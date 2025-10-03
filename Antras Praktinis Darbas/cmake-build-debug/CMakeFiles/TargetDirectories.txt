@@ -1,3 +1,0 @@
-C:/Users/s057522/Documents/Strukturinis programavimas/Antras Praktinis Darbas/cmake-build-debug/CMakeFiles/Antras_Praktinis_Darbas.dir
-C:/Users/s057522/Documents/Strukturinis programavimas/Antras Praktinis Darbas/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/s057522/Documents/Strukturinis programavimas/Antras Praktinis Darbas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

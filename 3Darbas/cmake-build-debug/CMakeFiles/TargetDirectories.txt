@@ -1,3 +1,0 @@
-C:/Users/s057522/Documents/Strukturinis programavimas/3Darbas/cmake-build-debug/CMakeFiles/3Darbas.dir
-C:/Users/s057522/Documents/Strukturinis programavimas/3Darbas/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/s057522/Documents/Strukturinis programavimas/3Darbas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-C:/Users/toska/Desktop/ProjektavimasDarbai/4PrkatinisDarbas/cmake-build-debug/CMakeFiles/4PrkatinisDarbas.dir
-C:/Users/toska/Desktop/ProjektavimasDarbai/4PrkatinisDarbas/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/toska/Desktop/ProjektavimasDarbai/4PrkatinisDarbas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
