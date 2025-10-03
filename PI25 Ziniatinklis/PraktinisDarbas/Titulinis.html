@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pagrindinis</title>
+
+        <style>
+            p{
+                margin: 0 10pt;
+                text-indent: 2cm;
+                text-align: justify;
+            }
+            div {
+            -moz-column-count: 3; /* Firefox narsyklei */
+            -webkit-column-count: 3; /* Safario ir Chrome narsyklems */
+            column-count: 3;
+            -moz-column-rule: outset#ff00ff;
+            -webkit-column-rule: #ff00ff;
+            column-rule: 4px outset#ff00ff;
+            }
+            img {
+                z-index: -1;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div style="-moz-column-count: 1; -webkit-column-count: 1; column-count: 1 ;left: 0px; top: 0px; width: 100%; position: fixed; text-align: end;">
+            <h1>
+                <a href="Galerija.html">Galerija</a>
+                <a href="Anketa.html">Anketa</a>
+                <a href="Kontaktai.html">Kontaktai</a>
+            </h1>
+
+        </div>
+        <b>
+            <img style="left: 0px; top: 0px; size: 100%; position: fixed;" src="d:\Screenshots\Screenshot 2025-03-05 212500.png" alt="">
+            <div style="padding-top: 60pt;">
+                09-29-2025 Sugalvojau pradėti aprašinėti pirmos praktinės užduoties eigą.
+                Nemeluosiu, iki šiandien turiu problemų įsivaizduojant galutinį vaizdą.
+                Nepaisant to manau darbas gana neblogai sekasi, tačiau toli gražu dar nebaigtas.
+                Pasitelkęs teorinių paskaitų žinias sukūriau vieningo dizaino šabloną, tačiau reik nuspresti dėl paties dizaino.
+                Nenoriu naudoti kitų asmenų vaizdų, todėl pasinaudosiu kuom nors iš nuosavos bibliotekos.
+                <a href="Galerija.html#Šablonas">Štai kaip blankiai atrodė šablonas.</a>
+                <a name="Atgal iš šablono"></a>
+                Gerai kad turiu nemažą pasirinkimą tinklapio fonui.
+                Klausimas ar tik jis nebus per daug blaškantis.
+                <a href="Galerija.html#Tinklapio fono pasirinkimas">Du fonai tinklapui</a>
+                <a name="Atgal iš tinklapio fono pasirinkimo"></a>
+                Dar nespėjau patikrinti ir prisegti vienos iš pasirinktų nuotraukų kaip tinklapio fono.
+                Tačiau pridėjau jas į nuotraukų galeriją ir padariau į jas nuorodas.
+                Negana to figcaption esantį teksta panaudojau kaip nuorodą atgal į tekstą kur buvo minimos tos nuotraukos.
+                Laikas nustatytį foną ir suteikti charakterį tinklapiui.
+                Taigi pirma problema su kurią iš kart susidūriau buvo atvaizdavimas.
+                Nuotrauka vaizduojama aukščiausiai visų elementų.
+                Tai nėra pirmas kartas kai susiduriu su panašia problema, pirmą kartą ji pasirodė po statinę nuorodų juosta.
+                Laikinas sprendimas buvo panaudoti padding-top ir atitraukti div paragraph elementus nuo viršaus.
+                Tačiau čia turiu parinkti kažką panašaus į layer pobūdį.
+                Reikiama funkcija yra z-index.
+                Su ją aprašiau img z-index reikšmę kaip -1.
+
+                
+            </div>
+            
+        </b>
+    </body>
+</html>
