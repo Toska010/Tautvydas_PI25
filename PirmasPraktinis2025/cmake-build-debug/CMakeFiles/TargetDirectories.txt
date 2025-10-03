@@ -1,0 +1,3 @@
+C:/Users/s057522/Desktop/StrukturinisDu/PirmasPraktinis2025/cmake-build-debug/CMakeFiles/PirmasPraktinis2025.dir
+C:/Users/s057522/Desktop/StrukturinisDu/PirmasPraktinis2025/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s057522/Desktop/StrukturinisDu/PirmasPraktinis2025/cmake-build-debug/CMakeFiles/rebuild_cache.dir
