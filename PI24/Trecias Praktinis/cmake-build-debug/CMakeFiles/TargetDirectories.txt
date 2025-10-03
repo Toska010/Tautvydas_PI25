@@ -1,0 +1,3 @@
+C:/Users/s057522/Documents/Strukturinis programavimas/Trecias Praktinis/cmake-build-debug/CMakeFiles/Trecias_Praktinis.dir
+C:/Users/s057522/Documents/Strukturinis programavimas/Trecias Praktinis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s057522/Documents/Strukturinis programavimas/Trecias Praktinis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
