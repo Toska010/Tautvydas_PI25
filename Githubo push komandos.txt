@@ -1,3 +1,0 @@
-git add .
-git commit -m "Komentaras" 
-git push origin SakaAprasytaGitBashKonsolej
