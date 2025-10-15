@@ -1,0 +1,8 @@
+git init
+git remote -v
+git remote rm origin
+git remote -v
+git remote add origin https://github.com/Toska010/Tautvydas_PI25.git
+git branch -M main
+git remote -v
+git pull origin main
