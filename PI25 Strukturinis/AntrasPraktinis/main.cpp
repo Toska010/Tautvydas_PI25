@@ -4,9 +4,10 @@
 using namespace std;
 
 bool programa = true;
+const int pazymiai = 10;
 
-string varduMasyvas[100];
-int pazymiuMasyvas[100][10];
+string varduMasyvas[3];
+int pazymiuMasyvas[3][pazymiai];
 int ivestiMokiniai = 0;
 
 string nepasitikiu;
@@ -227,12 +228,12 @@ int main() {
                                     cin >> nepasitikiu;
                                     int ciklas;
                                     bool neSuveike = true;
-                                    for (ciklas = 0; ciklas <= 99; ciklas++) {
+                                    for (ciklas = 0; ciklas <= 2; ciklas++) {
                                         if (nepasitikiu == varduMasyvas[ciklas]) {
                                             neSuveike = false;
                                             int vardoId = ciklas + 1;
                                             cout << "Mokinys: " << varduMasyvas[vardoId - 1] << " buvo pasalnitas!" << endl;
-                                            for (int i = vardoId; i <= 99; i++) {
+                                            for (int i = vardoId; i <= 2; i++) {
                                                 varduMasyvas[i - 1] = varduMasyvas[i];
                                                 for (int j = 0; j <= 9; j++) {
                                                     pazymiuMasyvas[i - 1][j] = pazymiuMasyvas[i][j];

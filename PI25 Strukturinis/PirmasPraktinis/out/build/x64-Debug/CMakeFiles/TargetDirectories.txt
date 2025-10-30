@@ -1,0 +1,3 @@
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/PirmasPraktinis/out/build/x64-Debug/CMakeFiles/2025PirmasPraktinis.dir
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/PirmasPraktinis/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/PirmasPraktinis/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
