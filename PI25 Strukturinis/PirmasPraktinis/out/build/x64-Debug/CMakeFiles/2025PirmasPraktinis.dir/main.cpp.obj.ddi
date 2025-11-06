@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\2025PirmasPraktinis.dir\\main.cpp.obj",
+            "outputs": [
+                "C:\\Users\\s057522\\Desktop\\Naujas\\PI25 Strukturinis\\PirmasPraktinis\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\2025PirmasPraktinis.dir\\main.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

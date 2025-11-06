@@ -4,9 +4,10 @@
 using namespace std;
 
 bool programa = true;
+const int pazymiai = 10;
 
-string varduMasyvas[100];
-int pazymiuMasyvas[100][10];
+string varduMasyvas[3];
+int pazymiuMasyvas[3][pazymiai];
 int ivestiMokiniai = 0;
 
 string nepasitikiu;
@@ -30,6 +31,17 @@ int nelauzykManoProgramosPrasau(string patikra, int varijantas) {
         return -1;
     }
     return -1;
+}
+
+void laukNulius() {
+    for (int i = 0; i <= ivestiMokiniai; i++) {
+        for (int j = 0; j <= 9; j++) {
+            if (pazymiuMasyvas[i][j] == 0 && j < 9) {
+                pazymiuMasyvas[i][j] = pazymiuMasyvas[i][j + 1];
+                pazymiuMasyvas[i][j + 1] = 0;
+            }
+        }
+    }
 }
 
 int main() {
@@ -84,13 +96,17 @@ int main() {
                             ivedamiMokiniai++;
                         }
                     }
+                    laukNulius();
                     break;
                 }
                 case 2: {
+                    laukNulius();
                     for (int i = 0; i < ivestiMokiniai; i++) {
                         cout << varduMasyvas[i] << " ID: " << i + 1 << endl;
                         for (int j = 0; j <= 9; j++) {
-                            cout << pazymiuMasyvas[i][j] << " ";
+                            if (pazymiuMasyvas[i][j] != 0) {
+                                cout << pazymiuMasyvas[i][j] << " ";
+                            }
                         }
                         cout << endl;
                     }
@@ -98,6 +114,7 @@ int main() {
                 }
                 case 3: {
                     while (true) {
+                        laukNulius();
                         cout <<
                             "Pasirinkite metoda mokiniui pasirinkti:\n"
                             "0: Atgal i meniu\n"
@@ -112,26 +129,32 @@ int main() {
                         if (funkcija == 1 || funkcija == 2) {
                             switch (funkcija) {
                                 case 1: {
+                                    laukNulius();
                                     int vardoId;
                                     int paz;
                                     cout << "Iveskite mokinio ID: ";
                                     cin >> vardoId;
                                     cout << "Mokinys: " << varduMasyvas[vardoId - 1] << ". Kuri pazymi norite pakeisti? " << endl;
-                                    for (int i = 0; i <= 9; i++) {
-                                        cout << pazymiuMasyvas[vardoId - 1][i] << " ";
+                                    for (int j = 0; j <= 9; j++) {
+                                        if (pazymiuMasyvas[vardoId - 1][j] != 0) {
+                                            cout << pazymiuMasyvas[vardoId - 1][j] << " ";
+                                        }
                                     }
                                     cout << endl;
                                     cin >> paz;
                                     cout << "Pazimys kuri keiciate: " << pazymiuMasyvas[vardoId - 1][paz - 1] << " Iveskite i koki norite pakeisti: ";
                                     cin >> pazymiuMasyvas[vardoId - 1][paz - 1];
                                     cout << "Mokinys: " << varduMasyvas[vardoId - 1] << " nauji pazymiai:" << endl;
-                                    for (int i = 0; i <= 9; i++) {
-                                        cout << pazymiuMasyvas[vardoId - 1][i] << " ";
+                                    for (int j = 0; j <= 9; j++) {
+                                        if (pazymiuMasyvas[vardoId - 1][j] != 0) {
+                                            cout << pazymiuMasyvas[vardoId - 1][j] << " ";
+                                        }
                                     }
                                     cout << endl;
                                     break;
                                 }
                                 case 2: {
+                                    laukNulius();
                                     cout << "Iveskite mokinio varda: ";
                                     cin >> nepasitikiu;
                                     int ciklas;
@@ -143,26 +166,28 @@ int main() {
                                             int paz;
                                             cout << "Mokinys: " << varduMasyvas[vardoId] << ". Kuri pazymi norite pakeisti? " << endl;
                                             for (int j = 0; j <= 9; j++) {
-                                                cout << pazymiuMasyvas[vardoId][j] << " ";
+                                                if (pazymiuMasyvas[vardoId][j] != 0) {
+                                                    cout << pazymiuMasyvas[vardoId][j] << " ";
+                                                }
                                             }
                                             cout << endl;
                                             cin >> paz;
                                             cout << "Pazimys kuri keiciate: " << pazymiuMasyvas[vardoId][paz - 1] << " Iveskite i koki norite pakeisti: ";
                                             cin >> pazymiuMasyvas[vardoId][paz - 1];
                                             cout << "Mokinys: " << varduMasyvas[vardoId] << " nauji pazymiai:" << endl;
+                                            laukNulius();
                                             for (int z = 0; z <= 9; z++) {
-                                                cout << pazymiuMasyvas[vardoId][z] << " ";
+                                                if (pazymiuMasyvas[vardoId][z] != 0) {
+                                                    cout << pazymiuMasyvas[vardoId][z] << " ";
+                                                }
                                             }
                                         }
-                                        if (neSuveike) {
+                                    }
+                                    cout << endl;
+                                    if (neSuveike) {
                                             cout << "Mokinio " << nepasitikiu << " sistemoje nera!" << endl;
                                         }
-                                        cout << endl;
-                                        break;
-                                    }
-                                }
-                                default: {
-                                    cout << "Tokio pasirinkimo nera!" << endl;
+                                    break;
                                 }
                             }
                         }
@@ -203,12 +228,12 @@ int main() {
                                     cin >> nepasitikiu;
                                     int ciklas;
                                     bool neSuveike = true;
-                                    for (ciklas = 0; ciklas <= 99; ciklas++) {
+                                    for (ciklas = 0; ciklas <= 2; ciklas++) {
                                         if (nepasitikiu == varduMasyvas[ciklas]) {
                                             neSuveike = false;
                                             int vardoId = ciklas + 1;
                                             cout << "Mokinys: " << varduMasyvas[vardoId - 1] << " buvo pasalnitas!" << endl;
-                                            for (int i = vardoId; i <= 99; i++) {
+                                            for (int i = vardoId; i <= 2; i++) {
                                                 varduMasyvas[i - 1] = varduMasyvas[i];
                                                 for (int j = 0; j <= 9; j++) {
                                                     pazymiuMasyvas[i - 1][j] = pazymiuMasyvas[i][j];

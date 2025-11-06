@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "2025PirmasPraktinis",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "2025PirmasPraktinis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2025PirmasPraktinis-Debug-1ec855bdbc2d798eee8b.json",
+					"name" : "2025PirmasPraktinis",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/PirmasPraktinis/out/build/x64-Debug",
+		"source" : "C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/PirmasPraktinis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
