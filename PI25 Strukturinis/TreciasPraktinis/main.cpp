@@ -63,8 +63,8 @@ void pirmas(int veiksmas) {
             bilietaiFailas2 << left << setw(15) << fixed << setprecision(0) << failoMasyvas[i] << fixed << setprecision(2) << failoMasyvas[i - 1] * failoMasyvas[i] << endl;
         }
     }
-    cout << left << setw(15) << " " << left << setw(15) << fixed << setprecision(0) << bendrasKiekis << setprecision(2) << bendraSuma << endl;
-    bilietaiFailas2 << left << setw(15) << " " << left << setw(15) << fixed << setprecision(0) << bendrasKiekis << setprecision(2) << bendraSuma << endl;
+    cout << left << setw(15) << "Viso:" << left << setw(15) << fixed << setprecision(0) << bendrasKiekis << setprecision(2) << bendraSuma << endl;
+    bilietaiFailas2 << left << setw(15) << "Viso:" << left << setw(15) << fixed << setprecision(0) << bendrasKiekis << setprecision(2) << bendraSuma << endl;
 }
 void antras(int veiksmas) {
     int operacija = veiksmas - 1;
