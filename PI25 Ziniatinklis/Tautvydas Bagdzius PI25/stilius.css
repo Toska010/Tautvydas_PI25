@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.two-column {
+  display: flex;
+  padding: 2em;
+}
+
+.left-column {
+  flex: 2;
+  padding-right: 1em;
+}
+
+.right-column {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.galerija {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  padding: 2em;
+}
+.galerija img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}

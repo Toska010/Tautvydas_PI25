@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prisijungimo forma</title>
+  <link rel="stylesheet" href="stilius.css" />
+</head>
+<body>
+  <header>
+    <h1>Prisijungimo forma</h1>
+    <nav>
+      <ul>
+        <li><a href="pagrindinis.html">Pagrindinis</a></li>
+        <li><a href="nuotraukos.html">Nuotraukos</a></li>
+        <li><a href="bendrininkai.html">Mūsų komanda</a></li>
+        <li><a href="forma.html">Prisijung prie mūsų</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="two-column">
+    <section class="left-column">
+      <h2>Prisijunk prie mūsų</h2>
+      <form action="#" method="post">
+        <label for="paštas">El. paštas:</label><br />
+        <input
+          type="paštas"
+          id="paštas"
+          name="paštas"
+          required
+          placeholder="Įveskite savo el. paštą"
+          oninvalid="this.setCustomValidity('Prašome įvesti el. paštą')"
+          oninput="this.setCustomValidity('')"
+        /><br /><br />
+
+        <label for="diskordas">Diskordo vardas:</label><br />
+        <input
+          type="text"
+          id="diskordas"
+          name="diskordas"
+          required
+          placeholder="Pvz.: Toska010"
+          oninvalid="this.setCustomValidity('Prašome įvesti diskordo vardą')"
+          oninput="this.setCustomValidity('')"
+        /><br /><br />
+
+        <label for="žaidimoVardas">Žaidimo vardas:</label><br />
+        <input
+          type="text"
+          id="žaidimoVardas"
+          name="žaidimoVardas"
+          required
+          placeholder="Pvz.: Toska Toska"
+          oninvalid="this.setCustomValidity('Prašome įvesti žaidimo vardą')"
+          oninput="this.setCustomValidity('')"
+        /><br /><br />
+
+        <label for="amžius">Amžius:</label><br />
+        <input
+          type="number"
+          id="amžius"
+          name="amžius"
+          min="18"
+          max="100"
+          required
+          placeholder="Pvz.: 25"
+          oninvalid="this.setCustomValidity('Prašome įvesti savo amžių (nuo 18 iki 100)')"
+          oninput="this.setCustomValidity('')"
+        /><br /><br />
+
+        <fieldset>
+          <legend>Pasirinkite dominančias veiklas:</legend>
+          <label><input type="checkbox" name="pomėgiai" value="Kasinėjimas" /> Kasinėjimas</label><br />
+          <label><input type="checkbox" name="pomėgiai" value="Kovos" /> Kovos</label><br />
+          <label><input type="checkbox" name="pomėgiai" value="Vadovavimas" /> Vadovavimas</label><br />
+          <label><input type="checkbox" name="pomėgiai" value="Šnipinėjimas" /> Šnipinėjimas</label><br />
+          <label><input type="checkbox" name="pomėgiai" value="Sistemų tyrinėjimas" /> Sistemų tyrinėjimas</label><br />
+          <label><input type="checkbox" name="pomėgiai" value="Inžinierius" /> Inžinierius</label>
+        </fieldset><br />
+
+        <button type="submit">Pateikti</button>
+      </form>
+    </section>
+
+    <aside class="right-column">
+      <h3>Apie prisijungimą</h3>
+      <p>Užpildyk formą ir prisijunk prie mūsų komandos. Mes ieškome aktyvių ir motyvuotų žaidėjų!</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tautvydas Bagdzius</p>
+  </footer>
+</body>
+</html>
