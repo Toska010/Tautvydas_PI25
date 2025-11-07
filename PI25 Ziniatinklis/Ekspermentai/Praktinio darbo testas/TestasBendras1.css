@@ -1,0 +1,177 @@
+/* Bendras css failas visiem puslapaim vienodam dizainui palaikyti */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 100px;
+    background-image: url('Nuotraukos/2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h2, h3 {
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5em;
+    justify-content: flex-end;
+    margin-right: 1em;
+  }
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #222;
+    border: 1px solid black;
+    padding: 1em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    display: inline-block;
+}
+  
+nav a:hover {
+    background-color: #111;
+}
+  
+nav a.active {
+    color: inherit;
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+}
+
+footer {
+    /* position: fixed; */
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-box {
+    border: 1px solid black;
+    background-color: #ffffff79;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+    max-width: 900px;
+}
+
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+  
+.left-column {
+    flex: 3;
+    padding-right: 1em;
+}
+  
+.right-column {
+    flex: 1;
+    height: 100%;
+    width: 70px;
+    background-color: #ffffff79;
+    border: 1px solid black;
+    padding: 1em;
+}
+.right-column ul {
+    list-style: none;
+    padding: 0;
+}
+.right-column a {
+    text-decoration: none;
+    color: #333;
+}
+
+#highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+    .two-column {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .two-column {
+        flex-direction: column;
+    }
+    .left-column {
+        flex: 100%;
+        margin-bottom: 20px;
+    }
+    .right-column {
+        display: none;
+    }
+}
+  
+@media (max-width: 645px) {
+    nav a {
+        padding: 0.5em 1em;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+  
+@media (max-width: 550px) {
+    nav ul {
+        justify-content: flex-start;
+    }
+}
