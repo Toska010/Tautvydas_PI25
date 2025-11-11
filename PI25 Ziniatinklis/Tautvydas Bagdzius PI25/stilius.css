@@ -1,15 +1,28 @@
 /* General page setup */
 body {
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  padding-bottom: 60px;
-
-   background-image: url('Nuotraukos/2.png'); /* adjust path if needed */
+  background-image: url('Nuotraukos/2.png'); /* adjust path if needed */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+main {
+  min-height: 100vh;
+}
+
+aside {
+  position: sticky;
+  top: 1em; /* starts sticking after 1em from top */
+  width: 250px;
+  background-color: #ffffff79;
+  border: 1px solid black;
+  padding: 1em;
 }
 
 
@@ -76,10 +89,15 @@ nav a.active {
 
 /* Form layout */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #ffffff79; /* semi-transparent white */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+  max-width: 900px;
+  margin: 0 auto;
 }
+
+
 
 .full-width {
   width: 100%;
@@ -159,6 +177,8 @@ h2, h3 {
 .two-column {
   display: flex;
   flex-wrap: wrap;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 2em;
 }
 
@@ -173,7 +193,9 @@ h2, h3 {
   background-color: #ffffff79;
   border: 1px solid black;
   padding: 1em;
+  border-radius: 8px;
 }
+
 .right-column ul {
   list-style: none;
   padding: 0;
@@ -212,67 +234,24 @@ img {
 }
 
 .galerija img {
-  width: 500px;
-  height: 100%; /* or any fixed height you prefer */
+  width: 100%; /* instead of 500px */
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 8px;
 }
+
 
 /* Footer styling */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: 0px;
   background-color: #333;
   color: white;
   padding: 0.5em 1em;
   text-align: center;
+  margin-top: 20px; /* optional spacing from content */
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .two-column {
-    flex-direction: column;
-  }
-  .left-column {
-    flex: 100%;
-    margin-bottom: 20px;
-  }
-  .right-column {
-    display: none;
-  }
-}
 
-@media (max-width: 645px) {
-  nav a {
-    padding: 0.5em 1em;
-  }
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  nav ul {
-    flex-wrap: wrap;
-  }
-  .two-column {
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 550px) {
-  nav ul {
-    justify-content: flex-start;
-  }
+* {
+  outline: 1px solid red;
 }
