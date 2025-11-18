@@ -1,0 +1,194 @@
+/* General page setup */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('Nuotraukos/2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+    padding: 1em; /* ensures spacing from header */
+}
+
+/* Header styling */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    flex-wrap: wrap;
+    position: fixed;      /* <-- Make header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5em;
+    justify-content: flex-end;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #222;
+    border: 1px solid black;
+    padding: 0.75em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+}
+
+/* Sidebar */
+aside {
+    position: sticky;
+    top: 1em;
+    width: 250px;
+    background-color: #ffffff79;
+    border: 1px solid black;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
+
+/* Content box */
+.content-box {
+    border: 1px solid black;
+    background-color: #ffffff79;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Two-column layout */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+.left-column {
+    flex: 3;
+    padding-right: 1em;
+}
+
+.right-column {
+    flex: 1;
+    background-color: #ffffff79;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.right-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-column a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Utility classes */
+#highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.inherit-color {
+    color: inherit;
+}
+
+.important-text {
+    color: red !important;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 1em;
+    }
+
+    .two-column {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+* {
+  outline: 1px solid red;
+}
