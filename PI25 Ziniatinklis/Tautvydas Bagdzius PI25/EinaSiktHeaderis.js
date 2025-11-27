@@ -9,6 +9,6 @@ function adjustLayoutForHeader() {
         aside.style.top = header.offsetHeight + 'px';
     }
 }
-
 window.addEventListener('DOMContentLoaded', adjustLayoutForHeader);
 window.addEventListener('resize', adjustLayoutForHeader);
+window.addEventListener('load', adjustLayoutForHeader);
