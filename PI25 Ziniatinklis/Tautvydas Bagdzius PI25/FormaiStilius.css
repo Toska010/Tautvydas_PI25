@@ -1,9 +1,5 @@
-
-/* Page-specific styles for the membership form */
-
-/* Form container */
 form {
-    background-color: #ffffffcc; /* slightly more opaque for readability */
+    background-color: #ffffffcc;
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #333;
@@ -12,14 +8,14 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Form title */
+
 h2, h3 {
     text-align: center;
     margin-bottom: 1em;
     color: #222;
 }
 
-/* Input fields */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -42,7 +38,7 @@ h2, h3 {
     box-sizing: border-box;
 }
 
-/* Checkbox section */
+
 .checkbox-row {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +67,7 @@ h2, h3 {
     margin-right: 0.5em;
 }
 
-/* Submit button */
+
 button[type="submit"],
 input[type="submit"] {
     background-color: #333;
@@ -91,7 +87,7 @@ input[type="submit"]:hover {
     background-color: #111;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
     .form-row {
         flex-direction: column;
