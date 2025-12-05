@@ -1,0 +1,3 @@
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/4Praktinis/cmake-build-debug/CMakeFiles/4Praktinis.dir
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/4Praktinis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s057522/Desktop/Naujas/PI25 Strukturinis/4Praktinis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
