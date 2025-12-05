@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "KetvirtasPraktinis",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "KetvirtasPraktinis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KetvirtasPraktinis-Debug-0fec78cb16b076a86cf6.json",
+					"name" : "KetvirtasPraktinis",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/toska/Desktop/PI25_Main/PI25 Strukturinis/KetvirtasPraktinis/cmake-build-debug",
+		"source" : "C:/Users/toska/Desktop/PI25_Main/PI25 Strukturinis/KetvirtasPraktinis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
