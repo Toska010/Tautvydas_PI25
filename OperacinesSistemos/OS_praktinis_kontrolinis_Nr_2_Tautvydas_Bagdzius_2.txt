@@ -1,0 +1,70 @@
+Failas1=""
+Failas2=""
+Rezultatas=""
+
+while true; do
+    echo "1. Failo 1 įvedimas"
+    echo "2. Failo 2 įvedimas"
+    echo "3. Apskaičioti kuris failas turi daugiau eilučių"
+    echo "4. Rezultato parodymas"
+    echo "5. Išeiti"
+    
+    read Pasirinkimas
+    
+    case $Pasirinkimas in
+        1)
+            while true; do
+                read -p "Įveskite 1 failo pavadinimą: " Ivestas1Failas
+                if [[ -f "$Ivestas1Failas" ]]; then
+                    Failas1="$Ivestas1Failas"
+                    echo "Failas išsaugotas: $Failas1"
+                    break
+                else
+                    echo "Failas nerastas."
+                fi
+            done
+            ;;
+        2)
+            while true; do
+                read -p "Įveskite 2 failo pavadinimą: " Ivestas2Failas
+                if [[ "$Ivestas2Failas" == "$Failas1" ]]; then
+                    echo "Toks failas jau įvestas, įveskite kitą."
+                elif [[ -f "$Ivestas2Failas" ]]; then
+                    Failas2="$Ivestas2Failas"
+                    echo "Failas išsaugotas: $Failas2"
+                    break
+                else
+                    echo "Failas nerastas."
+                fi
+            done
+            ;;
+        3)
+            if [[ -n "$Failas1" && -n "$Failas2" ]]; then
+                Failo1Eilutes=$(wc -l < "$Failas1")
+                Failo2Eilutes=$(wc -l < "$Failas2")
+                if [[ $Failo1Eilutes -gt $Failo2Eilutes ]]; then
+                    Rezultatas="Failas 1 turi daugiau eilučių: Pirmas turi: ($Failo1Eilutes), antras turi: ($Failo2Eilutes)"
+                elif [[ $Failo1Eilutes -lt $Failo2Eilutes ]]; then
+                    Rezultatas="Failas 2 turi daugiau eilučių: Antras turi: ($Failo2Eilutes), pirmas turi: ($Failo1Eilutes)"
+                else
+                    Rezultatas="Abu failai turi tiek pat eilučių ($Failo1Eilutes)"
+                fi
+                echo "Skaičiavimas atliktas."
+            else
+                echo "Įveskite failų pavadinimus pirmame ir antrame pasirinkimuose."
+            fi
+            ;;
+        4)
+            if [[ -n "$Rezultatas" ]]; then
+                echo "$Rezultatas"
+            else
+                echo "Nėra rezultato. Pirmiausia atlikite skaičiavimą."
+            fi
+            ;;
+        5)
+            echo "Viso gero."
+            break
+            ;;
+    esac
+done
+

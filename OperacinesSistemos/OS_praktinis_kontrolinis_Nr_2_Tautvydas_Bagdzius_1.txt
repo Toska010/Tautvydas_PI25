@@ -1,0 +1,24 @@
+Makijazas() {
+    local Kiekis=$1
+    for ((i = 0; i < Kiekis; i++)); do
+        echo -n " "
+    done
+}
+
+Velniava() {
+    local Kiekis=$1
+    local Simbolis=$2
+    for ((i = 0; i < Kiekis; i++)); do
+        echo -n "$Simbolis "
+    done
+    echo
+}
+
+Makijazas 5; Velniava 1 6
+Makijazas 4; Velniava 2 5
+Makijazas 2; Velniava 4 4
+Makijazas 0; Velniava 6 3
+Makijazas 2; Velniava 4 2
+Makijazas 4; Velniava 2 1
+Makijazas 5; Velniava 1 0
+
