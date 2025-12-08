@@ -3,6 +3,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+video {
+    max-width: 100%;
+    height: auto;
+}
 .galerija {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -22,12 +26,60 @@ img {
     object-fit: cover;
     
 }
+.galerija video {
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .left-column {
     flex: 3;
-    
 }
-@media (max-width: 768px) {
-    aside {
-        display: flex;
-    }
+
+
+
+.fonas {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  z-index: 9999;
+}
+
+/* Show fonas when targeted */
+.fonas:target {
+  display: block;
+}
+
+/* Center content */
+.fonas img,
+.fonas video {
+    padding-top: 2vh;
+  max-width: 85vw;
+  max-height: auto;
+}
+
+.uzdaryti, .atgal, .kitas {
+  position: fixed;
+  color: white;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+.uzdaryti {
+    padding-top: 2vh;
+    right: 1vw;
+    text-align: right;
+}
+.atgal {
+    left: 2vw;
+    top: 45vh;
+    text-align: center;
+}
+.kitas {
+    right: 1vw;
+    top: 45vh;
+    text-align: center;
 }

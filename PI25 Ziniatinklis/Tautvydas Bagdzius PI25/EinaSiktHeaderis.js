@@ -1,4 +1,4 @@
-function adjustLayoutForHeader() {
+/* function adjustLayoutForHeader() {
     const header = document.querySelector('header');
     const main = document.querySelector('main');
     const aside = document.querySelector('aside');
@@ -11,4 +11,4 @@ function adjustLayoutForHeader() {
 }
 window.addEventListener('DOMContentLoaded', adjustLayoutForHeader);
 window.addEventListener('resize', adjustLayoutForHeader);
-window.addEventListener('load', adjustLayoutForHeader);
+window.addEventListener('load', adjustLayoutForHeader); */
