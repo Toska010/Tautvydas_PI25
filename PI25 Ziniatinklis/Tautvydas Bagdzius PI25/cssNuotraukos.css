@@ -36,8 +36,6 @@ video {
     flex: 3;
 }
 
-
-
 .fonas {
   display: none;
   position: fixed;
@@ -48,12 +46,10 @@ video {
   z-index: 9999;
 }
 
-/* Show fonas when targeted */
 .fonas:target {
   display: block;
 }
 
-/* Center content */
 .fonas img,
 .fonas video {
     padding-top: 2vh;
