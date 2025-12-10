@@ -1,0 +1,13 @@
+Sveiki atvyke i skestancio pirato restorana
+
+  9 Kiausiniene                                  13.05 EUR
+  8 Kiaulienos sonine su keptu kiausiniu         19.60 EUR
+  7 Keksiukas su vysnia                          6.93 EUR
+  6 Prancuziskas skrebutis                       11.94 EUR
+  5 Vaisiu salotos                               12.45 EUR
+  4 Pusryciu dribsniai                           2.76 EUR
+  3 Kava                                         1.50 EUR
+  2 Arbata                                       1.50 EUR
+
+Mokesciai (21%)                                  14.64 EUR
+Galutine suma                                    84.37 EUR
