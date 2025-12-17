@@ -5,12 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pagrindinis</title>
   <link rel="stylesheet" href="BendrasStilius.css" />
+  <link rel="stylesheet" href="poper.js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo">
+      <a href="pagrindinis.html"><img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo"></a>
       <h1>We Stand From Dark</h1>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        ☰
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="pagrindinis.html">Pagrindinis</a></li>
+        <li><a class="dropdown-item" a href="pve.html">PvE</a></li>
+        <li><a class="dropdown-item" a href="pvp.html">PvP</a></li>
+        <li><a class="dropdown-item" a href="mining.html">Kasinėjimas</a></li>
+        <li><a class="dropdown-item" a href="industry.html">Industrija</a></li>
+        <li><a class="dropdown-item" a href="bendrininkai.html">Mūsų komanda</a></li>
+        <li><a class="dropdown-item" a href="forma.html">Prisijungimo forma</a></li>
+        <li><a class="dropdown-item" a href="nuotraukos.html">Nuotraukos</a></li>
+      </ul>
     </div>
     <nav>
       <ul>
@@ -27,32 +44,31 @@
   </header>
   <main class="two-column">
     <section class="left-column">
-  <div class="content-box">
-    <h2 id="apieEve">Apie EVE Online</h2>
-    <p>
-      <strong>EVE Online</strong> – tai masinis daugelio žaidėjų internetinis žaidimas (MMORPG), vykstantis kosmose, kur žaidėjai kuria savo likimą galaktikoje pavadinimu <em>Naujoji Edena</em>.<br><br>
-      Sukurtas Islandijos kompanijos <em>CCP Games</em>, tai vienas iš sudėtingiausių ir labiausiai žaidėjų valdomų MMO žaidimų pasaulyje. Išleistas 2003 m. gegužės 6 d., jis išlaiko aktyvią bendruomenę.<br><br>
-      <strong>Pagrindinės žaidimo savybės:</strong>
-      <ul>
-        <li><strong>Kosminė simuliacija</strong>: daugiau nei 7700 žvaigždžių sistemų su planetomis, stotimis ir kirmgraužomis.</li>
-        <li><strong>Žaidėjų ekonomika</strong>: valdoma žaidėjų – nuo gamybos iki prekybos ir rinkos manipuliacijų.</li>
-        <li><strong>Kovos ir politika</strong>: korporacijos, teritorijų kontrolė, diplomatinės intrigos ir masiniai mūšiai.</li>
-        <li><strong>Laisvė pasirinkti kelią</strong>: piratas, prekybininkas, tyrinėtojas, gamintojas ar diplomatas.</li>
-      </ul>
-      <strong>Techniniai aspektai:</strong>
-      <ul>
-        <li><strong>Platformos</strong>: Windows, Mac OS X (Linux palaikymas nutrauktas)</li>
-        <li><strong>Varikliai</strong>: Trinity, Ambulation</li>
-        <li><strong>Žanras</strong>: MMORPG, kosmoso simuliacija</li>
-        <li><strong>Režimas</strong>: tik daugelio žaidėjų</li>
-      </ul>
-      <strong>EVE Online</strong> garsėja savo sudėtingumu, ilgalaike progresija ir bendruomenės kuriama istorija. Tai žaidimas, kur kiekvienas sprendimas gali turėti ilgalaikių pasekmių visai visatai.
-    </p>
-  </div>
-  <div class="content-box">
-    <h2 id="pradzia">Korporacijos pradžia
-    </h2>
-    <p>
+    <div class="content-box">
+      <h1 id="apieEve">Apie EVE Online</h1>
+      <p>
+        <strong>EVE Online</strong> – tai masinis daugelio žaidėjų internetinis žaidimas (MMORPG), vykstantis kosmose, kur žaidėjai kuria savo likimą galaktikoje pavadinimu <em>Naujoji Edena</em>.<br><br>
+        Sukurtas Islandijos kompanijos <em>CCP Games</em>, tai vienas iš sudėtingiausių ir labiausiai žaidėjų valdomų MMO žaidimų pasaulyje. Išleistas 2003 m. gegužės 6 d., jis išlaiko aktyvią bendruomenę.<br><br>
+        <strong>Pagrindinės žaidimo savybės:</strong>
+        <ul>
+          <li><strong>Kosminė simuliacija</strong>: daugiau nei 7700 žvaigždžių sistemų su planetomis, stotimis ir kirmgraužomis.</li>
+          <li><strong>Žaidėjų ekonomika</strong>: valdoma žaidėjų – nuo gamybos iki prekybos ir rinkos manipuliacijų.</li>
+          <li><strong>Kovos ir politika</strong>: korporacijos, teritorijų kontrolė, diplomatinės intrigos ir masiniai mūšiai.</li>
+          <li><strong>Laisvė pasirinkti kelią</strong>: piratas, prekybininkas, tyrinėtojas, gamintojas ar diplomatas.</li>
+        </ul>
+        <strong>Techniniai aspektai:</strong>
+        <ul>
+          <li><strong>Platformos</strong>: Windows, Mac OS X (Linux palaikymas nutrauktas)</li>
+          <li><strong>Varikliai</strong>: Trinity, Ambulation</li>
+          <li><strong>Žanras</strong>: MMORPG, kosmoso simuliacija</li>
+          <li><strong>Režimas</strong>: tik daugelio žaidėjų</li>
+        </ul>
+        <strong>EVE Online</strong> garsėja savo sudėtingumu, ilgalaike progresija ir bendruomenės kuriama istorija. Tai žaidimas, kur kiekvienas sprendimas gali turėti ilgalaikių pasekmių visai visatai.
+      </p>
+    </div>
+    <div class="content-box">
+      <h1 id="pradzia">Korporacijos pradžia</h1>
+      <p>
       <li><strong>Įkurtas 2017.07.19</strong> su tikslu šnipinėti ir infiltruotis į sistemas. Nuo pačios pradžios korporacija buvo mažos apimties tačiau labai mobili ir organizuota.
       Laiku bėgant pradėjome kontroliuoti užimtas sistemas vietoj to kad parduotume prieeigą prie jų. Tada pradėjome sparčiai plėsti veikos sritį ir narių kiekį.
       Iki tol buvome priklausomi nuo rinkos ir aplinkinių, tačiau su valdomomis sistemomis pradėjome veikti nepriklausomai.</li>
@@ -62,8 +78,8 @@
     </p>
   </div>
   <div class="content-box">
-    <h2 id="siulome">Męs siūlome
-    </h2>
+    <h1 id="siulome">Męs siūlome
+    </h1>
     <p>
       <li><strong>Visada rasime tau tinkamiausią vietą,</strong> kuri ne būtinai gali būti mūsų korporacijoje, bet vienoje mūsų sąjungininkų.
       Pradedant nuo veikimo srities - <strong>aukšto saugumo, vidutinio saugumo, žemo saugumo, nulinės saugos ar joudųjų skylių grandinės.</strong> Turime sistemas kurios tau patiks labiausiai.</li>
@@ -75,8 +91,7 @@
     </p>
   </div>
   <div class="content-box">
-    <h2 id="tikimes">Ko męs tikimes
-    </h2>
+    <h1 id="tikimes">Ko męs tikimes</h1>
     <p>
       <li>Suprantame kad <strong>tai yra žaidimas</strong> ir todėl <strong>nesitikime matyti kiekvieną dieną</strong>, tačiau prašome supratingimo. Tai yra šeima, prašome būti mandgiais, klausyti savo viršesniųjų, esant nesklandumamas arba nenumatytiems
       planams informuotis mus korporacijos diskordo puslapyje.</li>
@@ -99,10 +114,9 @@
      <li><a href="#tikimes">Ko męs tikimes</a></li>
     </ul>
   </aside>
-    
 </main>
 <footer>
-    <p>&copy; 2025 Tautvydas Bagdzius</p>
+  <p>&copy; 2025 Tautvydas Bagdzius</p>
   </footer>
 </body>
 </html>
