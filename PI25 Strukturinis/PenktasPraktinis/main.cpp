@@ -1,7 +1,30 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+struct studentas {
+    string vardas;
+    string pavarde;
+    double procentas;
+    int pazymys;
+};
+
+int priskirtiPaazymi(double procentas) {
+    if      (procentas >= 95) return 10;
+    else if (procentas >= 85) return 9;
+    else if (procentas >= 75) return 8;
+    else if (procentas >= 65) return 7;
+    else if (procentas >= 55) return 6;
+    else if (procentas >= 45) return 5;
+    else if (procentas >= 35) return 4;
+    else if (procentas >= 25) return 3;
+    else if (procentas >= 15) return 2;
+    else                      return 1;
+}
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    cout << "Hello, World!" << endl;
     return 0;
 }
 
