@@ -5,8 +5,7 @@
 using namespace std;
 
 const int klausimuKiekis = 20;
-
-bool klausimas[klausimuKiekis];
+const int testoIzanga = 4;
 
 struct strukturaKlausimu {
     int id;
@@ -56,12 +55,12 @@ int priskirtiPaazymi(int procentas) {
     else                      return 1;
 }
 
-void tekstoDuomenys() {
+void tekstoDuomenys(strukturaKlausimu klausimai[]) {
     ofstream duomenys;
     duomenys.open("testData.txt");
     duomenys << "\t";
     for (int i = 0; i < klausimuKiekis; i++) {
-        if(klausimas[i] == true) {
+        if(klausimai[i].atsakymas == true) {
             duomenys << "T ";
         }
         else {
@@ -72,23 +71,71 @@ void tekstoDuomenys() {
     duomenys.close();
 }
 
-void isvesk(strukturaKlausimu klausimai[]) {
+void testas(strukturaKlausimu klausimai[], vector<strukturaStudento> studentas) {
+    ofstream testas;
+    testas.open("testas.txt");
+    testas << "I klausimus atsakykite po jais esanciose eilutese\nT: jei tiesa, F: jei netiesa, -: jei norite praleisti klausima" << endl << endl;
+    testas << "Studento sprendziancio testa id: "; testas << studentas.size() + 1 << endl;
     for (int i = 0; i < klausimuKiekis; i++) {
-        cout << klausimai[i].id + 1 << " " << klausimai[i].klausimas << endl;
-        if (klausimai[i].atsakymas == true) {
-            cout << "T" << endl << endl;
+        testas << klausimai[i].id + 1 << ") " << klausimai[i].klausimas << endl << endl;
+    }
+    testas.close();
+}
+
+void priimti(strukturaKlausimu klausimai[], vector<strukturaStudento> studentas) {
+    ifstream testas;
+    testas.open("testas.txt");
+    string eilute;
+    int eilesNr;
+    eilesNr = studentas.size();
+    strukturaStudento nezinau;
+    nezinau.id = eilesNr;
+    for (int i = 0; i < testoIzanga; i++) {
+        getline(testas, eilute);
+    }
+    int iteracija = 0;
+    while (testas.eof()) {
+        getline(testas, eilute);
+        getline(testas, eilute);
+        if (eilute == "T" || eilute == "t") {
+            nezinau.atsakymai[iteracija] = 'T';
+        }
+        else if (eilute == "F" || eilute == "f") {
+            nezinau.atsakymai[iteracija] = 'F';
         }
         else {
-            cout << "F" << endl << endl;
+            nezinau.atsakymai[iteracija] = '-';
         }
     }
+
+
 }
 
 int main() {
-    //vector<strukturaStudento> studentas();
+    vector<strukturaStudento> studentas;
     strukturaKlausimu klausimai[klausimuKiekis];
     trueFalse(klausimai);
-    isvesk(klausimai);
+    tekstoDuomenys(klausimai);
+
+    bool veikimas = true;
+    int pasirinkimas;
+    while (veikimas == true) {
+        cout << "Pasirinkite funkcija:\n0: Nutraukti programa\n1: Valyti testa\n2: Priimti testa" << endl;
+        cin >> pasirinkimas;
+        switch (pasirinkimas) {
+            case 0: {
+                break;
+            }
+            case 1: {
+                testas(klausimai, studentas);
+                break;
+            }
+            case 2: {
+                priimti(klausimai, studentas);
+                break;
+            }
+        }
+    }
     return 0;
 }
 
@@ -106,11 +153,10 @@ leidžia ieškoti studento pagal ID ir analizuoja kiekvieno klausimo sudėtingum
 
 Uždavinio aprašymas:
 
-Teksto duomenys saugomi faile testData.txt:
-Pirmoje failo eilutėje pateikiami teisingi atsakymai į 20 klausimų (T arba F).
-Kiekvienoje kitoje eilutėje pateikiamas studento ID, tarpas ir studento atsakymai.
-Studento atsakymuose gali būti: T - True, F - False, “-” arba tarpas – neatsakytas klausimas.
-Studentų skaičius faile nėra žinomas iš anksto.
+Teksto duomenys saugomi faile testData.txt:                                                                         yra
+Pirmoje failo eilutėje pateikiami teisingi atsakymai į 20 klausimų (T arba F).                                      yra
+Kiekvienoje kitoje eilutėje pateikiamas studento ID, tarpas ir studento atsakymai.                                  bus
+Studento atsakymuose gali būti: T - True, F - False, “-” arba tarpas – neatsakytas klausimas.                       bus
 
 
 Testo vertinimas:
@@ -129,9 +175,9 @@ Pažymių skyrimas (be apvalinimo):
 
 Reikalavimai programai:
 
-Duomenys turi būti nuskaitomi iš failo.
-Turi būti naudojama dinaminė atmintis (new / delete[] arba vector), nes studentų skaičius nežinomas iš anksto.
-Duomenys turi būti saugomi struktūroje Student.
+Duomenys turi būti nuskaitomi iš failo.                                                                             yra
+Turi būti naudojama dinaminė atmintis (new / delete[] arba vector), nes studentų skaičius nežinomas iš anksto.      yra
+Duomenys turi būti saugomi struktūroje Student.                                                                     yra
 Programa turi išvesti visų studentų rezultatus.
 Turi būti naudojamos funkcijos skaičiavimams ir paieškai.
 
@@ -156,11 +202,12 @@ kiek studentų atsakė teisingai;
 kiek atsakė neteisingai;
 kiek neatsakė.
 
-5) Sunkiausio klausimo nustatymas – nustatyti klausimą, kurio teisingų atsakymų procentas yra mažiausias. Jei tokių klausimų yra keli, išvesti visus.
+5) Sunkiausio klausimo nustatymas – nustatyti klausimą, kurio teisingų atsakymų procentas yra mažiausias.
+Jei tokių klausimų yra keli, išvesti visus.
 
 
 Techniniai reikalavimai:
 
-Naudoti new ir delete[] dinaminei atminčiai valdyti arba vector – standartinį C++ bibliotekos konteinerį.
+Naudoti new ir delete[] dinaminei atminčiai valdyti arba vector – standartinį C++ bibliotekos konteinerį.           yra
 
 */

@@ -1,0 +1,44 @@
+I klausimus atsakykite po jais esanciose eilutese
+T: jei tiesa, F: jei netiesa, -: jei norite praleisti klausima
+
+Studento sprendziancio testa id: 1
+1) Ar tiesa, kad blokineje schemoje neimanoma pavaizduoti veiksmu kartojimo?
+
+2) Ar tiesa, kad sakinius, esancius kitame, sudetingesniame sakinyje, reikia patraukti i kaire puse per keleta poziciju?
+
+3) Ar tiesa, kad to paties lygio sakiniai, esantys skirtingose eilutese, turi buti surikiuoti vertikaliai?
+
+4) Ar galima kelis trumpus priskyrimo sakinius rasyti toje pacioje eiluteje?
+
+5) Ar galimas toks kintamojo pavadinimas: 1skaicius
+
+6) Ar tiesa kad skaiciaus duomenu tipas yra char?
+
+7) Ar tiesa kad loginis duomenu tipas yra bool?
+
+8) Ar tiesa kad realaus skaiciaus tipas yra double?
+
+9) Ar tiesa kad do while ciklas negali neprasideti?
+
+10) Ar tiesa, kad masyvo dydis turi buti grieztai apibreztas ir jo keisti programos eigoje negalima?
+
+11) Ar tiesa, kad globalus kintamieji yra matomi visoms programos fungcijoms ir tokiu kintamuju nereikia perduoti kaip funkciju argumentu?
+
+12) Ar tiesa, kad rekursines funkcijos argumentu reiksmes kaskart turi dideti?
+
+13) Ar ifstream klase skirta duomenu nuskaitymui is failo?
+
+14) Ar ofstream klase skirta duomenu isvedimui i faila?
+
+15) Ar tiesa, kad neesant sukurtam failui duomenims isvesti programa sukurtu faila automatiskai?
+
+16) Ar tiesa, kad strukturu masyve galima saugoti skingu tipu duomenis?
+
+17) Ar tiesa, kad net ir main() metode deklaruotas strukturu masyvas yra matomas visoms funkcijoms ir jo siusti kaip argumento nereikia?
+
+18) Ar tiesa, kad strukturu masyvas nuo paprasto skiriasi tuo, jog jo elementai numeruojami nuo 1?
+
+19) Ar tiesa, kad i struktura negalima ideti masyvo?
+
+20) Ar tiesa, kad sukurto masyvo dydis neturi buti is anksto apibreztas ir gali kisti programoje?
+
