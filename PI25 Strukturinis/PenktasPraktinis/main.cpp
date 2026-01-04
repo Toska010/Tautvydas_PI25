@@ -19,16 +19,16 @@ struct strukturaStudento {
 
 //Procento israiska pazymiu
 int priskirtiPaazymi(int procentas) {
-    if      (procentas >= 95) return 10;
-    else if (procentas >= 85) return 9;
-    else if (procentas >= 75) return 8;
-    else if (procentas >= 65) return 7;
-    else if (procentas >= 55) return 6;
-    else if (procentas >= 45) return 5;
-    else if (procentas >= 35) return 4;
-    else if (procentas >= 25) return 3;
-    else if (procentas >= 15) return 2;
-    else                      return 1;
+    if (procentas >= 95) return 10;
+    if (procentas >= 85) return 9;
+    if (procentas >= 75) return 8;
+    if (procentas >= 65) return 7;
+    if (procentas >= 55) return 6;
+    if (procentas >= 45) return 5;
+    if (procentas >= 35) return 4;
+    if (procentas >= 25) return 3;
+    if (procentas >= 15) return 2;
+                         return 1;
 }
 //Duomenu paemimas is failo testData.txt
 void duomenysIsFailo(vector<strukturaStudento> &studentas) {
@@ -99,8 +99,8 @@ void klasesStatistika(const vector<strukturaStudento> &studentas) {
     cout << "Didziausias balas: " << maxTaskai << endl;
     cout << "Maziausias balas: " << minTaskai << endl;
     cout << "Vidutinis balas: " << fixed << setprecision(0) << vidTaskai << endl;
-    cout << "Vidutinis procentas: " << fixed << setprecision(0) << vidProc << "%\n";
-    cout << "\nPazymiu pasiskirstymas:\n";
+    cout << "Vidutinis procentas: " << fixed << vidProc << "%" << endl << endl;
+    cout << "Pazymiu pasiskirstymas:" << endl;
     for (int i = 1; i <= 10; i++) {
         cout << i << ": " << pazymiuPasiskirstymas[i];
         if (i  != 10) {
