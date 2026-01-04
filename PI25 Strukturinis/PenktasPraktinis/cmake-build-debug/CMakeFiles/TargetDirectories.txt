@@ -1,0 +1,3 @@
+C:/Users/toska/Desktop/PI25_Main/PI25 Strukturinis/PenktasPraktinis/cmake-build-debug/CMakeFiles/PenktasPraktinis.dir
+C:/Users/toska/Desktop/PI25_Main/PI25 Strukturinis/PenktasPraktinis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/toska/Desktop/PI25_Main/PI25 Strukturinis/PenktasPraktinis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
