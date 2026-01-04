@@ -74,9 +74,111 @@ void saugojimas(const vector<strukturaStudento> &studentas) {
     lauk.open("results.txt");
     lauk << "ID\tTaskai\tProcent\tPazymys\n";
     for (auto& nezinau : studentas) {
-        lauk << nezinau.id << "\t" << nezinau.taskai << "\t" << fixed << setprecision(0) << nezinau.procentas << "%\t" << nezinau.pazymys << endl;
+        lauk << nezinau.id << "\t" << nezinau.taskai << "\t" << nezinau.procentas << "%\t" << nezinau.pazymys << endl;
     }
     lauk.close();
+}
+
+void klasesStatistika(const vector<strukturaStudento> &studentas) {
+    int studentuSk = studentas.size();
+    int maxTaskai = studentas[0].taskai;
+    int minTaskai = studentas[0].taskai;
+    double sumTaskai = 0;
+    double sumProc = 0;
+    int pazymiuPasiskirstymas[11] = {};
+    for (const auto &nezinau : studentas) {
+        if (nezinau.taskai > maxTaskai) maxTaskai = nezinau.taskai;
+        if (nezinau.taskai < minTaskai) minTaskai = nezinau.taskai;
+        sumTaskai += nezinau.taskai;
+        sumProc += nezinau.procentas;
+        pazymiuPasiskirstymas[nezinau.pazymys]++;
+    }
+    double vidTaskai = sumTaskai / studentuSk;
+    double vidProc = sumProc / studentuSk;
+    cout << "Studentu skaicius: " << studentuSk << endl;
+    cout << "Didziausias balas: " << maxTaskai << endl;
+    cout << "Maziausias balas: " << minTaskai << endl;
+    cout << "Vidutinis balas: " << fixed << setprecision(0) << vidTaskai << endl;
+    cout << "Vidutinis procentas: " << fixed << setprecision(0) << vidProc << "%\n";
+    cout << "\nPazymiu pasiskirstymas:\n";
+    for (int i = 1; i <= 10; i++) {
+        cout << i << ": " << pazymiuPasiskirstymas[i];
+        if (i  != 10) {
+            cout << " | ";
+        };
+    }
+    cout << endl << endl;
+}
+
+void studentoPaieska(const vector<strukturaStudento> &studentas) {
+    string ID;
+    while (true) {
+        cout << "Iveskite studento ID\n0: nutraukti paieska: " << endl;
+        cin >> ID;
+        if (ID == "0") break;
+
+        bool rastas = false;
+        for (const auto &nezinau : studentas) {
+            if (nezinau.id == ID) {
+                cout << "ID\tTaskai\tProcent\tPazymys" << endl;
+                cout << nezinau.id << "\t" << nezinau.taskai << "\t" << nezinau.procentas << "%\t" << nezinau.pazymys << endl << endl;
+                rastas = true;
+                break;
+            }
+        }
+        if (!rastas) {
+            cout << "Studentas su ID '" << ID << "' nerastas." <<  endl << endl;
+        }
+    }
+}
+
+void klausimuStatistika(const vector<strukturaStudento> &studentas) {
+    int teisingi[klausimuKiekis] = {0};
+    int neteisingi[klausimuKiekis] = {0};
+    int neatsakyti[klausimuKiekis] = {0};
+    for (const auto &nezinau : studentas) {
+        for (int i = 0; i < klausimuKiekis; i++) {
+            if (nezinau.atsakymai[i] == '-') {
+                neatsakyti[i]++;
+            } else if (nezinau.atsakymai[i] == atsakymai[i]) {
+                teisingi[i]++;
+            } else {
+                neteisingi[i]++;
+            }
+        }
+    }
+    cout << "Kl:\tT:\tF:\t-:" << endl;
+    for (int i = 0; i < klausimuKiekis; i++) {
+        cout  << (i + 1) << "\t" << teisingi[i] << "\t" << neteisingi[i] << "\t" << neatsakyti[i] << endl << endl;
+    }
+}
+
+void sunkiausiasKlausimas(const vector<strukturaStudento> &studentas) {
+    int teisingi[klausimuKiekis] = {0};
+    for (const auto &nezinau : studentas) {
+        for (int i = 0; i < klausimuKiekis; i++) {
+            if (nezinau.atsakymai[i] == atsakymai[i]) {
+                teisingi[i]++;
+            }
+        }
+    }
+    double minProcentas = 101.0;
+    vector<int> sunkiausi; //Taip ir cia vektorius nes velniai zino kiek tu sunkiausiu klausimu gali buti...
+    for (int i = 0; i < klausimuKiekis; i++) {
+        double procentas = (static_cast<double>(teisingi[i]) / studentas.size()) * 100.0;
+        if (procentas < minProcentas) {
+            minProcentas = procentas;
+            sunkiausi.clear();
+            sunkiausi.push_back(i + 1);
+        } else if (procentas == minProcentas) {
+            sunkiausi.push_back(i + 1);
+        }
+    }
+    cout << "Klausimas: ";
+    for (int nr : sunkiausi) {
+        cout << nr << " ";
+    }
+    cout << "Teisingai atsake: " << minProcentas << "%" << endl << endl;
 }
 
 int main() {
@@ -93,9 +195,11 @@ int main() {
                 break;
             }
             case 1: {
+                klasesStatistika(studentas);
                 break;
             }
             case 2: {
+                studentoPaieska(studentas);
                 break;
             }
             case 3: {
@@ -103,85 +207,14 @@ int main() {
                 break;
             }
             case 4: {
+                klausimuStatistika(studentas);
                 break;
             }
             case 5: {
+                sunkiausiasKlausimas(studentas);
                 break;
             }
         }
     }
     return 0;
 }
-
-
-/*
-
-Sukurti C++ programą,
-kuri nuskaito studentų True/False (T/F) testo atsakymus iš failo,
-apskaičiuoja jų rezultatus,
-priskiria pažymius pagal dešimties balų vertinimo sistemą,
-apdorotus duomenis išsaugo rezultatų faile,
-pateikia klasės statistiką,
-leidžia ieškoti studento pagal ID ir analizuoja kiekvieno klausimo sudėtingumą.
-
-
-Uždavinio aprašymas:
-
-Teksto duomenys saugomi faile testData.txt:                                                                         yra
-Pirmoje failo eilutėje pateikiami teisingi atsakymai į 20 klausimų (T arba F).                                      yra
-Kiekvienoje kitoje eilutėje pateikiamas studento ID, tarpas ir studento atsakymai.                                  bus
-Studento atsakymuose gali būti: T - True, F - False, “-” arba tarpas – neatsakytas klausimas.                       bus
-
-
-Testo vertinimas:
-
-Teisingas atsakymas - +2 taškai
-Neteisingas atsakymas - -1 taškas
-Neatsakytas klausimas - 0 taškų
-Testą sudaro 20 klausimų, todėl maksimaliai surenkamas taškų kiekis yra 40 taškų.
-
-
-Procentų skaičiavimas:
-
-percent = (score / 40.0) * 100
-Pažymių skyrimas (be apvalinimo):
-
-
-Reikalavimai programai:
-
-Duomenys turi būti nuskaitomi iš failo.                                                                             yra
-Turi būti naudojama dinaminė atmintis (new / delete[] arba vector), nes studentų skaičius nežinomas iš anksto.      yra
-Duomenys turi būti saugomi struktūroje Student.                                                                     yra
-Programa turi išvesti visų studentų rezultatus.
-Turi būti naudojamos funkcijos skaičiavimams ir paieškai.
-
-
-Privalomos funkcijos:
-
-1) Klasės statistika – apskaičiuoti ir išvesti:
-studentų skaičių;
-didžiausią ir mažiausią balą;
-vidutinį balą ir vidutinį procentą;
-pažymių (1–10) pasiskirstymą klasėje.
-
-2) Studento paieška pagal ID – leisti vartotojui įvesti studento ID ir surasti atitinkamą studentą.
-Jei studentas nerandamas, turi būti išvedamas pranešimas.
-Paieška kartojama tol, kol vartotojas įveda 0.
-
-3) Rezultatų išsaugojimas į failą – apdorotus studentų rezultatus išsaugoti naujame faile (pvz., results.txt).
-Faile turi būti: studento ID, surinkti taškai, procentai ir galutinis pažymys. Naudoti ofstream.
-
-4) Kiekvieno klausimo statistika – kiekvienam iš 20 klausimų apskaičiuoti:
-kiek studentų atsakė teisingai;
-kiek atsakė neteisingai;
-kiek neatsakė.
-
-5) Sunkiausio klausimo nustatymas – nustatyti klausimą, kurio teisingų atsakymų procentas yra mažiausias.
-Jei tokių klausimų yra keli, išvesti visus.
-
-
-Techniniai reikalavimai:
-
-Naudoti new ir delete[] dinaminei atminčiai valdyti arba vector – standartinį C++ bibliotekos konteinerį.           yra
-
-*/
