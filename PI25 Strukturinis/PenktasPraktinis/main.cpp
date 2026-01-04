@@ -4,7 +4,15 @@
 #include <vector>
 using namespace std;
 
-static int klausimuKiekis = 20;
+const int klausimuKiekis = 20;
+
+bool klausimas[klausimuKiekis];
+
+struct strukturaKlausimu {
+    int id;
+    string klausimas;
+    bool atsakymas;
+};
 
 struct strukturaStudento {
     int id;
@@ -13,6 +21,26 @@ struct strukturaStudento {
     bool teisingi[klausimuKiekis];
     char atsakymai[klausimuKiekis];
 };
+
+void trueFalse(strukturaKlausimu klausimai[]) {
+    ifstream tiesaNetiesa;
+    tiesaNetiesa.open("klausimai.txt");
+    int iteracija = 0;
+    string eilute;
+    while (!tiesaNetiesa.eof()) {
+        klausimai[iteracija].id = iteracija;
+        getline(tiesaNetiesa, eilute); klausimai[iteracija].klausimas = eilute;
+        getline(tiesaNetiesa, eilute);
+        if (eilute == "T") {
+            klausimai[iteracija].atsakymas = true;
+        }
+        else {
+            klausimai[iteracija].atsakymas = false;
+        }
+        iteracija++;
+    }
+    tiesaNetiesa.close();
+}
 
 //Procento israiska pazymiu
 int priskirtiPaazymi(int procentas) {
@@ -44,9 +72,23 @@ void tekstoDuomenys() {
     duomenys.close();
 }
 
+void isvesk(strukturaKlausimu klausimai[]) {
+    for (int i = 0; i < klausimuKiekis; i++) {
+        cout << klausimai[i].id + 1 << " " << klausimai[i].klausimas << endl;
+        if (klausimai[i].atsakymas == true) {
+            cout << "T" << endl << endl;
+        }
+        else {
+            cout << "F" << endl << endl;
+        }
+    }
+}
+
 int main() {
-    vector<strukturaStudento> studentas();
-    cout << "Hello, World!" << endl;
+    //vector<strukturaStudento> studentas();
+    strukturaKlausimu klausimai[klausimuKiekis];
+    trueFalse(klausimai);
+    isvesk(klausimai);
     return 0;
 }
 

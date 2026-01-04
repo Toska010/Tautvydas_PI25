@@ -1,0 +1,40 @@
+Ar tiesa, kad blokineje schemoje neimanoma pavaizduoti veiksmu kartojimo?
+F
+Ar tiesa, kad sakinius, esancius kitame, sudetingesniame sakinyje, reikia patraukti i kaire puse per keleta poziciju?
+F
+Ar tiesa, kad to paties lygio sakiniai, esantys skirtingose eilutese, turi buti surikiuoti vertikaliai?
+T
+Ar galima kelis trumpus priskyrimo sakinius rasyti toje pacioje eiluteje?
+T
+Ar galimas toks kintamojo pavadinimas: 1skaicius
+F
+Ar tiesa kad skaiciaus duomenu tipas yra char?
+F
+Ar tiesa kad loginis duomenu tipas yra bool?
+T
+Ar tiesa kad realaus skaiciaus tipas yra double?
+T
+Ar tiesa kad do while ciklas negali neprasideti?
+T
+Ar tiesa, kad masyvo dydis turi buti grieztai apibreztas ir jo keisti programos eigoje negalima?
+T
+Ar tiesa, kad globalus kintamieji yra matomi visoms programos fungcijoms ir tokiu kintamuju nereikia perduoti kaip funkciju argumentu?
+T
+Ar tiesa, kad rekursines funkcijos argumentu reiksmes kaskart turi dideti?
+F
+Ar ifstream klase skirta duomenu nuskaitymui is failo?
+T
+Ar ofstream klase skirta duomenu isvedimui i faila?
+T
+Ar tiesa, kad neesant sukurtam failui duomenims isvesti programa sukurtu faila automatiskai?
+T
+Ar tiesa, kad strukturu masyve galima saugoti skingu tipu duomenis?
+T
+Ar tiesa, kad net ir main() metode deklaruotas strukturu masyvas yra matomas visoms funkcijoms ir jo siusti kaip argumento nereikia?
+F
+Ar tiesa, kad strukturu masyvas nuo paprasto skiriasi tuo, jog jo elementai numeruojami nuo 1?
+F
+Ar tiesa, kad i struktura negalima ideti masyvo?
+F
+Ar tiesa, kad sukurto masyvo dydis neturi buti is anksto apibreztas ir gali kisti programoje?
+F
