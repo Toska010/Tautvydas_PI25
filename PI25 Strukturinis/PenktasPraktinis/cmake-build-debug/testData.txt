@@ -1,1 +1,6 @@
 	F F T T F F T T T T T F T T T T F F F F 
+As1 	t t f f f f f f f f f f f f t t t t t t
+As2 	f f t t - f f t f f t f f t t t t t t t
+As3 	f f t t f f t t t t t f t t t t f f f f
+As4 	- - - - - - - - - t t f t t t t f f f f
+As5	ffttfftttttfttttffff

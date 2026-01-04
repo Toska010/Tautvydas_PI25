@@ -36,7 +36,9 @@
       <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/CMakeFiles/PenktasPraktinis.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/CMakeFiles/PenktasPraktinis.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/PenktasPraktinis.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/PenktasPraktinis.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/klausimai.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/testData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/testData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/cmake-build-debug/testas.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PenktasPraktinis/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../PenktasPraktinis/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +105,7 @@
       <workItem from="1765388241857" duration="10207000" />
       <workItem from="1766042773348" duration="81000" />
       <workItem from="1767528257238" duration="60000" />
-      <workItem from="1767532500545" duration="3478000" />
+      <workItem from="1767532500545" duration="4753000" />
     </task>
     <servers />
   </component>

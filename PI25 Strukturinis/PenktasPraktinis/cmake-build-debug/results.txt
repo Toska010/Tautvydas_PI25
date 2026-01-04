@@ -1,0 +1,6 @@
+ID	Taskai	Procent	Pazymys
+As1	-5	0%	1
+As2	14	35%	4
+As3	40	100%	10
+As4	22	55%	6
+As5	40	100%	10

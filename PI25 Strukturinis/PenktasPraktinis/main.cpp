@@ -1,45 +1,21 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <string>
 #include <vector>
 using namespace std;
 
 const int klausimuKiekis = 20;
-const int testoIzanga = 4;
-
-struct strukturaKlausimu {
-    int id;
-    string klausimas;
-    bool atsakymas;
-};
+const double maxTasku = 40;
+char atsakymai[klausimuKiekis];
 
 struct strukturaStudento {
-    int id;
-    int procentas;
+    string id;
+    double procentas;
     int pazymys;
-    bool teisingi[klausimuKiekis];
     char atsakymai[klausimuKiekis];
+    int taskai;
 };
-
-void trueFalse(strukturaKlausimu klausimai[]) {
-    ifstream tiesaNetiesa;
-    tiesaNetiesa.open("klausimai.txt");
-    int iteracija = 0;
-    string eilute;
-    while (!tiesaNetiesa.eof()) {
-        klausimai[iteracija].id = iteracija;
-        getline(tiesaNetiesa, eilute); klausimai[iteracija].klausimas = eilute;
-        getline(tiesaNetiesa, eilute);
-        if (eilute == "T") {
-            klausimai[iteracija].atsakymas = true;
-        }
-        else {
-            klausimai[iteracija].atsakymas = false;
-        }
-        iteracija++;
-    }
-    tiesaNetiesa.close();
-}
 
 //Procento israiska pazymiu
 int priskirtiPaazymi(int procentas) {
@@ -54,84 +30,82 @@ int priskirtiPaazymi(int procentas) {
     else if (procentas >= 15) return 2;
     else                      return 1;
 }
-
-void tekstoDuomenys(strukturaKlausimu klausimai[]) {
-    ofstream duomenys;
-    duomenys.open("testData.txt");
-    duomenys << "\t";
+//Duomenu paemimas is failo testData.txt
+void duomenysIsFailo(vector<strukturaStudento> &studentas) {
+    ifstream infile;
+    infile.open("testData.txt");
+    char laikinas;
     for (int i = 0; i < klausimuKiekis; i++) {
-        if(klausimai[i].atsakymas == true) {
-            duomenys << "T ";
-        }
-        else {
-            duomenys << "F ";
-        }
+        infile >> atsakymai[i];
     }
-    duomenys << endl;
-    duomenys.close();
-}
-
-void testas(strukturaKlausimu klausimai[], vector<strukturaStudento> studentas) {
-    ofstream testas;
-    testas.open("testas.txt");
-    testas << "I klausimus atsakykite po jais esanciose eilutese\nT: jei tiesa, F: jei netiesa, -: jei norite praleisti klausima" << endl << endl;
-    testas << "Studento sprendziancio testa id: "; testas << studentas.size() + 1 << endl;
-    for (int i = 0; i < klausimuKiekis; i++) {
-        testas << klausimai[i].id + 1 << ") " << klausimai[i].klausimas << endl << endl;
-    }
-    testas.close();
-}
-
-void priimti(strukturaKlausimu klausimai[], vector<strukturaStudento> studentas) {
-    ifstream testas;
-    testas.open("testas.txt");
-    string eilute;
-    int eilesNr;
-    eilesNr = studentas.size();
     strukturaStudento nezinau;
-    nezinau.id = eilesNr;
-    for (int i = 0; i < testoIzanga; i++) {
-        getline(testas, eilute);
+    while (infile >> nezinau.id) {
+        for (int i = 0; i < klausimuKiekis; i++) {
+            infile >> laikinas;
+            if (laikinas == 'T' || laikinas == 't') laikinas = 'T';
+            else if (laikinas == 'F' || laikinas == 'f') laikinas = 'F';
+            else laikinas = '-';
+            nezinau.atsakymai[i] = laikinas;
+        }
+        int taskai = 0;
+        for (int i = 0; i < klausimuKiekis; i++) {
+            if (atsakymai[i] == nezinau.atsakymai[i]) {
+                taskai = taskai + 2;
+            }
+            else if (nezinau.atsakymai[i] == '-') {
+                taskai = taskai;
+            }
+            else {
+                taskai = taskai - 1;
+            }
+        }
+        nezinau.taskai = taskai;
+        double proc = (taskai / maxTasku) * 100;
+        if (proc < 0) proc = 0;
+        nezinau.procentas = proc;
+        nezinau.pazymys = priskirtiPaazymi(proc);
+        studentas.push_back(nezinau);
     }
-    int iteracija = 0;
-    while (testas.eof()) {
-        getline(testas, eilute);
-        getline(testas, eilute);
-        if (eilute == "T" || eilute == "t") {
-            nezinau.atsakymai[iteracija] = 'T';
-        }
-        else if (eilute == "F" || eilute == "f") {
-            nezinau.atsakymai[iteracija] = 'F';
-        }
-        else {
-            nezinau.atsakymai[iteracija] = '-';
-        }
+    infile.close();
+}
+//Isvedimas i faila results.txt
+void saugojimas(const vector<strukturaStudento> &studentas) {
+    ofstream lauk;
+    lauk.open("results.txt");
+    lauk << "ID\tTaskai\tProcent\tPazymys\n";
+    for (auto& nezinau : studentas) {
+        lauk << nezinau.id << "\t" << nezinau.taskai << "\t" << fixed << setprecision(0) << nezinau.procentas << "%\t" << nezinau.pazymys << endl;
     }
-
-
+    lauk.close();
 }
 
 int main() {
     vector<strukturaStudento> studentas;
-    strukturaKlausimu klausimai[klausimuKiekis];
-    trueFalse(klausimai);
-    tekstoDuomenys(klausimai);
-
+   duomenysIsFailo(studentas);
     bool veikimas = true;
     int pasirinkimas;
     while (veikimas == true) {
-        cout << "Pasirinkite funkcija:\n0: Nutraukti programa\n1: Valyti testa\n2: Priimti testa" << endl;
+        cout << "Pasirinkite funkcija:\n0: Nutraukti programa\n1: Klases statistika\n2: Studento paieska pagal ID\n3: Rezultatu issaugojimas i faila\n4: Kiekvieno klausimo statistika\n5: Sunkiausio klausimo nustatymas" << endl;
         cin >> pasirinkimas;
         switch (pasirinkimas) {
             case 0: {
+                veikimas = false;
                 break;
             }
             case 1: {
-                testas(klausimai, studentas);
                 break;
             }
             case 2: {
-                priimti(klausimai, studentas);
+                break;
+            }
+            case 3: {
+                saugojimas(studentas);
+                break;
+            }
+            case 4: {
+                break;
+            }
+            case 5: {
                 break;
             }
         }
