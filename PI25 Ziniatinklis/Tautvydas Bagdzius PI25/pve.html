@@ -1,92 +1,187 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="lt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kas yra PVE</title>
+  <title>PvE – We Stand From Dark</title>
+  <meta name="description" content="EVE Online PvE: misijos, anomalijos, kasyba, pramonė, tyrinėjimas ir NPC frakcijų kovos." />
+
+  <!-- Bootstrap CSS (exactly like pagrindinis.html) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared site styles -->
   <link rel="stylesheet" href="BendrasStilius.css" />
   <link rel="stylesheet" href="cssNuotraukos.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="pagrindinis.html"><img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo"></a> 
-      <h1>We Stand From Dark</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="pagrindinis.html">Pagrindinis</a></li>
-        <li><a href="pve.html" class="active">PvE</a></li>
-        <li><a href="pvp.html">PvP</a></li>
-        <li><a href="mining.html">Kasinėjimas</a></li>
-        <li><a href="industry.html">Industrija</a></li>
-        <li><a href="bendrininkai.html">Mūsų komanda</a></li>
-        <li><a href="forma.html">Prisijungimo forma</a></li>
-        <li><a href="nuotraukos.html">Nuotraukos</a></li>
-      </ul>
+  <!-- HEADER / NAV – copied structure & classes from pagrindinis.html -->
+  <header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-xl navbar-dark container">
+      <a class="navbar-brand d-flex align-items-center" href="pagrindinis.html">
+        <img src="Nuotraukos/Guristas.png" alt="We Stand From Dark Logo" class="wsfd-logo me-2">
+        <span class="fw-semibold">We Stand From Dark</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Perjungti navigaciją">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="pagrindinis.html">Pagrindinis</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pve.html">PvE</a></li>
+          <li class="nav-item"><a class="nav-link" href="pvp.html">PvP</a></li>
+          <li class="nav-item"><a class="nav-link" href="mining.html">Kasinėjimas</a></li>
+          <li class="nav-item"><a class="nav-link" href="industry.html">Industrija</a></li>
+          <li class="nav-item"><a class="nav-link" href="bendrininkai.html">Mūsų komanda</a></li>
+          <li class="nav-item"><a class="nav-link" href="forma.html">Prisijungimo forma</a></li>
+          <li class="nav-item"><a class="nav-link" href="nuotraukos.html">Nuotraukos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Nustatymai</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
-  <main class="two-column">
-    <section class="left-column">
-  <div class="content-box">
-    <h1>EVE Online PVE aspektas</h1>
-    <p>EVE Online PVE (Player vs Environment) aspektas – tai žaidimo dalis, kurioje sąveikaujama su aplinka ir NPC (nežaidėjų personažais),
-        o ne su kitais žaidėjais. PVE suteikia galimybę uždirbti ISK (žaidimo valiutą), gauti resursus, tobulinti laivus ir įgūdžius. Pagrindiniai PVE elementai:</p>
-    <h2>1. Misijos (Agent Missions)</h2>
-    <ul>
-        <li>Užduotys, kurias duoda NPC agentai: kovinės, transportavimo, kasybos.</li>
-        <li>Skirstomos pagal sudėtingumą (1–5 lygiai), didėjant rizikai ir atlygiam.</li>
-    </ul>
-    <h2>2. Anomalijos ir kompleksai</h2>
-    <ul>
-        <li>Kosminės anomalijos su NPC piratais.</li>
-        <li>„Deadspace“ kompleksai – sudėtingesni, reikalaujantys geresnės įrangos ir strategijos.</li>
-    </ul>
-    <h2>3. Kasyba (Mining)</h2>
-    <ul>
-        <li>Asteroidų išteklių gavyba.</li>
-        <li>Populiaru pradiniame etape, bet reikalauja laiko ir apsaugos nuo PVP grėsmių.</li>
-    </ul>
-    <h2>4. Pramonė ir gamyba</h2>
-    <ul>
-        <li>Žaliavų perdirbimas, laivų ir modulių gamyba.</li>
-        <li>Reikalauja investicijų ir rinkos analizės.</li>
-    </ul>
-    <h2>5. Tyrinėjimas (Exploration)</h2>
-    <ul>
-        <li>Skenerių naudojimas norint rasti slaptas vietas: „Data“ ir „Relic“ saitus.</li>
-        <li>Pelninga, bet rizikinga, ypač „wormhole“ erdvėse.</li>
-    </ul>
-    <h2>6. NPC frakcijų kovos</h2>
-    <ul>
-        <li>„Faction Warfare“ prieš NPC frakcijas, suteikiantis lojalumo taškus ir unikalius apdovanojimus.</li>
-    </ul>
-  </div>
-  <div class="galerija">
-        <a href="#8"><img src="Nuotraukos/8.png" alt="Description 8" /></a>
-        <a href="#W2"><img src="Nuotraukos/W2.jpg" alt="Description W2" /></a>
-        <a href="#W3"><img src="Nuotraukos/W3.jpg" alt="Description W3" /></a>
-        <a href="#W13"><img src="Nuotraukos/W13.png" alt="Description W13" /></a>
-        <a href="#W14"><img src="Nuotraukos/W14.jpg" alt="Description W14" /></a>
-        <a href="#W16"><img src="Nuotraukos/W16.jpg" alt="Description W16" /></a>
-        <div id="8" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/8.png" alt="Description 8"><a href="#W16" class="atgal">‹</a><a href="#W2" class="kitas">›</a></div>
-        <div id="W2" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W2.jpg" alt="Description W2"><a href="#8" class="atgal">‹</a><a href="#W3" class="kitas">›</a></div>
-        <div id="W3" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W3.jpg" alt="Description W3"><a href="#W2" class="atgal">‹</a><a href="#W13" class="kitas">›</a></div>
-        <div id="W13" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W13.png" alt="Description W13"><a href="#W3" class="atgal">‹</a><a href="#W14" class="kitas">›</a></div>
-        <div id="W14" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W14.jpg" alt="Description W14"><a href="#W13" class="atgal">‹</a><a href="#W16" class="kitas">›</a></div>
-        <div id="W16" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W16.jpg" alt="Description W16"><a href="#W14" class="atgal">‹</a><a href="#8" class="kitas">›</a></div>
+
+  <!-- MAIN – same two-column grid as pagrindinis.html -->
+  <main class="container my-2 my-md-4">
+    <div class="row g-4">
+      <!-- LEFT: MAIN CONTENT -->
+      <section class="col-12 col-md-8 col-lg-9 col-xxl-10">
+        <article class="content-box mb-4">
+          <h2 class="h3 text-center">EVE Online PvE aspektas</h2>
+          <p>
+            EVE Online PVE (Player vs Environment) aspektas – tai žaidimo dalis, kurioje sąveikaujama su aplinka ir NPC (nežaidėjų personažais),
+            o ne su kitais žaidėjais. PVE suteikia galimybę uždirbti ISK (žaidimo valiutą), gauti resursus, tobulinti laivus ir įgūdžius.
+            Pagrindiniai PVE elementai:
+          </p>
+
+          <h3>1. Misijos (Agent Missions)</h3>
+          <ul>
+            <li>Užduotys, kurias duoda NPC agentai: kovinės, transportavimo, kasybos.</li>
+            <li>Skirstomos pagal sudėtingumą (1–5 lygiai), didėjant rizikai ir atlygiam.</li>
+          </ul>
+
+          <h3>2. Anomalijos ir kompleksai</h3>
+          <ul>
+            <li>Kosminės anomalijos su NPC piratais.</li>
+            <li>„Deadspace“ kompleksai – sudėtingesni, reikalaujantys geresnės įrangos ir strategijos.</li>
+          </ul>
+
+          <h3>3. Kasyba (Mining)</h3>
+          <ul>
+            <li>Asteroidų išteklių gavyba.</li>
+            <li>Populiaru pradiniame etape, bet reikalauja laiko ir apsaugos nuo PVP grėsmių.</li>
+          </ul>
+
+          <h3>4. Pramonė ir gamyba</h3>
+          <ul>
+            <li>Žaliavų perdirbimas, laivų ir modulių gamyba.</li>
+            <li>Reikalauja investicijų ir rinkos analizės.</li>
+          </ul>
+
+          <h3>5. Tyrinėjimas (Exploration)</h3>
+          <ul>
+            <li>Skenerių naudojimas norint rasti slaptas vietas: „Data“ ir „Relic“ saitus.</li>
+            <li>Pelninga, bet rizikinga, ypač „wormhole“ erdvėse.</li>
+          </ul>
+
+          <h3>6. NPC frakcijų kovos</h3>
+          <ul>
+            <li>„Faction Warfare“ prieš NPC frakcijas, suteikiantis lojalumo taškus ir unikalius apdovanojimus.</li>
+          </ul>
+        </article>
+
+        <!-- GALLERY – kept exactly as your original (same src/href values) -->
+        <div class="galerija">
+          <a href="#8"><img src="Nuotraukos/8.png" alt="Description 8" /></a>
+          <a href="#W2"><img src="Nuotraukos/W2.jpg" alt="Description W2" /></a>
+          <a href="#W3"><img src="Nuotraukos/W3.jpg" alt="Description W3" /></a>
+          <a href="#W13"><img src="Nuotraukos/W13.png" alt="Description W13" /></a>
+          <a href="#W14"><img src="Nuotraukos/W14.jpg" alt="Description W14" /></a>
+          <a href="#W16"><img src="Nuotraukos/W16.jpg" alt="Description W16" /></a>
+
+          <div id="8" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/8.png" alt="Description 8"><a href="#W16" class="atgal">‹</a><a href="#W2" class="kitas">›</a></div>
+          <div id="W2" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W2.jpg" alt="Description W2"><a href="#8" class="atgal">‹</a><a href="#W3" class="kitas">›</a></div>
+          <div id="W3" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W3.jpg" alt="Description W3"><a href="#W2" class="atgal">‹</a><a href="#W13" class="kitas">›</a></div>
+          <div id="W13" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W13.png" alt="Description W13"><a href="#W3" class="atgal">‹</a><a href="#W14" class="kitas">›</a></div>
+          <div id="W14" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W14.jpg" alt="Description W14"><a href="#W13" class="atgal">‹</a><a href="#W16" class="kitas">›</a></div>
+          <div id="W16" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W16.jpg" alt="Description W16"><a href="#W14" class="atgal">‹</a><a href="#8" class="kitas">›</a></div>
+        </div>
+      </section>
+
+      <!-- RIGHT: ONLY the “Svarbu” box (no internal nav), same column widths -->
+      <aside class="col-12 col-md-4 col-lg-3 col-xxl-2 sidebar-sticky d-none d-md-block">
+        <div class="right-column">
+          <h2 class="mb-3 text-center">Svarbu</h2>
+          <ul class="mb-0">
+            <li>Nors PvE yra saugesnis nei PvP, EVE visada turi rizikos elementą – net saugiose zonose galima susidurti su kitais žaidėjais.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="settingsTitle" class="modal-title">Nustatymai</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Uždaryti"></button>
       </div>
-  </section>
-  <aside class="right-column">
-    <h2>Sarbu
-    </h2>
-    <ul>
-        <li>Nors PVE yra saugesnis nei PVP, EVE visada turi rizikos elementą – net saugiose zonose galima susidurti su kitais žaidėjais.</li>
-    </ul>
-  </aside>
-</main>
-<footer>
-    <p>&copy; 2025 Tautvydas Bagdzius</p>
+      <div class="modal-body">
+        <!-- Fono režimas -->
+        <div class="mb-3">
+          <label class="form-label d-block">Fono režimas</label>
+          <div class="btn-group" role="group" aria-label="Theme">
+            <input type="radio" class="btn-check" name="theme" id="theme-light" value="light" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-light">Dienos</label>
+            <input type="radio" class="btn-check" name="theme" id="theme-dark" value="dark" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-dark">Naktinis</label>
+          </div>
+        </div>
+
+        <!-- Akcento spalva -->
+        <div class="mb-3">
+          <label for="accentColor" class="form-label">Akcento spalva</label>
+          <input type="color" id="accentColor" class="form-control form-control-color" value="#ffc107" title="Pasirinkite akcento spalvą">
+        </div>
+
+        <!-- Teksto dydis -->
+        <div class="mb-1">
+          <label for="fontScale" class="form-label">Teksto dydis</label>
+          <select id="fontScale" class="form-select">
+            <option value="0.95">Mažas</option>
+            <option value="1" selected>Normalus</option>
+            <option value="1.1">Didelis</option>
+            <option value="1.2">Labai didelis</option>
+          </select>
+        </div>
+        <div class="form-text">Dydis taikomas visam puslapiui; reikšmė – daugiklis (×).</div>
+      </div>
+      <div class="modal-footer">
+        <button id="resetSettings" type="button" class="btn btn-outline-secondary">Atstatyti</button>
+        <button id="saveSettings" type="button" class="btn btn-primary">Išsaugoti</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- FOOTER – same style as pagrindinis.html -->
+  <footer class="bg-dark text-white text-center py-2 mt-4">
+    © 2026 Tautvydas Bagdžius PI25
   </footer>
+
+  <!-- Bootstrap JS bundle (same integrity & crossorigin) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+  </script>
+  <script src="wsfd.js"></script>
 </body>
 </html>

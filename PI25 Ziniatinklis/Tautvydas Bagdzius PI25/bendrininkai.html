@@ -1,58 +1,133 @@
 <!DOCTYPE html>
-<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mūsų komanda</title>
+  <title>Mūsų komanda – We Stand From Dark</title>
+  <meta name="description" content="Susisiekite su We Stand From Dark komanda per Discord. Taisyklės ir kontaktai." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="BendrasStilius.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="pagrindinis.html"><img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo"></a>
-      <h1>We Stand From Dark</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="pagrindinis.html">Pagrindinis</a></li>
-        <li><a href="pve.html">PvE</a></li>
-        <li><a href="pvp.html">PvP</a></li>
-        <li><a href="mining.html">Kasinėjimas</a></li>
-        <li><a href="industry.html">Industrija</a></li>
-        <li><a href="bendrininkai.html" class="active">Mūsų komanda</a></li>
-        <li><a href="forma.html">Prisijungimo forma</a></li>
-        <li><a href="nuotraukos.html">Nuotraukos</a></li>
-      </ul>
+  <!-- HEADER / NAV -->
+  <header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-xl navbar-dark container">
+      <a class="navbar-brand d-flex align-items-center" href="pagrindinis.html">
+        <img src="Nuotraukos/Guristas.png" alt="We Stand From Dark Logo" class="wsfd-logo me-2">
+        <span class="fw-semibold">We Stand From Dark</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Perjungti navigaciją">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="pagrindinis.html">Pagrindinis</a></li>
+          <li class="nav-item"><a class="nav-link" href="pve.html">PvE</a></li>
+          <li class="nav-item"><a class="nav-link" href="pvp.html">PvP</a></li>
+          <li class="nav-item"><a class="nav-link" href="mining.html">Kasinėjimas</a></li>
+          <li class="nav-item"><a class="nav-link" href="industry.html">Industrija</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="bendrininkai.html">Mūsų komanda</a></li>
+          <li class="nav-item"><a class="nav-link" href="forma.html">Prisijungimo forma</a></li>
+          <li class="nav-item"><a class="nav-link" href="nuotraukos.html">Nuotraukos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Nustatymai</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
-  <main class="two-column">
-    <section class="left-column">
-      <div class="content-box">
-        <h1>Susisiekite su mumis</h1>
-        <p>
-          Prisijunkite prie mūsų „Discord“ ir susipažinkite su komanda.
+
+  <main class="container my-2 my-md-4">
+    <div class="row g-4">
+      <!-- MAIN CONTENT -->
+      <section class="col-12 col-md-8">
+        <div class="content-box mb-4">
+          <h1>Susisiekite su mumis</h1>
+          <p>Prisijunkite prie mūsų „Discord“ ir susipažinkite su komanda.</p>
           <ul>
-            <li><a href="https://discord.gg/rykCFe7M2V">We Stand From Dark</a><strong> Korporacijos diskordas</strong></li>
-            <li><a href="https://discord.gg/SM9H8xjdzT">Fallen Syndicate Universe</a><strong> Bendros veiklos alijancas</strong></li>
-            <li><a href="https://discord.gg/EhVAr74Hpd">Snail Church</a><strong> Juodųjų skylių alijancas</strong></li>
-            <li><a href="https://discord.gg/8HpZE9AxQb">Hevensfall Reapers</a><strong> Nulinės saugos alijancas</strong></li>
+            <li>
+              <a href="https://discord.gg/rykCFe7M2V">We Stand From Dark</a>
+              <strong> Korporacijos diskordas</strong>
+            </li>
+            <li>
+              <a href="https://discord.gg/SM9H8xjdzT">Fallen Syndicate Universe</a>
+              <strong> Bendros veiklos alijancas</strong>
+            </li>
+            <li>
+              <a href="https://discord.gg/EhVAr74Hpd">Snail Church</a>
+              <strong> Juodųjų skylių alijancas</strong>
+            </li>
+            <li>
+              <a href="https://discord.gg/8HpZE9AxQb">Hevensfall Reapers</a>
+              <strong> Nulinės saugos alijancas</strong>
+            </li>
           </ul>
-        </p>
-      </div>
-    </section>
-    <aside class="right-column">
-      <h2>Taisyklės diskord kanaluose</h2>
-      <ul>
-        <li>Nepilnamečiai bus nedelsiaint pašalinami.</li>
-        <li>Informacijos nutekinimas iš čia esančių kanalų yra baudžiamas teisės aktų nustatyta tvarka.</li>
-        <li>Gerbkite vieni kitus, nors neturime cenzūros tai nereiškia kad galite peržengti linija ir įžeidinėti kitus asmenis. Jei mūsų platformoje įžeidinėsit kitus būsit nedelsiant pašalinami.</li>
-        <li>Turime daugybę kanalų, tad prašome juos naudoti pagal paskirti ir nediskutuoti apie kanalui neskirtas temas, taip greičiau ir papraščiau rasite norima informacija.</li>
-        <li>Daugiau taisyklių rasite atitinkamose discord grupėse, tad prašome su jomis susipažinti ir jų laikytis.</li>
-      </ul>
-    </aside>
+        </div>
+      </section>
+      <!-- SIDEBAR: Only "Taisyklės diskord kanaluose" box -->
+      <aside class="col-12 col-md-4 sidebar-sticky">
+        <div class="right-column">
+          <h2 class="mb-3 text-center">Taisyklės diskord kanaluose</h2>
+          <ul class="mb-0">
+            <li>Nepilnamečiai bus nedelsiaint pašalinami.</li>
+            <li>Informacijos nutekinimas iš čia esančių kanalų yra baudžiamas teisės aktų nustatyta tvarka.</li>
+            <li>Gerbkite vieni kitus, nors neturime cenzūros tai nereiškia kad galite peržengti linija ir įžeidinėti kitus asmenis. Jei mūsų platformoje įžeidinėsit kitus būsit nedelsiant pašalinami.</li>
+            <li>Turime daugybę kanalų, tad prašome juos naudoti pagal paskirtį ir nediskutuoti apie kanalui neskirtas temas, taip greičiau ir papraščiau rasite norimą informaciją.</li>
+            <li>Daugiau taisyklių rasite atitinkamose discord grupėse, tad prašome su jomis susipažinti ir jų laikytis.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Tautvydas Bagdzius</p>
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="settingsTitle" class="modal-title">Nustatymai</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Uždaryti"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Fono režimas -->
+        <div class="mb-3">
+          <label class="form-label d-block">Fono režimas</label>
+          <div class="btn-group" role="group" aria-label="Theme">
+            <input type="radio" class="btn-check" name="theme" id="theme-light" value="light" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-light">Dienos</label>
+            <input type="radio" class="btn-check" name="theme" id="theme-dark" value="dark" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-dark">Naktinis</label>
+          </div>
+        </div>
+
+        <!-- Akcento spalva -->
+        <div class="mb-3">
+          <label for="accentColor" class="form-label">Akcento spalva</label>
+          <input type="color" id="accentColor" class="form-control form-control-color" value="#ffc107" title="Pasirinkite akcento spalvą">
+        </div>
+
+        <!-- Teksto dydis -->
+        <div class="mb-1">
+          <label for="fontScale" class="form-label">Teksto dydis</label>
+          <select id="fontScale" class="form-select">
+            <option value="0.95">Mažas</option>
+            <option value="1" selected>Normalus</option>
+            <option value="1.1">Didelis</option>
+            <option value="1.2">Labai didelis</option>
+          </select>
+        </div>
+        <div class="form-text">Dydis taikomas visam puslapiui; reikšmė – daugiklis (×).</div>
+      </div>
+      <div class="modal-footer">
+        <button id="resetSettings" type="button" class="btn btn-outline-secondary">Atstatyti</button>
+        <button id="saveSettings" type="button" class="btn btn-primary">Išsaugoti</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer class="bg-dark text-white text-center py-2 mt-4">
+    &copy; 2026 Tautvydas Bagdžius PI25
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="wsfd.js"></script>
 </body>
-</html>
+</html

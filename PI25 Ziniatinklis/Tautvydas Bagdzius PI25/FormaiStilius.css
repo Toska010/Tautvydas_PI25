@@ -1,5 +1,5 @@
 form {
-    background-color: #ffffffcc;
+    background-color: #ffffff79;
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #333;
@@ -100,3 +100,98 @@ input[type="submit"]:hover {
 /* * {
   outline: 1px solid red;
 } */
+ /* Variables that your Settings (wsfd.js) expects/changes */
+    :root{
+      --wsfd-accent: #ffc107;     /* JS may change */
+      --wsfd-font-scale: 1;       /* JS may change */
+      --wsfd-panel-bg: #ffffff79; /* light panel background */
+      --wsfd-text-color: #212529;
+    }
+
+    body{
+      font-size: calc(16px * var(--wsfd-font-scale));
+      color: var(--wsfd-text-color);
+    }
+
+    /* Use vars for panels/boxes if you have them elsewhere */
+    .content-box,
+    .right-column{ background-color: var(--wsfd-panel-bg); }
+
+    /* Active menu underline uses accent */
+    .navbar-nav .nav-link.active{
+      border-bottom: 2px solid var(--wsfd-accent);
+    }
+
+    /* Dark theme override that JS enables by toggling .theme-dark on <html> */
+    .theme-dark{
+      --wsfd-panel-bg: rgba(15,15,20,0.75);
+      --wsfd-text-color: #eaeaea;
+    }
+
+    /* Make the FORM follow the theme without changing JS */
+    /* Your FormaiStilius.css gives form a white background — override it here to be theme-aware */
+    form{
+      background: var(--wsfd-panel-bg) !important; /* light by default, dark in .theme-dark */
+      border-color: #333;
+      color: inherit;
+    }
+    .theme-dark form{
+      border-color: #444; /* optional darker border on dark theme */
+    }
+    
+/* Užtikrina, kad tekstas dėžutėse ir aside paveldėtų teminę spalvą */
+.checkbox-row,
+.checkbox-row legend,
+.checkbox-option label,
+.right-column,
+.right-column h1,
+.right-column h2 {
+  color: var(--wsfd-text-color);
+}
+
+/* Jei reikia, stipresnis kontrastas legend ir heading */
+.checkbox-row legend,
+.right-column h2 {
+  font-weight: 600;
+}
+
+/* Užtikrina kontrastą checkbox blokui ir jo tekstui */
+.checkbox-row,
+.checkbox-row legend,
+.checkbox-option label {
+  color: var(--wsfd-text-color);
+}
+
+/* Papildomai, kad sąrašai ir heading būtų aiškūs */
+.right-column,
+.right-column h2,
+.right-column li {
+  color: var(--wsfd-text-color);
+}
+
+/* Užtikriname, kad visi tekstai checkbox bloke būtų aiškūs */
+.checkbox-row,
+.checkbox-row legend,
+.checkbox-option label {
+  color: var(--wsfd-text-color) !important;
+  font-weight: 600;
+}
+
+/* Padidiname šrifto dydį, kad būtų geriau matoma */
+.checkbox-option label {
+  font-size: 1.1em;
+}
+
+/* Pridedame subtilų foną checkbox blokui, kad kontrastas būtų geresnis */
+.checkbox-row {
+  background-color: rgba(255, 255, 255, 0.08); /* šviesus sluoksnis ant tamsaus fono */
+  padding: 1em;
+  border-radius: 8px;
+}
+
+/* Aside heading ir tekstas */
+.right-column h2,
+.right-column li {
+  color: var(--wsfd-text-color) !important;
+  font-weight: 700;
+}

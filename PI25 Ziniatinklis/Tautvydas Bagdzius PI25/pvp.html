@@ -1,91 +1,183 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="lt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kas yra PVP</title>
+  <title>PvP – We Stand From Dark</title>
+  <meta name="description" content="EVE Online PvP: kovų tipai, strategijos, ekonominė įtaka ir svarbiausi aspektai." />
+
+  <!-- Bootstrap CSS (same version & attributes as pagrindinis.html) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <!-- Shared site styles -->
   <link rel="stylesheet" href="BendrasStilius.css" />
   <link rel="stylesheet" href="cssNuotraukos.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="pagrindinis.html"><img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo"></a>
-      <h1>We Stand From Dark</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="pagrindinis.html">Pagrindinis</a></li>
-        <li><a href="pve.html">PvE</a></li>
-        <li><a href="pvp.html" class="active">PvP</a></li>
-        <li><a href="mining.html">Kasinėjimas</a></li>
-        <li><a href="industry.html">Industrija</a></li>
-        <li><a href="bendrininkai.html">Mūsų komanda</a></li>
-        <li><a href="forma.html">Prisijungimo forma</a></li>
-        <li><a href="nuotraukos.html">Nuotraukos</a></li>
-      </ul>
+  <!-- HEADER / NAV -->
+  <header class="bg-dark text-white">
+    <nav class="navbar navbar-expand-xl navbar-dark container">
+      <a class="navbar-brand d-flex align-items-center" href="pagrindinis.html">
+        <!-- Keep the original logo link exactly (backslash) -->
+        <img src="Nuotraukos\Guristas.png" alt="We Stand From Dark Logo" class="wsfd-logo me-2" />
+        <span class="fw-semibold">We Stand From Dark</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Perjungti navigaciją">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="pagrindinis.html">Pagrindinis</a></li>
+          <li class="nav-item"><a class="nav-link" href="pve.html">PvE</a></li>
+          <!-- Active page -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pvp.html">PvP</a></li>
+          <li class="nav-item"><a class="nav-link" href="mining.html">Kasinėjimas</a></li>
+          <li class="nav-item"><a class="nav-link" href="industry.html">Industrija</a></li>
+          <li class="nav-item"><a class="nav-link" href="bendrininkai.html">Mūsų komanda</a></li>
+          <li class="nav-item"><a class="nav-link" href="forma.html">Prisijungimo forma</a></li>
+          <li class="nav-item"><a class="nav-link" href="nuotraukos.html">Nuotraukos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Nustatymai</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
-  <main class="two-column">
-    <section class="left-column">
-  <div class="content-box">
-    <h1>EVE Online PVP aspektas</h1>
-    <p>Kas yra PVP EVE Online? PVP – tai kovos tarp žaidėjų, kurios yra viena iš pagrindinių EVE Online mechanikų. Skirtingai nei PVE, čia susiduriama su realiais žaidėjais, todėl rizika ir strategija yra daug didesnė. PVP suteikia galimybę patirti dinamišką kovą, užkariauti teritorijas ir dalyvauti politikoje.</p>
 
-    <h2>Pagrindiniai PVP tipai</h2>
-    <ul>
-        <li><strong>Mažos apimties kovos (Small Gang PvP):</strong> Nedidelės grupės susidūrimai „low-sec“ arba „null-sec“ zonose. Reikalauja koordinacijos ir greitų sprendimų.</li>
-        <li><strong>Didelio mąsto (Fleet Battles):</strong> Šimtai ar net tūkstančiai laivų susiduria dėl teritorijų kontrolės. Dažnai organizuojama aljansų ir korporacijų.</li>
-        <li><strong>Solo PVP:</strong> Vienas žaidėjas prieš kitus. Labai rizikinga, bet įdomu patyrusiems pilotams.</li>
-        <li><strong>Gate Camp ir Hinterland PVP:</strong> Laukimas prie vartų (gate) arba strateginių taškų, kad užpultum praeinančius laivus. Dažnai naudojama piratavimo strategijose.</li>
-        <li><strong>Wormhole PVP:</strong> Kovos slaptose erdvėse, kur nėra vietos saugumo sistemoms. Labai nenuspėjama ir pelninga.</li>
-    </ul>
+  <!-- MAIN (two-column grid like pagrindinis.html) -->
+  <main class="container my-2 my-md-4">
+    <div class="row g-4">
+      <!-- LEFT: MAIN CONTENT -->
+      <section class="col-12 col-md-8 col-lg-9 col-xxl-10">
+        <div class="content-box mb-4">
+          <h1>EVE Online PvP aspektas</h1>
+          <p>
+            Kas yra PvP EVE Online? PvP – tai kovos tarp žaidėjų, kurios yra viena iš pagrindinių EVE Online mechanikų.
+            Skirtingai nei PvE, čia susiduriama su realiais žaidėjais, todėl rizika ir strategija yra daug didesnė.
+            PvP suteikia galimybę patirti dinamišką kovą, užkariauti teritorijas ir dalyvauti politikoje.
+          </p>
 
-    <h2>Svarbiausi PVP aspektai</h2>
-    <ul>
-        <li><strong>Laivų praradimas yra normalu:</strong> EVE filosofija – „Don’t fly what you can’t afford to lose.“ (Neskrisk su tuo ką bijai prarasti)</li>
-        <li><strong>Strategija ir žvalgyba:</strong> Informacija apie priešą yra kritiškai svarbi.</li>
-        <li><strong>Fit’ai (įrangos konfigūracijos):</strong> Tinkamas laivo pritaikymas kovai lemia pergalę.</li>
-        <li><strong>Aljansai ir korporacijos:</strong> PVP dažnai vyksta organizuotai, todėl bendradarbiavimas yra būtinas.</li>
-    </ul>
-  </div>
-  <div class="galerija">
-        <a href="#3"><img src="Nuotraukos/3.png" alt="Description 3" /></a>
-        <a href="#11"><img src="Nuotraukos/11.png" alt="Description 11" /></a>
-        <a href="#W1"><img src="Nuotraukos/W1.jpg" alt="Description W1" /></a>
-        <a href="#W2"><img src="Nuotraukos/W2.jpg" alt="Description W2" /></a>
-        <a href="#W4"><img src="Nuotraukos/W4.jpg" alt="Description W4" /></a>
-        <a href="#W5"><img src="Nuotraukos/W5.jpg" alt="Description W5" /></a>
-        <a href="#W6"><img src="Nuotraukos/W6.jpg" alt="Description W6" /></a>
-        <a href="#W7"><img src="Nuotraukos/W7.jpg" alt="Description W7" /></a>
-        <a href="#W8"><img src="Nuotraukos/W8.jpg" alt="Description W8" /></a>
-        <a href="#W9"><img src="Nuotraukos/W9.jpg" alt="Description W9" /></a>
-        <a href="#W10"><img src="Nuotraukos/W10.jpg" alt="Description W10" /></a>
-        <a href="#W14"><img src="Nuotraukos/W14.jpg" alt="Description W14" /></a>
-        <div id="3" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/3.png" alt="Description 3"><a href="#W14" class="atgal">‹</a><a href="#11" class="kitas">›</a></div>
-        <div id="11" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/11.png" alt="Description 11"><a href="#3" class="atgal">‹</a><a href="#W1" class="kitas">›</a></div>
-        <div id="W1" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W1.jpg" alt="Description W1"><a href="#11" class="atgal">‹</a><a href="#W2" class="kitas">›</a></div>
-        <div id="W2" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W2.jpg" alt="Description W2"><a href="#W1" class="atgal">‹</a><a href="#W4" class="kitas">›</a></div>
-        <div id="W4" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W4.jpg" alt="Description W4"><a href="#W2" class="atgal">‹</a><a href="#W5" class="kitas">›</a></div>
-        <div id="W5" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W5.jpg" alt="Description W5"><a href="#W4" class="atgal">‹</a><a href="#W6" class="kitas">›</a></div>
-        <div id="W6" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W6.jpg" alt="Description W6"><a href="#W5" class="atgal">‹</a><a href="#W7" class="kitas">›</a></div>
-        <div id="W7" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W7.jpg" alt="Description W7"><a href="#W6" class="atgal">‹</a><a href="#W8" class="kitas">›</a></div>
-        <div id="W8" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W8.jpg" alt="Description W8"><a href="#W7" class="atgal">‹</a><a href="#W9" class="kitas">›</a></div>
-        <div id="W9" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W9.jpg" alt="Description W9"><a href="#W8" class="atgal">‹</a><a href="#W10" class="kitas">›</a></div>
-        <div id="W10" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W10.jpg" alt="Description W10"><a href="#W9" class="atgal">‹</a><a href="#W14" class="kitas">›</a></div>
-        <div id="W14" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W14.jpg" alt="Description W14"><a href="#W10" class="atgal">‹</a><a href="#3" class="kitas">›</a></div>
+          <h2>Pagrindiniai PvP tipai</h2>
+          <ul>
+            <li><strong>Mažos apimties kovos (Small Gang PvP):</strong> Nedidelės grupės susidūrimai „low-sec“ arba „null-sec“ zonose. Reikalauja koordinacijos ir greitų sprendimų.</li>
+            <li><strong>Didelio mąsto (Fleet Battles):</strong> Šimtai ar net tūkstančiai laivų susiduria dėl teritorijų kontrolės. Dažnai organizuojama aljansų ir korporacijų.</li>
+            <li><strong>Solo PvP:</strong> Vienas žaidėjas prieš kitus. Labai rizikinga, bet įdomu patyrusiems pilotams.</li>
+            <li><strong>Gate Camp ir Hinterland PvP:</strong> Laukimas prie vartų (gate) arba strateginių taškų, kad užpultum praeinančius laivus. Dažnai naudojama piratavimo strategijose.</li>
+            <li><strong>Wormhole PvP:</strong> Kovos slaptose erdvėse, kur nėra vietos saugumo sistemoms. Labai nenuspėjama ir pelninga.</li>
+          </ul>
+
+          <h2>Svarbiausi PvP aspektai</h2>
+          <ul>
+            <li><strong>Laivų praradimas yra normalu:</strong> EVE filosofija – „Don’t fly what you can’t afford to lose.“ (Neskrisk su tuo ką bijai prarasti)</li>
+            <li><strong>Strategija ir žvalgyba:</strong> Informacija apie priešą yra kritiškai svarbi.</li>
+            <li><strong>Fit’ai (įrangos konfigūracijos):</strong> Tinkamas laivo pritaikymas kovai lemia pergalę.</li>
+            <li><strong>Aljansai ir korporacijos:</strong> PvP dažnai vyksta organizuotai, todėl bendradarbiavimas yra būtinas.</li>
+          </ul>
+        </div>
+
+        <!-- GALLERY (kept exactly as in your original; same src/href values) -->
+        <div class="galerija">
+          <a href="#3"><img src="Nuotraukos/3.png" alt="Description 3" /></a>
+          <a href="#11"><img src="Nuotraukos/11.png" alt="Description 11" /></a>
+          <a href="#W1"><img src="Nuotraukos/W1.jpg" alt="Description W1" /></a>
+          <a href="#W2"><img src="Nuotraukos/W2.jpg" alt="Description W2" /></a>
+          <a href="#W4"><img src="Nuotraukos/W4.jpg" alt="Description W4" /></a>
+          <a href="#W5"><img src="Nuotraukos/W5.jpg" alt="Description W5" /></a>
+          <a href="#W6"><img src="Nuotraukos/W6.jpg" alt="Description W6" /></a>
+          <a href="#W7"><img src="Nuotraukos/W7.jpg" alt="Description W7" /></a>
+          <a href="#W8"><img src="Nuotraukos/W8.jpg" alt="Description W8" /></a>
+          <a href="#W9"><img src="Nuotraukos/W9.jpg" alt="Description W9" /></a>
+          <a href="#W10"><img src="Nuotraukos/W10.jpg" alt="Description W10" /></a>
+          <a href="#W14"><img src="Nuotraukos/W14.jpg" alt="Description W14" /></a>
+
+          <div id="3" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/3.png" alt="Description 3" /><a href="#W14" class="atgal">‹</a><a href="#11" class="kitas">›</a></div>
+          <div id="11" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/11.png" alt="Description 11" /><a href="#3" class="atgal">‹</a><a href="#W1" class="kitas">›</a></div>
+          <div id="W1" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W1.jpg" alt="Description W1" /><a href="#11" class="atgal">‹</a><a href="#W2" class="kitas">›</a></div>
+          <div id="W2" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W2.jpg" alt="Description W2" /><a href="#W1" class="atgal">‹</a><a href="#W4" class="kitas">›</a></div>
+          <div id="W4" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W4.jpg" alt="Description W4" /><a href="#W2" class="atgal">‹</a><a href="#W5" class="kitas">›</a></div>
+          <div id="W5" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W5.jpg" alt="Description W5" /><a href="#W4" class="atgal">‹</a><a href="#W6" class="kitas">›</a></div>
+          <div id="W6" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W6.jpg" alt="Description W6" /><a href="#W5" class="atgal">‹</a><a href="#W7" class="kitas">›</a></div>
+          <div id="W7" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W7.jpg" alt="Description W7" /><a href="#W6" class="atgal">‹</a><a href="#W8" class="kitas">›</a></div>
+          <div id="W8" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W8.jpg" alt="Description W8" /><a href="#W7" class="atgal">‹</a><a href="#W9" class="kitas">›</a></div>
+          <div id="W9" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W9.jpg" alt="Description W9" /><a href="#W8" class="atgal">‹</a><a href="#W10" class="kitas">›</a></div>
+          <div id="W10" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W10.jpg" alt="Description W10" /><a href="#W9" class="atgal">‹</a><a href="#W14" class="kitas">›</a></div>
+          <div id="W14" class="fonas"><a href="#" class="uzdaryti">×</a><img src="Nuotraukos/W14.jpg" alt="Description W14" /><a href="#W10" class="atgal">‹</a><a href="#3" class="kitas">›</a></div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Only the “Pastaba” box (no internal navigation) -->
+      <aside class="col-12 col-md-4 col-lg-3 col-xxl-2 sidebar-sticky d-none d-md-block">
+        <div class="right-column">
+          <h2 class="mb-3 text-center">Pastaba</h2>
+          <ul class="mb-0">
+            <li>PvP EVE Online yra neatsiejama nuo ekonomikos – laivų praradimas skatina rinką, todėl kiekviena kova turi finansinę įtaką.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="settingsTitle" class="modal-title">Nustatymai</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Uždaryti"></button>
       </div>
-  </section>
-  <aside class="right-column">
-    <h2>Pastaba
-    </h2>
-    <ul>
-        <li>PVP EVE Online yra neatsiejama nuo ekonomikos – laivų praradimas skatina rinką, todėl kiekviena kova turi finansinę įtaką.</li>
-    </ul>
-  </aside>
-</main>
-<footer>
-    <p>&copy; 2025 Tautvydas Bagdzius</p>
+      <div class="modal-body">
+        <!-- Fono režimas -->
+        <div class="mb-3">
+          <label class="form-label d-block">Fono režimas</label>
+          <div class="btn-group" role="group" aria-label="Theme">
+            <input type="radio" class="btn-check" name="theme" id="theme-light" value="light" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-light">Dienos</label>
+            <input type="radio" class="btn-check" name="theme" id="theme-dark" value="dark" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="theme-dark">Naktinis</label>
+          </div>
+        </div>
+
+        <!-- Akcento spalva -->
+        <div class="mb-3">
+          <label for="accentColor" class="form-label">Akcento spalva</label>
+          <input type="color" id="accentColor" class="form-control form-control-color" value="#ffc107" title="Pasirinkite akcento spalvą">
+        </div>
+
+        <!-- Teksto dydis -->
+        <div class="mb-1">
+          <label for="fontScale" class="form-label">Teksto dydis</label>
+          <select id="fontScale" class="form-select">
+            <option value="0.95">Mažas</option>
+            <option value="1" selected>Normalus</option>
+            <option value="1.1">Didelis</option>
+            <option value="1.2">Labai didelis</option>
+          </select>
+        </div>
+        <div class="form-text">Dydis taikomas visam puslapiui; reikšmė – daugiklis (×).</div>
+      </div>
+      <div class="modal-footer">
+        <button id="resetSettings" type="button" class="btn btn-outline-secondary">Atstatyti</button>
+        <button id="saveSettings" type="button" class="btn btn-primary">Išsaugoti</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- FOOTER (consistent with pagrindinis.html style; year matches your original PvP) -->
+  <footer class="bg-dark text-white text-center py-2 mt-4">
+     &copy; 2026 Tautvydas Bagdžius PI25
   </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+  </script>
+  <script src="wsfd.js"></script>
 </body>
 </html>
