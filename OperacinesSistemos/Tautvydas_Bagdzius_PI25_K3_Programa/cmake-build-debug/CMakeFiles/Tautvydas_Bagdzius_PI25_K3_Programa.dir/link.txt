@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Tautvydas_Bagdzius_PI25_K3_Programa.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\Tautvydas_Bagdzius_PI25_K3_Programa.dir/objects.a @CMakeFiles\Tautvydas_Bagdzius_PI25_K3_Programa.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Tautvydas_Bagdzius_PI25_K3_Programa.dir/objects.a -Wl,--no-whole-archive -o Tautvydas_Bagdzius_PI25_K3_Programa.exe -Wl,--out-implib,libTautvydas_Bagdzius_PI25_K3_Programa.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Tautvydas_Bagdzius_PI25_K3_Programa.dir\linkLibs.rsp
