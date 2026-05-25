@@ -21,6 +21,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "C:/Program Files/JetBrains/CLion 2024.2.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeMinGWFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "C:/Program Files/JetBrains/CLion 2024.2.3/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -817,8 +822,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/toska/Desktop/Tautvydas_Bagdzius_PI25_K1_Programa2/cmake-build-debug",
-		"source" : "C:/Users/toska/Desktop/Tautvydas_Bagdzius_PI25_K1_Programa2"
+		"build" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa1/cmake-build-debug",
+		"source" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa1"
 	},
 	"version" : 
 	{

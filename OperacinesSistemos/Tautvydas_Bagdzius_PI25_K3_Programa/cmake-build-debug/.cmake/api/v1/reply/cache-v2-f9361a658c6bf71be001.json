@@ -55,7 +55,11 @@
 				}
 			],
 			"type" : "INTERNAL",
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f9361a658c6bf71be001.json
 			"value" : "c:/Users/s057522/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug"
+========
+			"value" : "c:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug"
+>>>>>>>> d4c780138423d68be15cb5d6240b11040a733001:Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8e08ee30e0df7df7f652.json
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -559,7 +563,11 @@
 				}
 			],
 			"type" : "STATIC",
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f9361a658c6bf71be001.json
 			"value" : "C:/Users/s057522/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/CMakeFiles/pkgRedirects"
+========
+			"value" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/CMakeFiles/pkgRedirects"
+>>>>>>>> d4c780138423d68be15cb5d6240b11040a733001:Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8e08ee30e0df7df7f652.json
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -631,7 +639,11 @@
 				}
 			],
 			"type" : "INTERNAL",
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f9361a658c6bf71be001.json
 			"value" : "C:/Users/s057522/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa"
+========
+			"value" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa2"
+>>>>>>>> d4c780138423d68be15cb5d6240b11040a733001:Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8e08ee30e0df7df7f652.json
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -643,7 +655,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Tautvydas_Bagdzius_PI25_K3_Programa"
+			"value" : "C:/Program Files (x86)/Tautvydas_Bagdzius_PI25_K4_Programa2"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -863,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Tautvydas_Bagdzius_PI25_K3_Programa"
+			"value" : "Tautvydas_Bagdzius_PI25_K4_Programa2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1258,7 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Tautvydas_Bagdzius_PI25_K3_Programa_BINARY_DIR",
+			"name" : "Tautvydas_Bagdzius_PI25_K4_Programa2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1267,10 +1279,14 @@
 				}
 			],
 			"type" : "STATIC",
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f9361a658c6bf71be001.json
 			"value" : "C:/Users/s057522/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug"
+========
+			"value" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug"
+>>>>>>>> d4c780138423d68be15cb5d6240b11040a733001:Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8e08ee30e0df7df7f652.json
 		},
 		{
-			"name" : "Tautvydas_Bagdzius_PI25_K3_Programa_IS_TOP_LEVEL",
+			"name" : "Tautvydas_Bagdzius_PI25_K4_Programa2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1282,7 +1298,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Tautvydas_Bagdzius_PI25_K3_Programa_SOURCE_DIR",
+			"name" : "Tautvydas_Bagdzius_PI25_K4_Programa2_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1291,7 +1307,11 @@
 				}
 			],
 			"type" : "STATIC",
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f9361a658c6bf71be001.json
 			"value" : "C:/Users/s057522/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa"
+========
+			"value" : "C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K4_Programa2"
+>>>>>>>> d4c780138423d68be15cb5d6240b11040a733001:Tautvydas_Bagdzius_PI25_K4_Programa2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8e08ee30e0df7df7f652.json
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
