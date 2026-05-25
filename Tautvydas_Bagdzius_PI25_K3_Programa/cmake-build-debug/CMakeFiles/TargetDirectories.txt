@@ -1,3 +1,0 @@
-C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/CMakeFiles/Tautvydas_Bagdzius_PI25_K3_Programa.dir
-C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/toska/Desktop/Darbai/Tautvydas_Bagdzius_PI25_K3_Programa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
