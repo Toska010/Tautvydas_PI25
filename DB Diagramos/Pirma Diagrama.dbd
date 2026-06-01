@@ -1,0 +1,2330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Database Diagram File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDatabaseDiagram>
+  <SchemaVersion>1.3</SchemaVersion>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <ConnectionModel>
+      <PropertyValue Name="Database">59f90733-4d68-4fdf-82a7-f0fcbf5460aa</PropertyValue>
+      <PropertyValue Name="Id">a980d456-bd76-4333-8502-6d935a4d284e</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Database=mydb;Character Set=utf8</PropertyValue>
+    </ConnectionModel>
+  </Connection>
+  <Settings>
+    <DbDiagramOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <PreserveRouting>false</PreserveRouting>
+      <CustomProperties />
+    </DbDiagramOptions>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
+      <TopLeftMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>210 mm</Width>
+        <Height>297 mm</Height>
+      </PaperSize>
+    </Options>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ViewOptions">
+      <ShadowOffset>
+        <X>4 px</X>
+        <Y>4 px</Y>
+      </ShadowOffset>
+      <CustomProperties>
+        <ShadowColor>100, 204, 206, 219</ShadowColor>
+      </CustomProperties>
+    </Options>
+  </Settings>
+  <VirtualRelations>
+    <RelationCount>0</RelationCount>
+  </VirtualRelations>
+  <Diagram Version="1.35.75.0">
+    <DiagramModel>
+      <Model xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DDRootModel">
+        <CustomProperties>
+          <OID>0</OID>
+          <BackgroundColor>255, 255, 255</BackgroundColor>
+        </CustomProperties>
+        <Children>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>1</OID>
+              <BackgroundColor>0, 0, 0, 0</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>2</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Size>
+                  <Width>193 px</Width>
+                  <Height>133 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.kontaktai</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="DDContainerModel">
+                <CustomProperties>
+                  <OID>3</OID>
+                  <BackgroundColor />
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Children>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>4</OID>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>280 px</X>
+                      <Y>10 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>185 px</Width>
+                      <Height>93 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.`el pavadinmas`</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>5</OID>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>270 px</X>
+                      <Y>120 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>199 px</Width>
+                      <Height>133 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.`el domain`</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>6</OID>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>20 px</X>
+                      <Y>10 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>211 px</Width>
+                      <Height>133 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.`el pastas`</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>7</OID>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>20 px</X>
+                      <Y>150 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>224 px</Width>
+                      <Height>93 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.country</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="RelationLinkModel">
+                    <CustomProperties>
+                      <OID>8</OID>
+                      <Comment>9</Comment>
+                      <OutModel>6</OutModel>
+                      <InModel>4</InModel>
+                      <OutPort>10</OutPort>
+                      <InPort>11</InPort>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>46.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>10</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>46.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>11</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                    </PortAnchors>
+                    <IsManuallyRouted>false</IsManuallyRouted>
+                    <DbOid>
+                      <Path>barakai.`el pastas`.`FK_el pastas_el pavadinmas_ID`</Path>
+                      <TypeName>ForeignKey</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="RelationCommentModel">
+                    <CustomProperties>
+                      <OID>9</OID>
+                      <ForeColor>68, 68, 68</ForeColor>
+                      <HolderModel>8</HolderModel>
+                      <Port>12</Port>
+                      <Font>Tahoma, 9pt</Font>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port xsi:type="LinkPort">
+                        <Location>
+                          <X>-24.5 px</X>
+                          <Y>0 px</Y>
+                        </Location>
+                        <Anchors>None</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>12</OID>
+                          <PortType>FixedAnchor</PortType>
+                        </CustomProperties>
+                        <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                      </Port>
+                    </PortAnchors>
+                    <CommentOffset>
+                      <X>22 px</X>
+                      <Y>2 px</Y>
+                    </CommentOffset>
+                  </Model>
+                  <Model xsi:type="RelationLinkModel">
+                    <CustomProperties>
+                      <OID>13</OID>
+                      <Comment>14</Comment>
+                      <OutModel>5</OutModel>
+                      <InModel>7</InModel>
+                      <OutPort>15</OutPort>
+                      <InPort>16</InPort>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>76.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>15</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>46.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>16</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                    </PortAnchors>
+                    <IsManuallyRouted>false</IsManuallyRouted>
+                    <DbOid>
+                      <Path>barakai.`el domain`.`FK_el domain_country_ID`</Path>
+                      <TypeName>ForeignKey</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="RelationCommentModel">
+                    <CustomProperties>
+                      <OID>14</OID>
+                      <ForeColor>68, 68, 68</ForeColor>
+                      <HolderModel>13</HolderModel>
+                      <Port>17</Port>
+                      <Font>Tahoma, 9pt</Font>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port xsi:type="LinkPort">
+                        <Location>
+                          <X>13 px</X>
+                          <Y>0 px</Y>
+                        </Location>
+                        <Anchors>None</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>17</OID>
+                          <PortType>FixedAnchor</PortType>
+                        </CustomProperties>
+                        <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                      </Port>
+                    </PortAnchors>
+                    <CommentOffset>
+                      <X>22 px</X>
+                      <Y>2 px</Y>
+                    </CommentOffset>
+                  </Model>
+                  <Model xsi:type="RelationLinkModel">
+                    <CustomProperties>
+                      <OID>18</OID>
+                      <Comment>19</Comment>
+                      <OutModel>6</OutModel>
+                      <InModel>5</InModel>
+                      <OutPort>20</OutPort>
+                      <InPort>21</InPort>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>121.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>20</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>11.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>21</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                    </PortAnchors>
+                    <IsManuallyRouted>false</IsManuallyRouted>
+                    <DbOid>
+                      <Path>barakai.`el pastas`.`FK_el pastas_el domain_ID`</Path>
+                      <TypeName>ForeignKey</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="RelationCommentModel">
+                    <CustomProperties>
+                      <OID>19</OID>
+                      <ForeColor>68, 68, 68</ForeColor>
+                      <HolderModel>18</HolderModel>
+                      <Port>22</Port>
+                      <Font>Tahoma, 9pt</Font>
+                      <Parent>3</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port xsi:type="LinkPort">
+                        <Location>
+                          <X>-19.5 px</X>
+                          <Y>0 px</Y>
+                        </Location>
+                        <Anchors>None</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>22</OID>
+                          <PortType>FixedAnchor</PortType>
+                        </CustomProperties>
+                        <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                      </Port>
+                    </PortAnchors>
+                    <CommentOffset>
+                      <X>22 px</X>
+                      <Y>2 px</Y>
+                    </CommentOffset>
+                  </Model>
+                </Children>
+                <Location>
+                  <X>230 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>477 px</Width>
+                  <Height>295 px</Height>
+                </Size>
+                <IsCollapsed>false</IsCollapsed>
+                <Text>Pastas</Text>
+                <ScrollState>
+                  <ScrollOrigin>
+                    <X>10 px</X>
+                    <Y>0 px</Y>
+                  </ScrollOrigin>
+                  <ScrollPosition>
+                    <X>10 px</X>
+                    <Y>0 px</Y>
+                  </ScrollPosition>
+                </ScrollState>
+                <Compartments>
+                  <Opacity>100</Opacity>
+                </Compartments>
+              </Model>
+              <Model xsi:type="DDContainerModel">
+                <CustomProperties>
+                  <OID>23</OID>
+                  <BackgroundColor />
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Children>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>24</OID>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>290 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>169 px</Width>
+                      <Height>93 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.numeris</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>25</OID>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>270 px</X>
+                      <Y>100 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>191 px</Width>
+                      <Height>93 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.`salies kodas`</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="TableModel">
+                    <CustomProperties>
+                      <OID>26</OID>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <Location>
+                      <X>20 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Size>
+                      <Width>187 px</Width>
+                      <Height>133 px</Height>
+                    </Size>
+                    <DbOid>
+                      <Path>barakai.telefonas</Path>
+                      <TypeName>Table</TypeName>
+                    </DbOid>
+                    <Compartments>
+                      <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                      <IndexesCollapsed>True</IndexesCollapsed>
+                      <TriggersCollapsed>True</TriggersCollapsed>
+                    </Compartments>
+                  </Model>
+                  <Model xsi:type="RelationLinkModel">
+                    <CustomProperties>
+                      <OID>27</OID>
+                      <Comment>28</Comment>
+                      <OutModel>26</OutModel>
+                      <InModel>24</InModel>
+                      <OutPort>29</OutPort>
+                      <InPort>30</InPort>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>46.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>29</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>46.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>30</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                    </PortAnchors>
+                    <IsManuallyRouted>false</IsManuallyRouted>
+                    <DbOid>
+                      <Path>barakai.telefonas.FK_telefonas_numeris_ID</Path>
+                      <TypeName>ForeignKey</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="RelationCommentModel">
+                    <CustomProperties>
+                      <OID>28</OID>
+                      <ForeColor>68, 68, 68</ForeColor>
+                      <HolderModel>27</HolderModel>
+                      <Port>31</Port>
+                      <Font>Tahoma, 9pt</Font>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port xsi:type="LinkPort">
+                        <Location>
+                          <X>-41.5 px</X>
+                          <Y>0 px</Y>
+                        </Location>
+                        <Anchors>None</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>31</OID>
+                          <PortType>FixedAnchor</PortType>
+                        </CustomProperties>
+                        <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                      </Port>
+                    </PortAnchors>
+                    <CommentOffset>
+                      <X>22 px</X>
+                      <Y>2 px</Y>
+                    </CommentOffset>
+                  </Model>
+                  <Model xsi:type="RelationLinkModel">
+                    <CustomProperties>
+                      <OID>32</OID>
+                      <Comment>33</Comment>
+                      <OutModel>26</OutModel>
+                      <InModel>25</InModel>
+                      <OutPort>34</OutPort>
+                      <InPort>35</InPort>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>116.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>34</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                      <Port>
+                        <Location>
+                          <X>0 px</X>
+                          <Y>16.5 px</Y>
+                        </Location>
+                        <Anchors>Top Bottom</Anchors>
+                        <Align>Left</Align>
+                        <CustomProperties>
+                          <OID>35</OID>
+                          <PortType>FloatAnchor</PortType>
+                        </CustomProperties>
+                      </Port>
+                    </PortAnchors>
+                    <IsManuallyRouted>false</IsManuallyRouted>
+                    <DbOid>
+                      <Path>barakai.telefonas.`FK_telefonas_salies kodas_ID`</Path>
+                      <TypeName>ForeignKey</TypeName>
+                    </DbOid>
+                  </Model>
+                  <Model xsi:type="RelationCommentModel">
+                    <CustomProperties>
+                      <OID>33</OID>
+                      <ForeColor>68, 68, 68</ForeColor>
+                      <HolderModel>32</HolderModel>
+                      <Port>36</Port>
+                      <Font>Tahoma, 9pt</Font>
+                      <Parent>23</Parent>
+                    </CustomProperties>
+                    <PortAnchors>
+                      <Port xsi:type="LinkPort">
+                        <Location>
+                          <X>-31.5 px</X>
+                          <Y>0 px</Y>
+                        </Location>
+                        <Anchors>None</Anchors>
+                        <Align>Right</Align>
+                        <CustomProperties>
+                          <OID>36</OID>
+                          <PortType>FixedAnchor</PortType>
+                        </CustomProperties>
+                        <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                      </Port>
+                    </PortAnchors>
+                    <CommentOffset>
+                      <X>22 px</X>
+                      <Y>2 px</Y>
+                    </CommentOffset>
+                  </Model>
+                </Children>
+                <Location>
+                  <X>230 px</X>
+                  <Y>310 px</Y>
+                </Location>
+                <Size>
+                  <Width>469 px</Width>
+                  <Height>245 px</Height>
+                </Size>
+                <IsCollapsed>false</IsCollapsed>
+                <Text>Telefonas</Text>
+                <ScrollState>
+                  <ScrollOrigin>
+                    <X>10 px</X>
+                    <Y>-10 px</Y>
+                  </ScrollOrigin>
+                  <ScrollPosition>
+                    <X>10 px</X>
+                    <Y>-10 px</Y>
+                  </ScrollPosition>
+                </ScrollState>
+                <Compartments>
+                  <Opacity>100</Opacity>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>37</OID>
+                  <Comment>38</Comment>
+                  <OutModel>2</OutModel>
+                  <InModel>6</InModel>
+                  <OutPort>39</OutPort>
+                  <InPort>40</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>79.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>39</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>53.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>40</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.kontaktai.`FK_kontaktai_el pastas_ID`</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>38</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>37</HolderModel>
+                  <Port>41</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-14.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>41</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>42</OID>
+                  <Comment>43</Comment>
+                  <OutModel>2</OutModel>
+                  <InModel>26</InModel>
+                  <OutPort>44</OutPort>
+                  <InPort>45</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>96.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>44</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>66.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>45</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>116.5 px</X>
+                    <Y>412.5 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.kontaktai.FK_kontaktai_telefonas_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>43</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>42</HolderModel>
+                  <Port>46</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>-134.75 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>46</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>660 px</X>
+              <Y>-230 px</Y>
+            </Location>
+            <Size>
+              <Width>715 px</Width>
+              <Height>607 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Kontaktai - pastas ir telefonas</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>10 px</X>
+                <Y>-10 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>10 px</X>
+                <Y>-10 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>47</OID>
+              <BackgroundColor>0, 0, 0, 0</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>48</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>208 px</Width>
+                  <Height>187 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.adresas</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>49</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>270 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>227 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.miestas</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>50</OID>
+                  <Comment>51</Comment>
+                  <OutModel>48</OutModel>
+                  <InModel>49</InModel>
+                  <OutPort>52</OutPort>
+                  <InPort>53</InPort>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>46.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>52</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>46.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>53</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.adresas.FK_adresas_miestas_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>51</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>50</HolderModel>
+                  <Port>54</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-21 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>54</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>55</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>270 px</X>
+                  <Y>100 px</Y>
+                </Location>
+                <Size>
+                  <Width>227 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.gatve</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>56</OID>
+                  <Comment>57</Comment>
+                  <OutModel>48</OutModel>
+                  <InModel>55</InModel>
+                  <OutPort>58</OutPort>
+                  <InPort>59</InPort>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>143.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>58</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>43.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>59</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.adresas.FK_adresas_gatve_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>57</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>56</HolderModel>
+                  <Port>60</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-21 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>60</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>61</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>510 px</X>
+                  <Y>100 px</Y>
+                </Location>
+                <Size>
+                  <Width>204 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.`namo nr`</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>62</OID>
+                  <Comment>63</Comment>
+                  <OutModel>48</OutModel>
+                  <InModel>61</InModel>
+                  <OutPort>64</OutPort>
+                  <InPort>65</InPort>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>165.25 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>64</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>65.25 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>65</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.adresas.`FK_adresas_namo nr_ID`</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>63</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>62</HolderModel>
+                  <Port>66</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-141 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>66</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>67</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>270 px</X>
+                  <Y>200 px</Y>
+                </Location>
+                <Size>
+                  <Width>220 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.`pasto kodas`</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>68</OID>
+                  <Comment>69</Comment>
+                  <OutModel>48</OutModel>
+                  <InModel>67</InModel>
+                  <OutPort>70</OutPort>
+                  <InPort>71</InPort>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>93.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>70</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>110 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>71</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>380 px</X>
+                    <Y>93.5 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.adresas.`FK_adresas_pasto kodas_ID`</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>69</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>68</HolderModel>
+                  <Port>72</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-76 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>72</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>73</OID>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>510 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>227 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.rajonas</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>74</OID>
+                  <Comment>75</Comment>
+                  <OutModel>48</OutModel>
+                  <InModel>73</InModel>
+                  <OutPort>76</OutPort>
+                  <InPort>77</InPort>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>69.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>76</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>69.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>77</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.adresas.FK_adresas_rajonas_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>75</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>74</HolderModel>
+                  <Port>78</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>47</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-141 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>78</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>660 px</X>
+              <Y>390 px</Y>
+            </Location>
+            <Size>
+              <Width>745 px</Width>
+              <Height>345 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Adresas</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>10 px</X>
+                <Y>-10 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>10 px</X>
+                <Y>-10 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>79</OID>
+              <BackgroundColor>0, 0, 0, 0</BackgroundColor>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>80</OID>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Size>
+                  <Width>229 px</Width>
+                  <Height>169 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.asmuo</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>81</OID>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>280 px</X>
+                  <Y>10 px</Y>
+                </Location>
+                <Size>
+                  <Width>196 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.vardas</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>82</OID>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>280 px</X>
+                  <Y>110 px</Y>
+                </Location>
+                <Size>
+                  <Width>203 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.pavarde</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>83</OID>
+                  <Comment>84</Comment>
+                  <OutModel>80</OutModel>
+                  <InModel>81</InModel>
+                  <OutPort>85</OutPort>
+                  <InPort>86</InPort>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>69.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>85</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>69.75 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>86</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.asmuo.FK_asmuo_vardas_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>84</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>83</HolderModel>
+                  <Port>87</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-15.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>87</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>88</OID>
+                  <Comment>89</Comment>
+                  <OutModel>80</OutModel>
+                  <InModel>82</InModel>
+                  <OutPort>90</OutPort>
+                  <InPort>91</InPort>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>134.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>90</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>34.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>91</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.asmuo.FK_asmuo_pavarde_ID</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>89</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>88</HolderModel>
+                  <Port>92</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>79</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-15.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>92</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>60 px</X>
+              <Y>220 px</Y>
+            </Location>
+            <Size>
+              <Width>499 px</Width>
+              <Height>580 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Asmens info</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>2 px</X>
+                <Y>0 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>2 px</X>
+                <Y>0 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>93</OID>
+              <BackgroundColor />
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>94</OID>
+                  <Parent>93</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>10 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>260 px</Width>
+                  <Height>151 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.institucija</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>95</OID>
+                  <Parent>93</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>320 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Size>
+                  <Width>227 px</Width>
+                  <Height>93 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>barakai.`institucijos pavadinimas`</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>96</OID>
+                  <Comment>97</Comment>
+                  <OutModel>94</OutModel>
+                  <InModel>95</InModel>
+                  <OutPort>98</OutPort>
+                  <InPort>99</InPort>
+                  <Parent>93</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>46.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>98</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>46.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>99</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>barakai.institucija.`FK_institucija_institucijos pavadinimas_ID`</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>97</OID>
+                  <ForeColor>68, 68, 68</ForeColor>
+                  <HolderModel>96</HolderModel>
+                  <Port>100</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>93</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>-25 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>100</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>60 px</X>
+              <Y>0 px</Y>
+            </Location>
+            <Size>
+              <Width>565 px</Width>
+              <Height>203 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Group1</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>-10 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>-10 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>101</OID>
+              <Comment>102</Comment>
+              <OutModel>94</OutModel>
+              <InModel>48</InModel>
+              <OutPort>103</OutPort>
+              <InPort>104</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>75.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>103</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>52 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>104</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>352 px</X>
+                <Y>111.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>352 px</X>
+                <Y>148 px</Y>
+              </PointD>
+              <PointD>
+                <X>641 px</X>
+                <Y>148 px</Y>
+              </PointD>
+              <PointD>
+                <X>641 px</X>
+                <Y>388.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>724 px</X>
+                <Y>388.5 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>barakai.institucija.FK_institucija_adresas_ID</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>102</OID>
+              <ForeColor>68, 68, 68</ForeColor>
+              <HolderModel>101</HolderModel>
+              <Port>105</Port>
+              <Font>Tahoma, 9pt</Font>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-309 px</X>
+                  <Y>-156.75 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>105</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>106</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>-40 px</X>
+              <Y>-600 px</Y>
+            </Location>
+            <Size>
+              <Width>158 px</Width>
+              <Height>75 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.kambarys</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>107</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>150 px</X>
+              <Y>-550 px</Y>
+            </Location>
+            <Size>
+              <Width>205 px</Width>
+              <Height>93 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.`kambario dydis`</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>108</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>140 px</X>
+              <Y>-420 px</Y>
+            </Location>
+            <Size>
+              <Width>220 px</Width>
+              <Height>93 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.ivertinimas</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>109</OID>
+              <Comment>110</Comment>
+              <OutModel>94</OutModel>
+              <InModel>2</InModel>
+              <OutPort>111</OutPort>
+              <InPort>112</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>113.25 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>111</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>48.25 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>112</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>720.25 px</X>
+                <Y>149.25 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>barakai.institucija.`FK_institucija_kontaktai_FK telefonas`</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>110</OID>
+              <ForeColor>68, 68, 68</ForeColor>
+              <HolderModel>109</HolderModel>
+              <Port>113</Port>
+              <Font>Tahoma, 9pt</Font>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-194.125 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>113</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>114</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>140 px</X>
+              <Y>-170 px</Y>
+            </Location>
+            <Size>
+              <Width>179 px</Width>
+              <Height>133 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.kaina</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>115</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>350 px</X>
+              <Y>-170 px</Y>
+            </Location>
+            <Size>
+              <Width>195 px</Width>
+              <Height>93 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.valiuta</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>116</OID>
+              <Comment>117</Comment>
+              <OutModel>114</OutModel>
+              <InModel>115</InModel>
+              <OutPort>118</OutPort>
+              <InPort>119</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>46.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>118</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>46.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>119</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>mydb.kaina.FK_kaina_valiuta_ID</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>117</OID>
+              <ForeColor>68, 68, 68</ForeColor>
+              <HolderModel>116</HolderModel>
+              <Port>120</Port>
+              <Font>Tahoma, 9pt</Font>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-15.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>120</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>121</OID>
+              <Comment>122</Comment>
+              <OutModel>80</OutModel>
+              <InModel>2</InModel>
+              <OutPort>123</OutPort>
+              <InPort>124</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>42.25 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>123</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>144.75 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>124</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>329 px</X>
+                <Y>298.25 px</Y>
+              </PointD>
+              <PointD>
+                <X>329 px</X>
+                <Y>237 px</Y>
+              </PointD>
+              <PointD>
+                <X>816.75 px</X>
+                <Y>237 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>barakai.asmuo.FK_asmuo_kontaktai_ID</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>122</OID>
+              <ForeColor>68, 68, 68</ForeColor>
+              <HolderModel>121</HolderModel>
+              <Port>125</Port>
+              <Font>Tahoma, 9pt</Font>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-263.875 px</X>
+                  <Y>61.25 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>125</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>126</OID>
+              <Comment>127</Comment>
+              <OutModel>80</OutModel>
+              <InModel>48</InModel>
+              <OutPort>128</OutPort>
+              <InPort>129</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>84.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>128</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>104 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>129</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>329 px</X>
+                <Y>340.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>329 px</X>
+                <Y>468 px</Y>
+              </PointD>
+              <PointD>
+                <X>653 px</X>
+                <Y>468 px</Y>
+              </PointD>
+              <PointD>
+                <X>653 px</X>
+                <Y>406 px</Y>
+              </PointD>
+              <PointD>
+                <X>776 px</X>
+                <Y>406 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>barakai.asmuo.FK_asmuo_adresas_ID</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>127</OID>
+              <ForeColor>68, 68, 68</ForeColor>
+              <HolderModel>126</HolderModel>
+              <Port>130</Port>
+              <Font>Tahoma, 9pt</Font>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-182 px</X>
+                  <Y>-127.5 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>130</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>131</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>140 px</X>
+              <Y>-310 px</Y>
+            </Location>
+            <Size>
+              <Width>223 px</Width>
+              <Height>93 px</Height>
+            </Size>
+            <DbOid>
+              <Path>mydb.atsiliepimai</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+        </Children>
+        <ViewPort>
+          <ScaleMode>Free</ScaleMode>
+          <Scale>0.9</Scale>
+          <Location>
+            <X>-251.111122931963 px</X>
+            <Y>-612.222239782781 px</Y>
+          </Location>
+        </ViewPort>
+      </Model>
+    </DiagramModel>
+  </Diagram>
+</DevartDatabaseDiagram>
