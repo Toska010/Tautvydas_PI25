@@ -4,3 +4,7 @@ Apsirasant kambario kaina adresa svarbus eiliskumas
 3 Adresai baraku.
 4 Kambario dydis ir siknu kiekis juose.
 5 Kainos atitinkamai kambariams.
+
+Pasiekus nuomos kainas kitiems asmenis papildome KainodarosTipus tik poto galime itraukti kainas uz para nestudijuojantiems.
+Pasiekus VU reikia itraukti jo pavadinima ir vu studento grupe, tada bendrabuciu adresus, paskiau kainas.
+Pasiekus VU nuoma iki 2men nestudijuojantiems itraukiami nauji kainodaros tipai.

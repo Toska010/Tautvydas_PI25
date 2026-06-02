@@ -1,5 +1,8 @@
 -- Duomenu bazes strukturos sukurimas, ismetamos lenteles jei sutampa pavadinimas ir sukuriamos naujos, zemiau aprasytos lenteles ir rysiai
 -- IMPORTANT: DROP TABLES (order matters because of foreign keys)
+-- =========================================
+-- DROP TABLES (ORDER MATTERS)
+-- =========================================
 DROP TABLE IF EXISTS Uzklausos;
 DROP TABLE IF EXISTS Mokejimai;
 DROP TABLE IF EXISTS PersonaloAtsiliepimai;
@@ -12,8 +15,9 @@ DROP TABLE IF EXISTS Administratoriai;
 DROP TABLE IF EXISTS Personalas;
 DROP TABLE IF EXISTS Apgyvendinimas;
 DROP TABLE IF EXISTS Kambariai;
-DROP TABLE IF EXISTS KambariuKainodara;
-DROP TABLE IF EXISTS KambariuDydziai;
+DROP TABLE IF EXISTS PastatuKainodara;
+DROP TABLE IF EXISTS KainodarosTipai;
+DROP TABLE IF EXISTS KainosGrupe;
 DROP TABLE IF EXISTS Pastatai;
 DROP TABLE IF EXISTS Institucijos;
 DROP TABLE IF EXISTS AdministratoriausLygmuo;
@@ -21,8 +25,9 @@ DROP TABLE IF EXISTS PersonaloPareigos;
 DROP TABLE IF EXISTS Vartotojai;
 DROP TABLE IF EXISTS VartotojuTipai;
 
-
--- CREATE TABLES
+-- =========================================
+-- CORE TABLES
+-- =========================================
 
 CREATE TABLE VartotojuTipai (
     ID INT PRIMARY KEY,
@@ -61,26 +66,11 @@ CREATE TABLE Pastatai (
     FOREIGN KEY (Institucija) REFERENCES Institucijos(ID)
 );
 
-CREATE TABLE KambariuDydziai (
-    ID INT PRIMARY KEY,
-    Dydis INT
-);
-
-CREATE TABLE KambariuKainodara (
-    ID INT PRIMARY KEY,
-    Dydis INT NOT NULL,
-    Talpa INT,
-    Kaina DECIMAL(10,2),
-    FOREIGN KEY (Dydis) REFERENCES KambariuDydziai(ID)
-);
-
 CREATE TABLE Kambariai (
     ID INT PRIMARY KEY,
     Pastatas INT NOT NULL,
-    Kainodara INT NOT NULL,
     KambarioNumeris VARCHAR(50),
-    FOREIGN KEY (Pastatas) REFERENCES Pastatai(ID),
-    FOREIGN KEY (Kainodara) REFERENCES KambariuKainodara(ID)
+    FOREIGN KEY (Pastatas) REFERENCES Pastatai(ID)
 );
 
 CREATE TABLE Apgyvendinimas (
@@ -111,6 +101,10 @@ CREATE TABLE Administratoriai (
     FOREIGN KEY (PrieigosLygis) REFERENCES AdministratoriausLygmuo(ID)
 );
 
+-- =========================================
+-- LOOKUP TABLES
+-- =========================================
+
 CREATE TABLE Ivertinimai (
     ID INT PRIMARY KEY,
     Ivertinimas INT
@@ -123,8 +117,36 @@ CREATE TABLE MokejimuBusenos (
 
 CREATE TABLE UzklausuBusenos (
     ID INT PRIMARY KEY,
+    Busena VARCHAR(100)
+);
+
+-- ✅ NEW: pricing groups (student categories)
+CREATE TABLE KainosGrupe (
+    ID INT PRIMARY KEY,
     Pavadinimas VARCHAR(100)
 );
+
+-- ✅ room type definitions (rows in your table)
+CREATE TABLE KainodarosTipai (
+    ID INT PRIMARY KEY,
+    Pavadinimas VARCHAR(255)
+);
+
+-- ✅ FINAL pricing table (correct normalized form)
+CREATE TABLE PastatuKainodara (
+    ID INT PRIMARY KEY,
+    Pastatas INT NOT NULL,
+    KainodarosTipas INT NOT NULL,
+    KainosGrupe INT NOT NULL,
+    Kaina DECIMAL(10,2),
+    FOREIGN KEY (Pastatas) REFERENCES Pastatai(ID),
+    FOREIGN KEY (KainodarosTipas) REFERENCES KainodarosTipai(ID),
+    FOREIGN KEY (KainosGrupe) REFERENCES KainosGrupe(ID)
+);
+
+-- =========================================
+-- REVIEWS
+-- =========================================
 
 CREATE TABLE PastatuAtsiliepimai (
     ID INT PRIMARY KEY,
@@ -158,14 +180,18 @@ CREATE TABLE PersonaloAtsiliepimai (
     FOREIGN KEY (Ivertinimas) REFERENCES Ivertinimai(ID)
 );
 
+-- =========================================
+-- PAYMENTS & REQUESTS
+-- =========================================
+
 CREATE TABLE Mokejimai (
     ID INT PRIMARY KEY,
-    ApgyvendinimasID INT NOT NULL,
-    BusenaID INT NOT NULL,
+    Apgyvendinimas INT NOT NULL,
+    Busena INT NOT NULL,
     Suma DECIMAL(10,2),
     MokejimoData DATE,
-    FOREIGN KEY (ApgyvendinimasID) REFERENCES Apgyvendinimas(ID),
-    FOREIGN KEY (BusenaID) REFERENCES MokejimuBusenos(ID)
+    FOREIGN KEY (Apgyvendinimas) REFERENCES Apgyvendinimas(ID),
+    FOREIGN KEY (Busena) REFERENCES MokejimuBusenos(ID)
 );
 
 CREATE TABLE Uzklausos (
@@ -179,4 +205,3 @@ CREATE TABLE Uzklausos (
     FOREIGN KEY (PriskirtasPersonalas) REFERENCES Personalas(ID),
     FOREIGN KEY (Busena) REFERENCES UzklausuBusenos(ID)
 );
-``

@@ -1,0 +1,225 @@
+SELECT
+    a.ID,
+    v.Vardas,
+    v.Pavarde,
+    vt.Pavadinimas AS VartotojoTipas,
+    al.Pavadinimas AS AdministratoriausLygis
+FROM Administratoriai a
+JOIN Vartotojai v ON a.Vartotojas = v.ID
+JOIN VartotojuTipai vt ON v.VartotojoTipas = vt.ID
+JOIN AdministratoriausLygmuo al ON a.PrieigosLygis = al.ID;
+
+SELECT
+    al.ID,
+    al.Pavadinimas AS AdministratoriausLygis
+FROM AdministratoriausLygmuo al;
+
+SELECT
+    a.ID,
+    v.Vardas,
+    v.Pavarde,
+    p.Adresas AS Pastatas,
+    k.KambarioNumeris,
+    a.PradziosData,
+    a.PabaigosData
+FROM Apgyvendinimas a
+JOIN Vartotojai v ON a.Studentas = v.ID
+JOIN Kambariai k ON a.Kambarys = k.ID
+JOIN Pastatai p ON k.Pastatas = p.ID;
+
+SELECT
+    i.ID,
+    i.Pavadinimas
+FROM Institucijos i;
+
+SELECT
+    i.ID,
+    i.Ivertinimas
+FROM Ivertinimai i;
+
+SELECT
+    kt.ID,
+    kt.Pavadinimas AS KambarioTipas
+FROM KainodarosTipai kt;
+
+SELECT
+    kg.ID,
+    kg.Pavadinimas AS KainosGrupe
+FROM KainosGrupe kg;
+
+SELECT
+    k.ID,
+    k.KambarioNumeris,
+    p.Adresas AS Pastatas,
+    i.Pavadinimas AS Institucija
+FROM Kambariai k
+JOIN Pastatai p ON k.Pastatas = p.ID
+JOIN Institucijos i ON p.Institucija = i.ID;
+
+SELECT
+    ka.ID,
+    v.Vardas,
+    v.Pavarde,
+    p.Adresas AS Pastatas,
+    k.KambarioNumeris,
+    i.Ivertinimas,
+    ka.Komentaras,
+    ka.Sukurta
+FROM KambariuAtsiliepimai ka
+JOIN Apgyvendinimas a ON ka.Apgyvendinimas = a.ID
+JOIN Vartotojai v ON a.Studentas = v.ID
+JOIN Kambariai k ON a.Kambarys = k.ID
+JOIN Pastatai p ON k.Pastatas = p.ID
+JOIN Ivertinimai i ON ka.Ivertinimas = i.ID;
+
+SELECT
+    m.ID,
+    v.Vardas,
+    v.Pavarde,
+    p.Adresas AS Pastatas,
+    mb.Busena,
+    m.Suma,
+    m.MokejimoData
+FROM Mokejimai m
+JOIN Apgyvendinimas a ON m.Apgyvendinimas = a.ID
+JOIN Vartotojai v ON a.Studentas = v.ID
+JOIN Kambariai k ON a.Kambarys = k.ID
+JOIN Pastatai p ON k.Pastatas = p.ID
+JOIN MokejimuBusenos mb ON m.Busena = mb.ID;
+
+SELECT
+    mb.ID,
+    mb.Busena
+FROM MokejimuBusenos mb;
+
+-- =========================================
+-- Pastatai
+-- =========================================
+SELECT 
+    p.ID,
+    p.Adresas,
+    i.Pavadinimas AS Institucija
+FROM Pastatai p
+JOIN Institucijos i ON p.Institucija = i.ID;
+
+-- =========================================
+-- PastatuAtsiliepimai
+-- =========================================
+SELECT 
+    pa.ID,
+    v.Vardas,
+    v.Pavarde,
+    p.Adresas AS Pastatas,
+    iv.Ivertinimas,
+    pa.Komentaras,
+    pa.Sukurta
+FROM PastatuAtsiliepimai pa
+JOIN Apgyvendinimas a ON pa.Apgyvendinimas = a.ID
+JOIN Vartotojai v ON a.Studentas = v.ID
+JOIN Kambariai k ON a.Kambarys = k.ID
+JOIN Pastatai p ON k.Pastatas = p.ID
+JOIN Ivertinimai iv ON pa.Ivertinimas = iv.ID;
+
+-- =========================================
+-- PastatuKainodara
+-- =========================================
+SELECT 
+    pk.ID,
+    p.Adresas AS Pastatas,
+    kt.Pavadinimas AS KambarioTipas,
+    kg.Pavadinimas AS KainosGrupe,
+    pk.Kaina
+FROM PastatuKainodara pk
+JOIN Pastatai p ON pk.Pastatas = p.ID
+JOIN KainodarosTipai kt ON pk.KainodarosTipas = kt.ID
+JOIN KainosGrupe kg ON pk.KainosGrupe = kg.ID
+ORDER BY p.ID, kt.ID, kg.ID;
+
+-- =========================================
+-- Personalas
+-- =========================================
+SELECT 
+    ps.ID,
+    v.Vardas,
+    v.Pavarde,
+    i.Pavadinimas AS Institucija,
+    pp.Pavadinimas AS Pareigos
+FROM Personalas ps
+JOIN Vartotojai v ON ps.Vartotojas = v.ID
+JOIN Institucijos i ON ps.Institucija = i.ID
+JOIN PersonaloPareigos pp ON ps.Pareigos = pp.ID;
+
+-- =========================================
+-- PersonaloAtsiliepimai
+-- =========================================
+SELECT 
+    pa.ID,
+    v.Vardas AS StudentsVardas,
+    v.Pavarde AS StudentsPavarde,
+    vp.Vardas AS PersonaloVardas,
+    vp.Pavarde AS PersonaloPavarde,
+    iv.Ivertinimas,
+    pa.Komentaras,
+    pa.Sukurta
+FROM PersonaloAtsiliepimai pa
+JOIN Apgyvendinimas a ON pa.Apgyvendinimas = a.ID
+JOIN Vartotojai v ON a.Studentas = v.ID
+JOIN Personalas ps ON pa.Personalas = ps.ID
+JOIN Vartotojai vp ON ps.Vartotojas = vp.ID
+JOIN Ivertinimai iv ON pa.Ivertinimas = iv.ID;
+
+-- =========================================
+-- PersonaloPareigos
+-- =========================================
+SELECT 
+    pp.ID,
+    pp.Pavadinimas AS Pareigos
+FROM PersonaloPareigos pp;
+
+-- =========================================
+-- Uzklausos
+-- =========================================
+SELECT 
+    u.ID,
+    vs.Vardas AS StudentoVardas,
+    vs.Pavarde AS StudentoPavarde,
+    vp.Vardas AS PersonaloVardas,
+    vp.Pavarde AS PersonaloPavarde,
+    ub.Busena,
+    u.Aprasymas,
+    u.Sukurta
+FROM Uzklausos u
+JOIN Apgyvendinimas a ON u.Apgyvendinimas = a.ID
+JOIN Vartotojai vs ON a.Studentas = vs.ID
+LEFT JOIN Personalas p ON u.PriskirtasPersonalas = p.ID
+LEFT JOIN Vartotojai vp ON p.Vartotojas = vp.ID
+JOIN UzklausuBusenos ub ON u.Busena = ub.ID;
+
+-- =========================================
+-- UzklausuBusenos
+-- =========================================
+SELECT 
+    ub.ID,
+    ub.Busena
+FROM UzklausuBusenos ub;
+
+-- =========================================
+-- Vartotojai
+-- =========================================
+SELECT 
+    v.ID,
+    v.Vardas,
+    v.Pavarde,
+    v.Telefonas,
+    v.ElPastas,
+    vt.Pavadinimas AS VartotojoTipas
+FROM Vartotojai v
+JOIN VartotojuTipai vt ON v.VartotojoTipas = vt.ID;
+
+-- =========================================
+-- VartotojuTipai
+-- =========================================
+SELECT 
+    vt.ID,
+    vt.Pavadinimas AS VartotojoTipas
+FROM VartotojuTipai vt;

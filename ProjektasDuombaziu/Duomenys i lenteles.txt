@@ -1,0 +1,426 @@
+-- =========================================
+-- INSTITUCIJA
+-- =========================================
+INSERT INTO Institucijos (ID, Pavadinimas)
+VALUES (1, 'Vilniaus kolegija');
+
+-- =========================================
+-- VARTOTOJU TIPAI (basic for later use)
+-- =========================================
+INSERT INTO VartotojuTipai (ID, Pavadinimas) VALUES
+(1, 'Studentas'),
+(2, 'Darbuotojas'),
+(3, 'Administratorius');
+
+-- =========================================
+-- KAINOS GRUPES
+-- =========================================
+INSERT INTO KainosGrupe (ID, Pavadinimas) VALUES
+(1, 'Vilniaus kolegijos studentas'),
+(2, 'Kitos institucijos studentas'),
+(3, 'Nestudijuojantis');
+
+-- =========================================
+-- PASTATAI
+-- =========================================
+INSERT INTO Pastatai (ID, Institucija, Adresas) VALUES
+(1, 1, 'Verkių g. 45'),
+(2, 1, 'Šaltkalvių g. 14'),
+(3, 1, 'Didlaukio g. 61'),
+(4, 1, 'Studentų g. 47'),
+(5, 1, 'Statybininkų g. 3'),
+(6, 1, 'Giedraičių g. 81'),
+(7, 1, 'Didlaukio g. 63'),
+(8, 1, 'Antakalnio g. 52'),
+(9, 1, 'Antakalnio g. 56'),
+(10, 1, 'P. Vileišio g. 20');
+
+-- =========================================
+-- KAINODAROS TIPAI
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(1, 'Vienviečiame kambaryje'),
+(2, 'Dviviečiame kambaryje gyvenant dviem asmenims'),
+(3, 'Dviviečiame kambaryje gyvenant vienam asmeniui'),
+(4, 'Triviečiame kambaryje gyvenant trims asmenims'),
+(5, 'Triviečiame kambaryje gyvenant dviem asmenims'),
+(6, 'Triviečiame kambaryje gyvenant vienam asmeniui'),
+(7, 'Vienviečiame geresnių sąlygų kambaryje'),
+(8, 'Dviviečiame geresnių sąlygų kambaryje gyvenant dviem asmenims'),
+(9, 'Dviviečiame geresnių sąlygų kambaryje gyvenant vienam asmeniui');
+
+-- =========================================
+-- PASTATU KAINODARA (VISI DUOMENYS)
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- 1. Vienvietis
+(1, 4, 1, 1, 115),
+(2, 8, 1, 1, 115),
+(3, 9, 1, 1, 115),
+
+-- 2. Dvivietis (2 asm.)
+(4, 1, 2, 1, 80),
+(5, 3, 2, 1, 80),
+(6, 4, 2, 1, 100),
+(7, 5, 2, 1, 100),
+(8, 7, 2, 1, 80),
+(9, 8, 2, 1, 100),
+(10, 9, 2, 1, 100),
+(11, 10, 2, 1, 100),
+
+-- 3. Dvivietis (1 asm.)
+(12, 1, 3, 1, 125),
+(13, 3, 3, 1, 125),
+(14, 4, 3, 1, 165),
+(15, 5, 3, 1, 180),
+(16, 7, 3, 1, 125),
+(17, 8, 3, 1, 185),
+(18, 9, 3, 1, 185),
+(19, 10, 3, 1, 185),
+
+-- 4. Trivietis (3 asm.)
+(20, 1, 4, 1, 75),
+(21, 2, 4, 1, 70),
+(22, 3, 4, 1, 75),
+(23, 5, 4, 1, 75),
+(24, 7, 4, 1, 75),
+
+-- 5. Trivietis (2 asm.)
+(25, 1, 5, 1, 85),
+(26, 2, 5, 1, 80),
+(27, 3, 5, 1, 85),
+(28, 5, 5, 1, 85),
+(29, 7, 5, 1, 85),
+
+-- 6. Trivietis (1 asm.)
+(30, 1, 6, 1, 165),
+(31, 2, 6, 1, 145),
+(32, 3, 6, 1, 165),
+(33, 5, 6, 1, 185),
+(34, 7, 6, 1, 165),
+
+-- 7. Vienvietis geresniu salygu
+(35, 3, 7, 1, 180),
+(36, 6, 7, 1, 180),
+
+-- 8. Dvivietis geresniu salygu (2 asm.)
+(37, 3, 8, 1, 145),
+(38, 6, 8, 1, 145),
+(39, 8, 8, 1, 145),
+(40, 10, 8, 1, 145),
+
+-- 9. Dvivietis geresniu salygu (1 asm.)
+(41, 3, 9, 1, 260),
+(42, 6, 9, 1, 260),
+(43, 8, 9, 1, 260),
+(44, 10, 9, 1, 260);
+
+
+-- =========================================
+-- PASTATU KAINODARA (Kitos institucijos studentai)
+-- KainosGrupe = 2
+-- =========================================
+
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- 1. Vienvietis
+(45, 5, 1, 2, 175),
+(46, 7, 1, 2, 175),
+(47, 8, 1, 2, 175),
+
+-- 2. Dvivietis (2 asm.)
+(48, 1, 2, 2, 100),
+(49, 3, 2, 2, 100),
+(50, 4, 2, 2, 130),
+(51, 5, 2, 2, 120),
+(52, 6, 2, 2, 100),
+(53, 7, 2, 2, 120),
+(54, 8, 2, 2, 120),
+(55, 9, 2, 2, 120),
+
+-- 3. Dvivietis (1 asm.)
+(56, 1, 3, 2, 150),
+(57, 3, 3, 2, 150),
+(58, 4, 3, 2, 190),
+(59, 5, 3, 2, 220),
+(60, 6, 3, 2, 150),
+(61, 7, 3, 2, 215),
+(62, 8, 3, 2, 215),
+(63, 9, 3, 2, 215),
+
+-- 4. Trivietis (3 asm.)
+(64, 1, 4, 2, 90),
+(65, 2, 4, 2, 80),
+(66, 3, 4, 2, 90),
+(67, 5, 4, 2, 90),
+(68, 6, 4, 2, 90),
+
+-- 5. Trivietis (2 asm.)
+(69, 1, 5, 2, 110),
+(70, 2, 5, 2, 100),
+(71, 3, 5, 2, 110),
+(72, 5, 5, 2, 105),
+(73, 6, 5, 2, 105),
+
+-- 6. Trivietis (1 asm.)
+(74, 1, 6, 2, 190),
+(75, 2, 6, 2, 180),
+(76, 3, 6, 2, 190),
+(77, 5, 6, 2, 190),
+(78, 6, 6, 2, 190),
+
+-- 7. Geresniu salygu (vienvietis) → nėra duomenų
+
+-- 8. Geresniu salygu (dvivietis 2 asm.)
+(79, 7, 8, 2, 195),
+
+-- 9. Geresniu salygu (dvivietis 1 asm.)
+(80, 7, 9, 2, 295);
+
+-- =========================================
+-- PAPILDOMI KAINODAROS TIPAI (paros kainos)
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(10, 'Iki 10 paru - asmeniui (paros kaina)'),
+(11, 'Iki 15 paru - asmeniui (paros kaina)'),
+(12, 'Iki 30 paru - asmeniui (paros kaina)'),
+(13, 'Daugiau nei 30 paru - asmeniui (paros kaina)'),
+(14, 'Geresniu salygu sveciu kambarys (paros kaina)');
+
+-- =========================================
+-- PASTATU KAINODARA (nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Iki 10 paru
+(95, 1, 10, 3, 10),
+(96, 2, 10, 3, 10),
+(97, 3, 10, 3, 10),
+(98, 4, 10, 3, 10),
+(99, 5, 10, 3, 10),
+(100, 6, 10, 3, 18),
+(101, 7, 10, 3, 10),
+(102, 8, 10, 3, 10),
+(103, 9, 10, 3, 10),
+(104, 10, 10, 3, 10),
+
+-- Iki 15 paru
+(105, 1, 11, 3, 8),
+(106, 2, 11, 3, 8),
+(107, 3, 11, 3, 8),
+(108, 4, 11, 3, 8),
+(109, 5, 11, 3, 8),
+(110, 6, 11, 3, 18),
+(111, 7, 11, 3, 8),
+(112, 8, 11, 3, 8),
+(113, 9, 11, 3, 8),
+(114, 10, 11, 3, 8),
+
+-- Iki 30 paru
+(115, 1, 12, 3, 7),
+(116, 2, 12, 3, 7),
+(117, 3, 12, 3, 7),
+(118, 4, 12, 3, 7),
+(119, 5, 12, 3, 7),
+(120, 6, 12, 3, 18),
+(121, 7, 12, 3, 7),
+(122, 8, 12, 3, 7),
+(123, 9, 12, 3, 7),
+(124, 10, 12, 3, 7),
+
+-- Daugiau nei 30 paru
+(125, 1, 13, 3, 6),
+(126, 2, 13, 3, 6),
+(127, 3, 13, 3, 6),
+(128, 4, 13, 3, 6),
+(129, 5, 13, 3, 6),
+(130, 6, 13, 3, 18),
+(131, 7, 13, 3, 6),
+(132, 8, 13, 3, 6),
+(133, 9, 13, 3, 6),
+(134, 10, 13, 3, 6),
+
+-- Geresniu salygu sveciu kambarys
+(135, 1, 14, 3, 13),
+(136, 2, 14, 3, 13),
+(137, 3, 14, 3, 13),
+(138, 4, 14, 3, 13),
+(139, 5, 14, 3, 13),
+(140, 6, 14, 3, 18),
+(141, 7, 14, 3, 13),
+(142, 8, 14, 3, 13),
+(143, 9, 14, 3, 13),
+(144, 10, 14, 3, 13);
+
+-- =========================================
+-- INSTITUCIJA: Vilniaus universitetas
+-- =========================================
+INSERT INTO Institucijos (ID, Pavadinimas)
+VALUES (2, 'Vilniaus universitetas');
+
+-- =========================================
+-- PASTATAI (Vilniaus universitetas)
+-- =========================================
+INSERT INTO Pastatai (ID, Institucija, Adresas) VALUES
+(11, 2, 'Olandų g. 51'),
+(12, 2, 'Saulėtekio al. 39'),
+(13, 2, 'Saulėtekio al. 37'),
+(14, 2, 'Saulėtekio al. 4'),
+(15, 2, 'Didlaukio g. 59'),
+(16, 2, 'Saulėtekio al. 33'),
+(17, 2, 'Saulėtekio al. 35');
+
+
+-- =========================================
+-- PRIDEDAME NAUJĄ KAINOS GRUPĘ
+-- =========================================
+INSERT INTO KainosGrupe (ID, Pavadinimas)
+VALUES (4, 'Vilniaus universiteto studentas');
+
+-- =========================================
+-- PASTATU KAINODARA (VU studentai)
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis (2 asm.)
+(145, 11, 2, 4, 85),
+(146, 12, 2, 4, 85),
+(147, 13, 2, 4, 85),
+(148, 14, 2, 4, 85),
+(149, 15, 2, 4, 85),
+(150, 16, 2, 4, 85),
+(151, 17, 2, 4, 85),
+
+-- Trivietis (3 asm.)
+(152, 11, 4, 4, 70),
+(153, 12, 4, 4, 70),
+(154, 13, 4, 4, 70),
+(155, 14, 4, 4, 70),
+(156, 15, 4, 4, 70),
+(157, 16, 4, 4, 70),
+(158, 17, 4, 4, 70);
+
+-- =========================================
+-- PASTATU KAINODARA (VU pastatai, nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis (2 asm.)
+(159, 11, 2, 3, 130),
+(160, 12, 2, 3, 130),
+(161, 13, 2, 3, 130),
+(162, 14, 2, 3, 130),
+(163, 15, 2, 3, 130),
+(164, 16, 2, 3, 130),
+(165, 17, 2, 3, 130),
+
+-- Dvivietis (1 asm.)
+(166, 11, 3, 3, 260),
+(167, 12, 3, 3, 260),
+(168, 13, 3, 3, 260),
+(169, 14, 3, 3, 260),
+(170, 15, 3, 3, 260),
+(171, 16, 3, 3, 260),
+(172, 17, 3, 3, 260),
+
+-- Trivietis (3 asm.)
+(173, 11, 4, 3, 90),
+(174, 12, 4, 3, 90),
+(175, 13, 4, 3, 90),
+(176, 14, 4, 3, 90),
+(177, 15, 4, 3, 90),
+(178, 16, 4, 3, 90),
+(179, 17, 4, 3, 90),
+
+-- Trivietis (2 asm.)
+(180, 11, 5, 3, 135),
+(181, 12, 5, 3, 135),
+(182, 13, 5, 3, 135),
+(183, 14, 5, 3, 135),
+(184, 15, 5, 3, 135),
+(185, 16, 5, 3, 135),
+(186, 17, 5, 3, 135),
+
+-- Trivietis (1 asm.)
+(187, 11, 6, 3, 260),
+(188, 12, 6, 3, 260),
+(189, 13, 6, 3, 260),
+(190, 14, 6, 3, 260),
+(191, 15, 6, 3, 260),
+(192, 16, 6, 3, 260),
+(193, 17, 6, 3, 260);
+
+-- =========================================
+-- KAINODAROS TIPAI (papildomi – paros kainos VU svečiams)
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(15, 'Dvivietis iki 10 paru (paros kaina)'),
+(16, 'Dvivietis 11–20 paru (paros kaina)'),
+(17, 'Dvivietis nuo 21 paros (paros kaina)'),
+(18, 'Trivietis iki 10 paru (paros kaina)'),
+(19, 'Trivietis 11–20 paru (paros kaina)'),
+(20, 'Trivietis nuo 21 paros (paros kaina)');
+
+-- =========================================
+-- PASTATU KAINODARA (VU pastatai, nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis: iki 10 paru
+(194, 11, 15, 3, 20),
+(195, 12, 15, 3, 20),
+(196, 13, 15, 3, 20),
+(197, 14, 15, 3, 20),
+(198, 15, 15, 3, 20),
+(199, 16, 15, 3, 20),
+(200, 17, 15, 3, 20),
+
+-- Dvivietis: 11–20 paru
+(201, 11, 16, 3, 15),
+(202, 12, 16, 3, 15),
+(203, 13, 16, 3, 15),
+(204, 14, 16, 3, 15),
+(205, 15, 16, 3, 15),
+(206, 16, 16, 3, 15),
+(207, 17, 16, 3, 15),
+
+-- Dvivietis: nuo 21 paros
+(208, 11, 17, 3, 12),
+(209, 12, 17, 3, 12),
+(210, 13, 17, 3, 12),
+(211, 14, 17, 3, 12),
+(212, 15, 17, 3, 12),
+(213, 16, 17, 3, 12),
+(214, 17, 17, 3, 12),
+
+-- Trivietis: iki 10 paru
+(215, 11, 18, 3, 16),
+(216, 12, 18, 3, 16),
+(217, 13, 18, 3, 16),
+(218, 14, 18, 3, 16),
+(219, 15, 18, 3, 16),
+(220, 16, 18, 3, 16),
+(221, 17, 18, 3, 16),
+
+-- Trivietis: 11–20 paru
+(222, 11, 19, 3, 12),
+(223, 12, 19, 3, 12),
+(224, 13, 19, 3, 12),
+(225, 14, 19, 3, 12),
+(226, 15, 19, 3, 12),
+(227, 16, 19, 3, 12),
+(228, 17, 19, 3, 12),
+
+-- Trivietis: nuo 21 paros
+(229, 11, 20, 3, 9),
+(230, 12, 20, 3, 9),
+(231, 13, 20, 3, 9),
+(232, 14, 20, 3, 9),
+(233, 15, 20, 3, 9),
+(234, 16, 20, 3, 9),
+(235, 17, 20, 3, 9);
