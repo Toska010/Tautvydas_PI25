@@ -1,6 +1,7 @@
 cd Desktop
 cd Darbai
 git init
+git remote add origin https://github.com/Toska010/Tautvydas_PI25.git
 git status
 git branch -M main
 git add .
