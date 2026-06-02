@@ -1,0 +1,6 @@
+Apsirasant kambario kaina adresa svarbus eiliskumas
+1 Institucijos duomenys, pavadinimas.
+2 Kainos grupe tai institucijos studentams, kitos institucijos studentams, nestudijuojantiems.
+3 Adresai baraku.
+4 Kambario dydis ir siknu kiekis juose.
+5 Kainos atitinkamai kambariams.
