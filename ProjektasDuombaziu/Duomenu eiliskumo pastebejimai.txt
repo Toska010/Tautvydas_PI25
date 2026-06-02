@@ -8,3 +8,7 @@ Apsirasant kambario kaina adresa svarbus eiliskumas
 Pasiekus nuomos kainas kitiems asmenis papildome KainodarosTipus tik poto galime itraukti kainas uz para nestudijuojantiems.
 Pasiekus VU reikia itraukti jo pavadinima ir vu studento grupe, tada bendrabuciu adresus, paskiau kainas.
 Pasiekus VU nuoma iki 2men nestudijuojantiems itraukiami nauji kainodaros tipai.
+
+zmones nuo 1 iki 100 yra instituciju darbuotojai
+nuo 101 iki 110 administratoriai
+nuo 111 iki 260 gyvenentys bendrabuciuose

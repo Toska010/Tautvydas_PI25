@@ -1,0 +1,1101 @@
+-- =========================================
+-- INSTITUCIJA
+-- =========================================
+INSERT INTO Institucijos (ID, Pavadinimas)
+VALUES (1, 'Vilniaus kolegija');
+
+-- =========================================
+-- VARTOTOJU TIPAI (basic for later use)
+-- =========================================
+INSERT INTO VartotojuTipai (ID, Pavadinimas) VALUES
+(1, 'Studentas'),
+(2, 'Darbuotojas'),
+(3, 'Administratorius'),
+(4, 'Nestudijuojantis');
+
+-- =========================================
+-- KAINOS GRUPES
+-- =========================================
+INSERT INTO KainosGrupe (ID, Pavadinimas) VALUES
+(1, 'Vilniaus kolegijos studentas'),
+(2, 'Kitos institucijos studentas'),
+(3, 'Nestudijuojantis');
+
+-- =========================================
+-- PASTATAI
+-- =========================================
+INSERT INTO Pastatai (ID, Institucija, Adresas) VALUES
+(1, 1, 'Verkių g. 45'),
+(2, 1, 'Šaltkalvių g. 14'),
+(3, 1, 'Didlaukio g. 61'),
+(4, 1, 'Studentų g. 47'),
+(5, 1, 'Statybininkų g. 3'),
+(6, 1, 'Giedraičių g. 81'),
+(7, 1, 'Didlaukio g. 63'),
+(8, 1, 'Antakalnio g. 52'),
+(9, 1, 'Antakalnio g. 56'),
+(10, 1, 'P. Vileišio g. 20');
+
+-- =========================================
+-- KAINODAROS TIPAI
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(1, 'Vienviečiame kambaryje'),
+(2, 'Dviviečiame kambaryje gyvenant dviem asmenims'),
+(3, 'Dviviečiame kambaryje gyvenant vienam asmeniui'),
+(4, 'Triviečiame kambaryje gyvenant trims asmenims'),
+(5, 'Triviečiame kambaryje gyvenant dviem asmenims'),
+(6, 'Triviečiame kambaryje gyvenant vienam asmeniui'),
+(7, 'Vienviečiame geresnių sąlygų kambaryje'),
+(8, 'Dviviečiame geresnių sąlygų kambaryje gyvenant dviem asmenims'),
+(9, 'Dviviečiame geresnių sąlygų kambaryje gyvenant vienam asmeniui');
+
+-- =========================================
+-- PASTATU KAINODARA (VISI DUOMENYS)
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- 1. Vienvietis
+(1, 4, 1, 1, 115),
+(2, 8, 1, 1, 115),
+(3, 9, 1, 1, 115),
+
+-- 2. Dvivietis (2 asm.)
+(4, 1, 2, 1, 80),
+(5, 3, 2, 1, 80),
+(6, 4, 2, 1, 100),
+(7, 5, 2, 1, 100),
+(8, 7, 2, 1, 80),
+(9, 8, 2, 1, 100),
+(10, 9, 2, 1, 100),
+(11, 10, 2, 1, 100),
+
+-- 3. Dvivietis (1 asm.)
+(12, 1, 3, 1, 125),
+(13, 3, 3, 1, 125),
+(14, 4, 3, 1, 165),
+(15, 5, 3, 1, 180),
+(16, 7, 3, 1, 125),
+(17, 8, 3, 1, 185),
+(18, 9, 3, 1, 185),
+(19, 10, 3, 1, 185),
+
+-- 4. Trivietis (3 asm.)
+(20, 1, 4, 1, 75),
+(21, 2, 4, 1, 70),
+(22, 3, 4, 1, 75),
+(23, 5, 4, 1, 75),
+(24, 7, 4, 1, 75),
+
+-- 5. Trivietis (2 asm.)
+(25, 1, 5, 1, 85),
+(26, 2, 5, 1, 80),
+(27, 3, 5, 1, 85),
+(28, 5, 5, 1, 85),
+(29, 7, 5, 1, 85),
+
+-- 6. Trivietis (1 asm.)
+(30, 1, 6, 1, 165),
+(31, 2, 6, 1, 145),
+(32, 3, 6, 1, 165),
+(33, 5, 6, 1, 185),
+(34, 7, 6, 1, 165),
+
+-- 7. Vienvietis geresniu salygu
+(35, 3, 7, 1, 180),
+(36, 6, 7, 1, 180),
+
+-- 8. Dvivietis geresniu salygu (2 asm.)
+(37, 3, 8, 1, 145),
+(38, 6, 8, 1, 145),
+(39, 8, 8, 1, 145),
+(40, 10, 8, 1, 145),
+
+-- 9. Dvivietis geresniu salygu (1 asm.)
+(41, 3, 9, 1, 260),
+(42, 6, 9, 1, 260),
+(43, 8, 9, 1, 260),
+(44, 10, 9, 1, 260);
+
+
+-- =========================================
+-- PASTATU KAINODARA (Kitos institucijos studentai)
+-- KainosGrupe = 2
+-- =========================================
+
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- 1. Vienvietis
+(45, 5, 1, 2, 175),
+(46, 7, 1, 2, 175),
+(47, 8, 1, 2, 175),
+
+-- 2. Dvivietis (2 asm.)
+(48, 1, 2, 2, 100),
+(49, 3, 2, 2, 100),
+(50, 4, 2, 2, 130),
+(51, 5, 2, 2, 120),
+(52, 6, 2, 2, 100),
+(53, 7, 2, 2, 120),
+(54, 8, 2, 2, 120),
+(55, 9, 2, 2, 120),
+
+-- 3. Dvivietis (1 asm.)
+(56, 1, 3, 2, 150),
+(57, 3, 3, 2, 150),
+(58, 4, 3, 2, 190),
+(59, 5, 3, 2, 220),
+(60, 6, 3, 2, 150),
+(61, 7, 3, 2, 215),
+(62, 8, 3, 2, 215),
+(63, 9, 3, 2, 215),
+
+-- 4. Trivietis (3 asm.)
+(64, 1, 4, 2, 90),
+(65, 2, 4, 2, 80),
+(66, 3, 4, 2, 90),
+(67, 5, 4, 2, 90),
+(68, 6, 4, 2, 90),
+
+-- 5. Trivietis (2 asm.)
+(69, 1, 5, 2, 110),
+(70, 2, 5, 2, 100),
+(71, 3, 5, 2, 110),
+(72, 5, 5, 2, 105),
+(73, 6, 5, 2, 105),
+
+-- 6. Trivietis (1 asm.)
+(74, 1, 6, 2, 190),
+(75, 2, 6, 2, 180),
+(76, 3, 6, 2, 190),
+(77, 5, 6, 2, 190),
+(78, 6, 6, 2, 190),
+
+-- 7. Geresniu salygu (vienvietis) → nėra duomenų
+
+-- 8. Geresniu salygu (dvivietis 2 asm.)
+(79, 7, 8, 2, 195),
+
+-- 9. Geresniu salygu (dvivietis 1 asm.)
+(80, 7, 9, 2, 295);
+
+-- =========================================
+-- PAPILDOMI KAINODAROS TIPAI (paros kainos)
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(10, 'Iki 10 paru - asmeniui (paros kaina)'),
+(11, 'Iki 15 paru - asmeniui (paros kaina)'),
+(12, 'Iki 30 paru - asmeniui (paros kaina)'),
+(13, 'Daugiau nei 30 paru - asmeniui (paros kaina)'),
+(14, 'Geresniu salygu sveciu kambarys (paros kaina)');
+
+-- =========================================
+-- PASTATU KAINODARA (nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Iki 10 paru
+(95, 1, 10, 3, 10),
+(96, 2, 10, 3, 10),
+(97, 3, 10, 3, 10),
+(98, 4, 10, 3, 10),
+(99, 5, 10, 3, 10),
+(100, 6, 10, 3, 18),
+(101, 7, 10, 3, 10),
+(102, 8, 10, 3, 10),
+(103, 9, 10, 3, 10),
+(104, 10, 10, 3, 10),
+
+-- Iki 15 paru
+(105, 1, 11, 3, 8),
+(106, 2, 11, 3, 8),
+(107, 3, 11, 3, 8),
+(108, 4, 11, 3, 8),
+(109, 5, 11, 3, 8),
+(110, 6, 11, 3, 18),
+(111, 7, 11, 3, 8),
+(112, 8, 11, 3, 8),
+(113, 9, 11, 3, 8),
+(114, 10, 11, 3, 8),
+
+-- Iki 30 paru
+(115, 1, 12, 3, 7),
+(116, 2, 12, 3, 7),
+(117, 3, 12, 3, 7),
+(118, 4, 12, 3, 7),
+(119, 5, 12, 3, 7),
+(120, 6, 12, 3, 18),
+(121, 7, 12, 3, 7),
+(122, 8, 12, 3, 7),
+(123, 9, 12, 3, 7),
+(124, 10, 12, 3, 7),
+
+-- Daugiau nei 30 paru
+(125, 1, 13, 3, 6),
+(126, 2, 13, 3, 6),
+(127, 3, 13, 3, 6),
+(128, 4, 13, 3, 6),
+(129, 5, 13, 3, 6),
+(130, 6, 13, 3, 18),
+(131, 7, 13, 3, 6),
+(132, 8, 13, 3, 6),
+(133, 9, 13, 3, 6),
+(134, 10, 13, 3, 6),
+
+-- Geresniu salygu sveciu kambarys
+(135, 1, 14, 3, 13),
+(136, 2, 14, 3, 13),
+(137, 3, 14, 3, 13),
+(138, 4, 14, 3, 13),
+(139, 5, 14, 3, 13),
+(140, 6, 14, 3, 18),
+(141, 7, 14, 3, 13),
+(142, 8, 14, 3, 13),
+(143, 9, 14, 3, 13),
+(144, 10, 14, 3, 13);
+
+-- =========================================
+-- INSTITUCIJA: Vilniaus universitetas
+-- =========================================
+INSERT INTO Institucijos (ID, Pavadinimas)
+VALUES (2, 'Vilniaus universitetas');
+
+-- =========================================
+-- PASTATAI (Vilniaus universitetas)
+-- =========================================
+INSERT INTO Pastatai (ID, Institucija, Adresas) VALUES
+(11, 2, 'Olandų g. 51'),
+(12, 2, 'Saulėtekio al. 39'),
+(13, 2, 'Saulėtekio al. 37'),
+(14, 2, 'Saulėtekio al. 4'),
+(15, 2, 'Didlaukio g. 59'),
+(16, 2, 'Saulėtekio al. 33'),
+(17, 2, 'Saulėtekio al. 35');
+
+
+-- =========================================
+-- PRIDEDAME NAUJĄ KAINOS GRUPĘ
+-- =========================================
+INSERT INTO KainosGrupe (ID, Pavadinimas)
+VALUES (4, 'Vilniaus universiteto studentas');
+
+-- =========================================
+-- PASTATU KAINODARA (VU studentai)
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis (2 asm.)
+(145, 11, 2, 4, 85),
+(146, 12, 2, 4, 85),
+(147, 13, 2, 4, 85),
+(148, 14, 2, 4, 85),
+(149, 15, 2, 4, 85),
+(150, 16, 2, 4, 85),
+(151, 17, 2, 4, 85),
+
+-- Trivietis (3 asm.)
+(152, 11, 4, 4, 70),
+(153, 12, 4, 4, 70),
+(154, 13, 4, 4, 70),
+(155, 14, 4, 4, 70),
+(156, 15, 4, 4, 70),
+(157, 16, 4, 4, 70),
+(158, 17, 4, 4, 70);
+
+-- =========================================
+-- PASTATU KAINODARA (VU pastatai, nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis (2 asm.)
+(159, 11, 2, 3, 130),
+(160, 12, 2, 3, 130),
+(161, 13, 2, 3, 130),
+(162, 14, 2, 3, 130),
+(163, 15, 2, 3, 130),
+(164, 16, 2, 3, 130),
+(165, 17, 2, 3, 130),
+
+-- Dvivietis (1 asm.)
+(166, 11, 3, 3, 260),
+(167, 12, 3, 3, 260),
+(168, 13, 3, 3, 260),
+(169, 14, 3, 3, 260),
+(170, 15, 3, 3, 260),
+(171, 16, 3, 3, 260),
+(172, 17, 3, 3, 260),
+
+-- Trivietis (3 asm.)
+(173, 11, 4, 3, 90),
+(174, 12, 4, 3, 90),
+(175, 13, 4, 3, 90),
+(176, 14, 4, 3, 90),
+(177, 15, 4, 3, 90),
+(178, 16, 4, 3, 90),
+(179, 17, 4, 3, 90),
+
+-- Trivietis (2 asm.)
+(180, 11, 5, 3, 135),
+(181, 12, 5, 3, 135),
+(182, 13, 5, 3, 135),
+(183, 14, 5, 3, 135),
+(184, 15, 5, 3, 135),
+(185, 16, 5, 3, 135),
+(186, 17, 5, 3, 135),
+
+-- Trivietis (1 asm.)
+(187, 11, 6, 3, 260),
+(188, 12, 6, 3, 260),
+(189, 13, 6, 3, 260),
+(190, 14, 6, 3, 260),
+(191, 15, 6, 3, 260),
+(192, 16, 6, 3, 260),
+(193, 17, 6, 3, 260);
+
+-- =========================================
+-- KAINODAROS TIPAI (papildomi – paros kainos VU svečiams)
+-- =========================================
+INSERT INTO KainodarosTipai (ID, Pavadinimas) VALUES
+(15, 'Dvivietis iki 10 paru (paros kaina)'),
+(16, 'Dvivietis 11–20 paru (paros kaina)'),
+(17, 'Dvivietis nuo 21 paros (paros kaina)'),
+(18, 'Trivietis iki 10 paru (paros kaina)'),
+(19, 'Trivietis 11–20 paru (paros kaina)'),
+(20, 'Trivietis nuo 21 paros (paros kaina)');
+
+-- =========================================
+-- PASTATU KAINODARA (VU pastatai, nestudijuojantys)
+-- KainosGrupe = 3
+-- =========================================
+INSERT INTO PastatuKainodara (ID, Pastatas, KainodarosTipas, KainosGrupe, Kaina) VALUES
+
+-- Dvivietis: iki 10 paru
+(194, 11, 15, 3, 20),
+(195, 12, 15, 3, 20),
+(196, 13, 15, 3, 20),
+(197, 14, 15, 3, 20),
+(198, 15, 15, 3, 20),
+(199, 16, 15, 3, 20),
+(200, 17, 15, 3, 20),
+
+-- Dvivietis: 11–20 paru
+(201, 11, 16, 3, 15),
+(202, 12, 16, 3, 15),
+(203, 13, 16, 3, 15),
+(204, 14, 16, 3, 15),
+(205, 15, 16, 3, 15),
+(206, 16, 16, 3, 15),
+(207, 17, 16, 3, 15),
+
+-- Dvivietis: nuo 21 paros
+(208, 11, 17, 3, 12),
+(209, 12, 17, 3, 12),
+(210, 13, 17, 3, 12),
+(211, 14, 17, 3, 12),
+(212, 15, 17, 3, 12),
+(213, 16, 17, 3, 12),
+(214, 17, 17, 3, 12),
+
+-- Trivietis: iki 10 paru
+(215, 11, 18, 3, 16),
+(216, 12, 18, 3, 16),
+(217, 13, 18, 3, 16),
+(218, 14, 18, 3, 16),
+(219, 15, 18, 3, 16),
+(220, 16, 18, 3, 16),
+(221, 17, 18, 3, 16),
+
+-- Trivietis: 11–20 paru
+(222, 11, 19, 3, 12),
+(223, 12, 19, 3, 12),
+(224, 13, 19, 3, 12),
+(225, 14, 19, 3, 12),
+(226, 15, 19, 3, 12),
+(227, 16, 19, 3, 12),
+(228, 17, 19, 3, 12),
+
+-- Trivietis: nuo 21 paros
+(229, 11, 20, 3, 9),
+(230, 12, 20, 3, 9),
+(231, 13, 20, 3, 9),
+(232, 14, 20, 3, 9),
+(233, 15, 20, 3, 9),
+(234, 16, 20, 3, 9),
+(235, 17, 20, 3, 9);
+
+-- =========================================
+-- MOKEJIMU BUSENOS
+-- =========================================
+INSERT INTO MokejimuBusenos (ID, Busena) VALUES
+(1, 'Nepateiktas'),
+(2, 'Laukiama apmokejimo'),
+(3, 'Apmoketas'),
+(4, 'Veluoja'),
+(5, 'Atšauktas');
+
+-- =========================================
+-- UZKLAUSU BUSENOS
+-- =========================================
+INSERT INTO UzklausuBusenos (ID, Busena) VALUES
+(1, 'Pateikta'),
+(2, 'Perziurima'),
+(3, 'Priskirta'),
+(4, 'Vykdoma'),
+(5, 'Uzdaryta'),
+(6, 'Atšaukta'),
+(7, 'Atmesta');
+
+-- =========================================
+-- ADMINISTRATORIAUS LYGMUO
+-- =========================================
+INSERT INTO AdministratoriausLygmuo (ID, Pavadinimas) VALUES
+(1, 'Superadministratorius'),
+(2, 'Administratorius'),
+(3, 'Moderatoriaus lygmuo'),
+(4, 'Perziuros lygmuo');
+
+-- =========================================
+-- IVERTINIMAI (1–10 skalė)
+-- =========================================
+INSERT INTO Ivertinimai (ID, Ivertinimas) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+-- =========================================
+-- PERSONALO PAREIGOS
+-- =========================================
+INSERT INTO PersonaloPareigos (ID, Pavadinimas) VALUES
+(1, 'Administratorius'),
+(2, 'Bendrabučio vadybininkas'),
+(3, 'Techninės priežiūros darbuotojas'),
+(4, 'Santechnikas'),
+(5, 'Elektrikas'),
+(6, 'Valytojas'),
+(7, 'Apsaugos darbuotojas'),
+(8, 'IT specialistas'),
+(9, 'Finansininkas'),
+(10, 'Buhalteris');
+
+INSERT INTO Kambariai (ID, Pastatas, KambarioNumeris)
+SELECT 
+    ((p.ID - 1) * 90) + t.Eile AS ID,
+    p.ID AS Pastatas,
+    t.KambarioNumeris
+FROM Pastatai p
+CROSS JOIN (
+    -- 1 aukštas (100 serija)
+    SELECT 1 AS Eile, '101' AS KambarioNumeris
+    UNION ALL SELECT 2,'102' UNION ALL SELECT 3,'103' UNION ALL SELECT 4,'104' UNION ALL SELECT 5,'105'
+    UNION ALL SELECT 6,'106' UNION ALL SELECT 7,'107' UNION ALL SELECT 8,'108' UNION ALL SELECT 9,'109'
+    UNION ALL SELECT 10,'110' UNION ALL SELECT 11,'111' UNION ALL SELECT 12,'112' UNION ALL SELECT 13,'113'
+    UNION ALL SELECT 14,'114' UNION ALL SELECT 15,'115' UNION ALL SELECT 16,'116' UNION ALL SELECT 17,'117'
+    UNION ALL SELECT 18,'118' UNION ALL SELECT 19,'119' UNION ALL SELECT 20,'120' UNION ALL SELECT 21,'121'
+    UNION ALL SELECT 22,'122' UNION ALL SELECT 23,'123' UNION ALL SELECT 24,'124' UNION ALL SELECT 25,'125'
+    UNION ALL SELECT 26,'126' UNION ALL SELECT 27,'127' UNION ALL SELECT 28,'128' UNION ALL SELECT 29,'129'
+    UNION ALL SELECT 30,'130'
+
+    -- 2 aukštas (200 serija)
+    UNION ALL SELECT 31,'201' UNION ALL SELECT 32,'202' UNION ALL SELECT 33,'203' UNION ALL SELECT 34,'204'
+    UNION ALL SELECT 35,'205' UNION ALL SELECT 36,'206' UNION ALL SELECT 37,'207' UNION ALL SELECT 38,'208'
+    UNION ALL SELECT 39,'209' UNION ALL SELECT 40,'210' UNION ALL SELECT 41,'211' UNION ALL SELECT 42,'212'
+    UNION ALL SELECT 43,'213' UNION ALL SELECT 44,'214' UNION ALL SELECT 45,'215' UNION ALL SELECT 46,'216'
+    UNION ALL SELECT 47,'217' UNION ALL SELECT 48,'218' UNION ALL SELECT 49,'219' UNION ALL SELECT 50,'220'
+    UNION ALL SELECT 51,'221' UNION ALL SELECT 52,'222' UNION ALL SELECT 53,'223' UNION ALL SELECT 54,'224'
+    UNION ALL SELECT 55,'225' UNION ALL SELECT 56,'226' UNION ALL SELECT 57,'227' UNION ALL SELECT 58,'228'
+    UNION ALL SELECT 59,'229' UNION ALL SELECT 60,'230'
+
+    -- 3 aukštas (300 serija)
+    UNION ALL SELECT 61,'301' UNION ALL SELECT 62,'302' UNION ALL SELECT 63,'303' UNION ALL SELECT 64,'304'
+    UNION ALL SELECT 65,'305' UNION ALL SELECT 66,'306' UNION ALL SELECT 67,'307' UNION ALL SELECT 68,'308'
+    UNION ALL SELECT 69,'309' UNION ALL SELECT 70,'310' UNION ALL SELECT 71,'311' UNION ALL SELECT 72,'312'
+    UNION ALL SELECT 73,'313' UNION ALL SELECT 74,'314' UNION ALL SELECT 75,'315' UNION ALL SELECT 76,'316'
+    UNION ALL SELECT 77,'317' UNION ALL SELECT 78,'318' UNION ALL SELECT 79,'319' UNION ALL SELECT 80,'320'
+    UNION ALL SELECT 81,'321' UNION ALL SELECT 82,'322' UNION ALL SELECT 83,'323' UNION ALL SELECT 84,'324'
+    UNION ALL SELECT 85,'325' UNION ALL SELECT 86,'326' UNION ALL SELECT 87,'327' UNION ALL SELECT 88,'328'
+    UNION ALL SELECT 89,'329' UNION ALL SELECT 90,'330'
+) t
+ORDER BY p.ID, t.Eile;
+
+-- =========================================
+-- VARTOTOJAI (100 darbuotojų)
+-- =========================================
+INSERT INTO Vartotojai (ID, Vardas, Pavarde, Telefonas, ElPastas, VartotojoTipas) VALUES
+(1,'Jonas','Kazlauskas','+37060000001','jonas.kazlauskas@imone.lt',2),
+(2,'Antanas','Petrauskas','+37060000002',NULL,2),
+(3,'Petras','Jankauskas','+37060000003','petras.jankauskas@imone.lt',2),
+(4,'Tomas','Stankevičius','+37060000004','tomas.stankevicius@imone.lt',2),
+(5,'Marius','Žukauskas','+37060000005',NULL,2),
+(6,'Andrius','Urbonas','+37060000006','andrius.urbonas@imone.lt',2),
+(7,'Darius','Savickas','+37060000007','darius.savickas@imone.lt',2),
+(8,'Rokas','Kavaliauskas','+37060000008',NULL,2),
+(9,'Vytautas','Navickas','+37060000009','vytautas.navickas@imone.lt',2),
+(10,'Saulius','Baranauskas','+37060000010','saulius.baranauskas@imone.lt',2),
+(11,'Ieva','Kazlauskienė','+37060000011','ieva.kazlauskiene@imone.lt',2),
+(12,'Austėja','Petrauskaitė','+37060000012',NULL,2),
+(13,'Monika','Jankauskaitė','+37060000013','monika.jankauskaite@imone.lt',2),
+(14,'Gabija','Stankevičiūtė','+37060000014','gabija.stankeviciute@imone.lt',2),
+(15,'Rūta','Žukauskaitė','+37060000015',NULL,2),
+(16,'Simona','Urbonaitė','+37060000016','simona.urbonaite@imone.lt',2),
+(17,'Kamilė','Savickaitė','+37060000017','kamile.savickaite@imone.lt',2),
+(18,'Eglė','Kavaliauskaitė','+37060000018',NULL,2),
+(19,'Laura','Navickaitė','+37060000019','laura.navickaite@imone.lt',2),
+(20,'Inga','Baranauskaitė','+37060000020','inga.baranauskaite@imone.lt',2),
+(21,'Paulius','Kazlauskas','+37060000021',NULL,2),
+(22,'Arnas','Petrauskas','+37060000022','arnas.petrauskas@imone.lt',2),
+(23,'Mantas','Jankauskas','+37060000023',NULL,2),
+(24,'Karolis','Stankevičius','+37060000024','karolis.stankevicius@imone.lt',2),
+(25,'Justas','Žukauskas','+37060000025',NULL,2),
+(26,'Lukas','Bielskis','+37060000026','lukas.bielskis@imone.lt',2),
+(27,'Deividas','Klimavičius','+37060000027',NULL,2),
+(28,'Edgaras','Rutkauskas','+37060000028','edgaras.rutkauskas@imone.lt',2),
+(29,'Tautvydas','Gudauskas','+37060000029',NULL,2),
+(30,'Mindaugas','Vasiliauskas','+37060000030','mindaugas.vasiliauskas@imone.lt',2),
+(31,'Agnė','Bielskaitė','+37060000031','agne.bielskaite@imone.lt',2),
+(32,'Vaida','Klimavičiūtė','+37060000032',NULL,2),
+(33,'Greta','Rutkauskaitė','+37060000033','greta.rutkauskaite@imone.lt',2),
+(34,'Emilija','Gudauskaitė','+37060000034','emilija.gudauskaite@imone.lt',2),
+(35,'Neringa','Vasiliauskaitė','+37060000035',NULL,2),
+(36,'Dovydas','Zujus','+37060000036','dovydas.zujus@imone.lt',2),
+(37,'Vytenis','Lekavičius','+37060000037','vytenis.lekavicius@imone.lt',2),
+(38,'Matas','Bagdonas','+37060000038',NULL,2),
+(39,'Eimantas','Kairys','+37060000039','eimantas.kairys@imone.lt',2),
+(40,'Tadas','Pocius','+37060000040',NULL,2),
+(41,'Skirmantė','Zujutė','+37060000041','skirmante.zujute@imone.lt',2),
+(42,'Justė','Lekavičiūtė','+37060000042','juste.lekaviciute@imone.lt',2),
+(43,'Dominyka','Bagdonaitė','+37060000043',NULL,2),
+(44,'Agnė','Kairytė','+37060000044','agne.kairyte@imone.lt',2),
+(45,'Kristina','Pociūtė','+37060000045',NULL,2),
+(46,'Rytis','Gricius','+37060000046','rytis.gricius@imone.lt',2),
+(47,'Dainius','Kučinskas','+37060000047',NULL,2),
+(48,'Gediminas','Jakubauskas','+37060000048','gediminas.jakubauskas@imone.lt',2),
+(49,'Algirdas','Matulionis','+37060000049','algirdas.matulionis@imone.lt',2),
+(50,'Egidijus','Šimkus','+37060000050',NULL,2),
+(51,'Simas','Stasiulis','+37060000051','simas.stasiulis@imone.lt',2),
+(52,'Nerijus','Tamošiūnas','+37060000052','nerijus.tamosiunas@imone.lt',2),
+(53,'Arvydas','Grigas','+37060000053',NULL,2),
+(54,'Kęstutis','Vaitkus','+37060000054','kestutis.vaitkus@imone.lt',2),
+(55,'Valdas','Janonis','+37060000055',NULL,2),
+(56,'Asta','Stasiulienė','+37060000056','asta.stasiuliene@imone.lt',2),
+(57,'Daiva','Tamošiūnienė','+37060000057',NULL,2),
+(58,'Rasa','Grigienė','+37060000058','rasa.grigiene@imone.lt',2),
+(59,'Jolita','Vaitkienė','+37060000059','jolita.vaitkiene@imone.lt',2),
+(60,'Edita','Janonienė','+37060000060',NULL,2),
+(61,'Paulius','Rimkus','+37060000061','paulius.rimkus@imone.lt',2),
+(62,'Artūras','Čepas','+37060000062','arturas.cepas@imone.lt',2),
+(63,'Gintaras','Pukis','+37060000063',NULL,2),
+(64,'Rolandas','Sabaliauskas','+37060000064','rolandas.sabaliauskas@imone.lt',2),
+(65,'Žilvinas','Daukša','+37060000065',NULL,2),
+(66,'Lina','Rimkutė','+37060000066','lina.rimkute@imone.lt',2),
+(67,'Aurelija','Čepaitė','+37060000067',NULL,2),
+(68,'Irena','Pukienė','+37060000068','irena.pukiene@imone.lt',2),
+(69,'Violeta','Sabaliauskienė','+37060000069','violeta.sabaliauskiene@imone.lt',2),
+(70,'Ilona','Daukšienė','+37060000070',NULL,2),
+(71,'Tomas','Remeika','+37060000071','tomas.remeika@imone.lt',2),
+(72,'Evaldas','Gintalas','+37060000072',NULL,2),
+(73,'Saulius','Butkus','+37060000073','saulius.butkus@imone.lt',2),
+(74,'Vaidotas','Šarka','+37060000074','vaidotas.sarka@imone.lt',2),
+(75,'Donatas','Ulevičius','+37060000075',NULL,2),
+(76,'Eglė','Remeikaitė','+37060000076','egle.remeikaite@imone.lt',2),
+(77,'Inesa','Gintalienė','+37060000077','inesa.gintaliene@imone.lt',2),
+(78,'Jovita','Butkutė','+37060000078',NULL,2),
+(79,'Sandra','Šarkienė','+37060000079','sandra.sarkiene@imone.lt',2),
+(80,'Raimonda','Ulevičienė','+37060000080',NULL,2),
+(81,'Marius','Kuncė','+37060000081','marius.kunce@imone.lt',2),
+(82,'Edvinas','Zaleckas','+37060000082','edvinas.zaleckas@imone.lt',2),
+(83,'Titas','Ivanauskas','+37060000083',NULL,2),
+(84,'Aurimas','Korsakas','+37060000084','aurimas.korsakas@imone.lt',2),
+(85,'Jonas','Mickevičius','+37060000085',NULL,2),
+(86,'Karolina','Kuncaitė','+37060000086','karolina.kuncaite@imone.lt',2),
+(87,'Viktorija','Zaleckaitė','+37060000087','viktorija.zaleckaite@imone.lt',2),
+(88,'Samanta','Ivanauskaitė','+37060000088',NULL,2),
+(89,'Giedrė','Korsakaitė','+37060000089','giedre.korsakaite@imone.lt',2),
+(90,'Milda','Mickevičiūtė','+37060000090',NULL,2),
+(91,'Dovidis','Kalvaitis','+37060000091','dovidis.kalvaitis@imone.lt',2),
+(92,'Arminas','Pliuskus','+37060000092',NULL,2),
+(93,'Kostas','Šaltenis','+37060000093','kostas.saltenis@imone.lt',2),
+(94,'Vytenis','Liorentas','+37060000094','vytenis.liorentas@imone.lt',2),
+(95,'Laimonas','Zubrus','+37060000095',NULL,2),
+(96,'Rasa','Kalvaitienė','+37060000096','rasa.kalvaitiene@imone.lt',2),
+(97,'Asta','Pliuskienė','+37060000097',NULL,2),
+(98,'Jurga','Šaltenienė','+37060000098','jurga.salteniene@imone.lt',2),
+(99,'Vilma','Liorentienė','+37060000099','vilma.liorentiene@imone.lt',2),
+(100,'Edita','Zubrienė','+37060000100',NULL,2);
+
+INSERT INTO Personalas (ID, Vartotojas, Institucija, Pareigos) VALUES
+
+-- 1–60 Vilniaus kolegija
+(1,1,1,1),(2,2,1,2),(3,3,1,3),(4,4,1,4),(5,5,1,5),
+(6,6,1,6),(7,7,1,7),(8,8,1,8),(9,9,1,9),(10,10,1,10),
+(11,11,1,1),(12,12,1,2),(13,13,1,3),(14,14,1,4),(15,15,1,5),
+(16,16,1,6),(17,17,1,7),(18,18,1,8),(19,19,1,9),(20,20,1,10),
+(21,21,1,1),(22,22,1,2),(23,23,1,3),(24,24,1,4),(25,25,1,5),
+(26,26,1,6),(27,27,1,7),(28,28,1,8),(29,29,1,9),(30,30,1,10),
+(31,31,1,1),(32,32,1,2),(33,33,1,3),(34,34,1,4),(35,35,1,5),
+(36,36,1,6),(37,37,1,7),(38,38,1,8),(39,39,1,9),(40,40,1,10),
+(41,41,1,1),(42,42,1,2),(43,43,1,3),(44,44,1,4),(45,45,1,5),
+(46,46,1,6),(47,47,1,7),(48,48,1,8),(49,49,1,9),(50,50,1,10),
+(51,51,1,1),(52,52,1,2),(53,53,1,3),(54,54,1,4),(55,55,1,5),
+(56,56,1,6),(57,57,1,7),(58,58,1,8),(59,59,1,9),(60,60,1,10),
+
+-- 61–100 Vilniaus universitetas
+(61,61,2,1),(62,62,2,2),(63,63,2,3),(64,64,2,4),(65,65,2,5),
+(66,66,2,6),(67,67,2,7),(68,68,2,8),(69,69,2,9),(70,70,2,10),
+(71,71,2,1),(72,72,2,2),(73,73,2,3),(74,74,2,4),(75,75,2,5),
+(76,76,2,6),(77,77,2,7),(78,78,2,8),(79,79,2,9),(80,80,2,10),
+(81,81,2,1),(82,82,2,2),(83,83,2,3),(84,84,2,4),(85,85,2,5),
+(86,86,2,6),(87,87,2,7),(88,88,2,8),(89,89,2,9),(90,90,2,10),
+(91,91,2,1),(92,92,2,2),(93,93,2,3),(94,94,2,4),(95,95,2,5),
+(96,96,2,6),(97,97,2,7),(98,98,2,8),(99,99,2,9),(100,100,2,10);
+-- =========================================
+-- NAUJI VARTOTOJAI (administratoriai – ne darbuotojai)
+-- =========================================
+INSERT INTO Vartotojai (ID, Vardas, Pavarde, Telefonas, ElPastas, VartotojoTipas) VALUES
+(101,'Linas','Petraitis','+37061100101','linas.petraitis@admin.lt',3),
+(102,'Giedrius','Jasaitis','+37061100102',NULL,3),
+(103,'Tadas','Paknys','+37061100103','tadas.paknys@admin.lt',3),
+(104,'Eimantas','Dargis','+37061100104','eimantas.dargis@admin.lt',3),
+(105,'Rokas','Milinis','+37061100105',NULL,3),
+(106,'Saulius','Kairys','+37061100106','saulius.kairys@admin.lt',3),
+(107,'Arnas','Valaitis','+37061100107',NULL,3),
+(108,'Domas','Kvedaras','+37061100108','domas.kvedaras@admin.lt',3),
+(109,'Mantas','Žemaitis','+37061100109','mantas.zemaitis@admin.lt',3),
+(110,'Paulius','Riauba','+37061100110',NULL,3);
+
+-- =========================================
+-- ADMINISTRATORIAI (naudoja naujus vartotojus)
+-- =========================================
+INSERT INTO Administratoriai (ID, Vartotojas, PrieigosLygis) VALUES
+(1, 101, 1),
+(2, 102, 2),
+(3, 103, 2),
+(4, 104, 3),
+(5, 105, 3),
+(6, 106, 2),
+(7, 107, 4),
+(8, 108, 2),
+(9, 109, 1),
+(10, 110, 3);
+
+INSERT INTO Vartotojai (ID, Vardas, Pavarde, Telefonas, ElPastas, VartotojoTipas) VALUES
+(111,'Tomas','Jasiūnas','+37061000111','tomas.jasiunas@student.lt',1),
+(112,'Mantas','Balčiūnas','+37061000112',NULL,1),
+(113,'Rokas','Vaitkevičius','+37061000113','rokas.vaitkevicius@student.lt',1),
+(114,'Paulius','Griškevičius','+37061000114',NULL,1),
+(115,'Lukas','Morkūnas','+37061000115','lukas.morkunas@student.lt',1),
+(116,'Ieva','Vaitkutė','+37061000116','ieva.vaitkute@student.lt',1),
+(117,'Austėja','Morkūnaitė','+37061000117',NULL,1),
+(118,'Gabija','Balčiūnaitė','+37061000118','gabija.balciunaite@student.lt',1),
+(119,'Monika','Griškevičiūtė','+37061000119',NULL,1),
+(120,'Eglė','Jasiūnaitė','+37061000120','egle.jasiunaite@student.lt',1),
+(121,'Karolis','Ulevičius','+37061000121',NULL,1),
+(122,'Domantas','Remeika','+37061000122','domantas.remeika@student.lt',1),
+(123,'Andrius','Kavaliauskas','+37061000123',NULL,1),
+(124,'Vytenis','Grigaitis','+37061000124','vytenis.grigaitis@student.lt',1),
+(125,'Evaldas','Sabaliauskas','+37061000125',NULL,1),
+(126,'Simona','Grigaitė','+37061000126','simona.grigaite@student.lt',1),
+(127,'Laura','Sabaliauskaitė','+37061000127',NULL,1),
+(128,'Rūta','Ulevičiūtė','+37061000128','ruta.uleviciute@student.lt',1),
+(129,'Kristina','Remeikaitė','+37061000129',NULL,1),
+(130,'Agnė','Kavaliauskaitė','+37061000130','agne.kavaliauskaite@student.lt',1),
+(131,'Edvinas','Zaleckas','+37061000131',NULL,1),
+(132,'Titas','Ivanauskas','+37061000132','titas.ivanauskas@student.lt',1),
+(133,'Aurimas','Korsakas','+37061000133',NULL,1),
+(134,'Jonas','Mickevičius','+37061000134','jonas.mickevicius@student.lt',1),
+(135,'Marius','Kalinauskas','+37061000135',NULL,1),
+(136,'Karolina','Kalinauskaitė','+37061000136','karolina.kalinauskaite@student.lt',1),
+(137,'Viktorija','Mickevičiūtė','+37061000137',NULL,1),
+(138,'Samanta','Ivanauskaitė','+37061000138','samanta.ivanauskaite@student.lt',1),
+(139,'Giedrė','Korsakaitė','+37061000139',NULL,1),
+(140,'Milda','Zaleckaitė','+37061000140','milda.zaleckaite@student.lt',1),
+(141,'Darius','Butkus','+37061000141',NULL,1),
+(142,'Saulius','Šarka','+37061000142','saulius.sarka@student.lt',1),
+(143,'Vytautas','Kairys','+37061000143',NULL,1),
+(144,'Egidijus','Pocius','+37061000144','egidijus.pocius@student.lt',1),
+(145,'Mindaugas','Rutkauskas','+37061000145',NULL,1),
+(146,'Aistė','Butkutė','+37061000146','aiste.butkute@student.lt',1),
+(147,'Jovita','Šarkaitė','+37061000147',NULL,1),
+(148,'Sandra','Kairytė','+37061000148','sandra.kairyte@student.lt',1),
+(149,'Raimonda','Pociūtė','+37061000149',NULL,1),
+(150,'Edita','Rutkauskaitė','+37061000150','edita.rutkauskaite@student.lt',1),
+(151,'Arnas','Daukša','+37061000151',NULL,1),
+(152,'Kęstutis','Šimaitis','+37061000152','kestutis.simaitis@student.lt',1),
+(153,'Laimonas','Petronis','+37061000153',NULL,1),
+(154,'Dovydas','Sakalauskas','+37061000154','dovydas.sakalauskas@student.lt',1),
+(155,'Rytis','Čekanauskas','+37061000155',NULL,1),
+(156,'Neringa','Daukšaitė','+37061000156','neringa.dauksaite@student.lt',1),
+(157,'Birutė','Šimaitė','+37061000157',NULL,1),
+(158,'Aurelija','Petronytė','+37061000158','aurelija.petronyte@student.lt',1),
+(159,'Inesa','Sakalauskaitė','+37061000159',NULL,1),
+(160,'Daiva','Čekanauskaitė','+37061000160','daiva.cekenauskaite@student.lt',1),
+(161,'Tautvydas','Janonis','+37061000161',NULL,1),
+(162,'Justas','Pukis','+37061000162','justas.pukis@student.lt',1),
+(163,'Matas','Rimkus','+37061000163',NULL,1),
+(164,'Vytautė','Pukytė','+37061000164','vytaute.pukyte@student.lt',1),
+(165,'Greta','Rimkutė','+37061000165',NULL,1),
+(166,'Linas','Stasiulis','+37061000166','linas.stasiulis@student.lt',1),
+(167,'Nerijus','Tamošiūnas','+37061000167',NULL,1),
+(168,'Arvydas','Grigas','+37061000168','arvydas.grigas@student.lt',1),
+(169,'Valdas','Janonis','+37061000169',NULL,1),
+(170,'Asta','Stasiulienė','+37061000170','asta.stasiuliene@student.lt',1),
+(171,'Daiva','Tamošiūnaitė','+37061000171',NULL,1),
+(172,'Rasa','Grigaitė','+37061000172','rasa.grigaite@student.lt',1),
+(173,'Jolita','Janonytė','+37061000173',NULL,1),
+(174,'Ilona','Bielskaitė','+37061000174','ilona.bielskaite@student.lt',1),
+(175,'Lukas','Klimavičius','+37061000175',NULL,1),
+(176,'Edgaras','Rutkauskas','+37061000176','edgaras.rutkauskas@student.lt',1),
+(177,'Tautvydas','Gudauskas','+37061000177',NULL,1),
+(178,'Mindaugas','Vasiliauskas','+37061000178','mindaugas.vasiliauskas@student.lt',1),
+(179,'Agnė','Klimavičiūtė','+37061000179',NULL,1),
+(180,'Vaida','Rutkauskaitė','+37061000180','vaida.rutkauskaite@student.lt',1),
+(181,'Emilija','Gudauskaitė','+37061000181',NULL,1),
+(182,'Neringa','Vasiliauskaitė','+37061000182','neringa.vasiliauskaite@student.lt',1),
+(183,'Dovydas','Lekavičius','+37061000183',NULL,1),
+(184,'Skirmantas','Zujus','+37061000184','skirmantas.zujus@student.lt',1),
+(185,'Justė','Bagdonaitė','+37061000185',NULL,1),
+(186,'Dominyka','Lekavičiūtė','+37061000186','dominyka.lekaviciute@student.lt',1),
+(187,'Agnė','Pociūtė','+37061000187',NULL,1),
+(188,'Kristina','Kairytė','+37061000188','kristina.kairyte@student.lt',1),
+(189,'Rytis','Kučinskas','+37061000189',NULL,1),
+(190,'Gediminas','Jakubauskas','+37061000190','gediminas.jakubauskas@student.lt',1),
+(191,'Algirdas','Matulionis','+37061000191',NULL,1),
+(192,'Egidijus','Šimkus','+37061000192','egidijus.simkus@student.lt',1),
+(193,'Paulius','Kazlauskas','+37061000193',NULL,1),
+(194,'Arnas','Petrauskas','+37061000194','arnas.petrauskas@student.lt',1),
+(195,'Mantas','Jankauskas','+37061000195',NULL,1),
+(196,'Karolis','Stankevičius','+37061000196','karolis.stankevicius@student.lt',1),
+(197,'Justas','Žukauskas','+37061000197',NULL,1),
+(198,'Ieva','Kazlauskienė','+37061000198','ieva.kazlauskiene@student.lt',1),
+(199,'Austėja','Petrauskaitė','+37061000199',NULL,1),
+(200,'Monika','Jankauskaitė','+37061000200','monika.jankauskaite@student.lt',1),
+(201,'Gabija','Stankevičiūtė','+37061000201',NULL,1),
+(202,'Rūta','Žukauskaitė','+37061000202','ruta.zukauskaite@student.lt',1),
+(203,'Simona','Urbonaitė','+37061000203',NULL,1),
+(204,'Kamilė','Savickaitė','+37061000204','kamile.savickaite@student.lt',1),
+(205,'Eglė','Kavaliauskaitė','+37061000205',NULL,1),
+(206,'Laura','Navickaitė','+37061000206','laura.navickaite@student.lt',1),
+(207,'Inga','Baranauskaitė','+37061000207',NULL,1),
+(208,'Tomas','Remeika','+37061000208','tomas.remeika@student.lt',1),
+(209,'Evaldas','Gintalas','+37061000209',NULL,1),
+(210,'Saulius','Butkus','+37061000210','saulius.butkus@student.lt',1),
+(211,'Vaidotas','Šarka','+37061000211',NULL,1),
+(212,'Donatas','Ulevičius','+37061000212','donatas.ulevicius@student.lt',1),
+(213,'Eglė','Remeikaitė','+37061000213',NULL,1),
+(214,'Inesa','Gintalienė','+37061000214','inesa.gintaliene@student.lt',1),
+(215,'Jovita','Butkutė','+37061000215',NULL,1),
+(216,'Sandra','Šarkienė','+37061000216','sandra.sarkiene@student.lt',1),
+(217,'Raimonda','Ulevičienė','+37061000217',NULL,1),
+(218,'Marius','Kuncė','+37061000218','marius.kunce@student.lt',1),
+(219,'Edvinas','Zaleckas','+37061000219',NULL,1),
+(220,'Titas','Ivanauskas','+37061000220','titas.ivanauskas@student.lt',1),
+(221,'Aurimas','Korsakas','+37061000221',NULL,1),
+(222,'Jonas','Mickevičius','+37061000222','jonas.mickevicius@student.lt',1),
+(223,'Karolina','Kuncaitė','+37061000223',NULL,1),
+(224,'Viktorija','Zaleckaitė','+37061000224','viktorija.zaleckaite@student.lt',1),
+(225,'Samanta','Ivanauskaitė','+37061000225',NULL,1),
+(226,'Giedrė','Korsakaitė','+37061000226','giedre.korsakaite@student.lt',1),
+(227,'Milda','Mickevičiūtė','+37061000227',NULL,1),
+(228,'Dovidis','Kalvaitis','+37061000228','dovidis.kalvaitis@student.lt',1),
+(229,'Arminas','Pliuskus','+37061000229',NULL,1),
+(230,'Kostas','Šaltenis','+37061000230','kostas.saltenis@student.lt',1),
+(231,'Vytenis','Liorentas','+37061000231',NULL,4),
+(232,'Laimonas','Zubrus','+37061000232','laimonas.zubrus@mail.lt',4),
+(233,'Rasa','Kalvaitienė','+37061000233',NULL,4),
+(234,'Asta','Pliuskienė','+37061000234','asta.pliuskiene@mail.lt',4),
+(235,'Jurga','Šaltenienė','+37061000235',NULL,4),
+(236,'Vilma','Liorentienė','+37061000236','vilma.liorentiene@mail.lt',4),
+(237,'Tomas','Grigas','+37061000237',NULL,4),
+(238,'Saulius','Urbaitis','+37061000238','saulius.urbaitis@mail.lt',4),
+(239,'Andrius','Lukšys','+37061000239',NULL,4),
+(240,'Rytis','Milius','+37061000240','rytis.milius@mail.lt',4),
+(241,'Egidijus','Balčius','+37061000241',NULL,4),
+(242,'Rasa','Grigienė','+37061000242','rasa.grigiene@mail.lt',4),
+(243,'Asta','Urbaitienė','+37061000243',NULL,4),
+(244,'Lina','Lukšienė','+37061000244','lina.luksiene@mail.lt',4),
+(245,'Jolanta','Miliūtė','+37061000245',NULL,4),
+(246,'Diana','Balčienė','+37061000246','diana.balciene@mail.lt',4),
+(247,'Algirdas','Dumčius','+37061000247',NULL,4),
+(248,'Kęstutis','Račkauskas','+37061000248','kestutis.rackauskas@mail.lt',4),
+(249,'Arūnas','Čekanauskas','+37061000249',NULL,4),
+(250,'Zenonas','Giedraitis','+37061000250','zenonas.giedraitis@mail.lt',4),
+(251,'Juozas','Kudirka','+37061000251',NULL,4),
+(252,'Birutė','Dumčienė','+37061000252','birute.dumciene@mail.lt',4),
+(253,'Genovaitė','Račkauskienė','+37061000253',NULL,4),
+(254,'Janina','Čekanauskienė','+37061000254','janina.cekenauskiene@mail.lt',4),
+(255,'Onutė','Giedraitienė','+37061000255',NULL,4),
+(256,'Danuta','Kudirkienė','+37061000256','danuta.kudirkiene@mail.lt',4),
+(257,'Rimantas','Sakalauskas','+37061000257',NULL,4),
+(258,'Valdemaras','Petronis','+37061000258','valdemaras.petronis@mail.lt',4),
+(259,'Aldona','Sakalauskienė','+37061000259',NULL,4),
+(260,'Irena','Petronienė','+37061000260','irena.petroniene@mail.lt',4);
+
+-- =========================================
+-- APGYVENDINIMAS
+-- Priskiriami visi ne darbuotojai ir ne administratoriai:
+-- Vartotojai ID 111–260
+-- =========================================
+INSERT INTO Apgyvendinimas (ID, Studentas, Kambarys, PradziosData, PabaigosData) VALUES
+(1, 111, 1, '2025-09-01', '2026-06-30'),
+(2, 112, 2, '2025-09-15', '2026-07-15'),
+(3, 113, 3, '2025-10-01', '2026-06-15'),
+(4, 114, 4, '2025-10-10', '2026-08-31'),
+(5, 115, 5, '2025-11-01', '2026-05-31'),
+(6, 116, 6, '2025-11-20', '2026-07-31'),
+(7, 117, 7, '2026-01-05', '2026-09-01'),
+(8, 118, 8, '2026-02-01', '2026-08-15'),
+(9, 119, 9, '2026-03-10', '2026-06-20'),
+(10, 120, 91, '2026-04-01', '2026-09-30'),
+
+(11, 121, 92, '2025-09-01', '2026-06-30'),
+(12, 122, 93, '2025-09-15', '2026-07-15'),
+(13, 123, 94, '2025-10-01', '2026-06-15'),
+(14, 124, 95, '2025-10-10', '2026-08-31'),
+(15, 125, 96, '2025-11-01', '2026-05-31'),
+(16, 126, 97, '2025-11-20', '2026-07-31'),
+(17, 127, 98, '2026-01-05', '2026-09-01'),
+(18, 128, 99, '2026-02-01', '2026-08-15'),
+(19, 129, 181, '2026-03-10', '2026-06-20'),
+(20, 130, 182, '2026-04-01', '2026-09-30'),
+
+(21, 131, 183, '2025-09-01', '2026-06-30'),
+(22, 132, 184, '2025-09-15', '2026-07-15'),
+(23, 133, 185, '2025-10-01', '2026-06-15'),
+(24, 134, 186, '2025-10-10', '2026-08-31'),
+(25, 135, 187, '2025-11-01', '2026-05-31'),
+(26, 136, 188, '2025-11-20', '2026-07-31'),
+(27, 137, 189, '2026-01-05', '2026-09-01'),
+(28, 138, 271, '2026-02-01', '2026-08-15'),
+(29, 139, 272, '2026-03-10', '2026-06-20'),
+(30, 140, 273, '2026-04-01', '2026-09-30'),
+
+(31, 141, 274, '2025-09-01', '2026-06-30'),
+(32, 142, 275, '2025-09-15', '2026-07-15'),
+(33, 143, 276, '2025-10-01', '2026-06-15'),
+(34, 144, 277, '2025-10-10', '2026-08-31'),
+(35, 145, 278, '2025-11-01', '2026-05-31'),
+(36, 146, 279, '2025-11-20', '2026-07-31'),
+(37, 147, 361, '2026-01-05', '2026-09-01'),
+(38, 148, 362, '2026-02-01', '2026-08-15'),
+(39, 149, 363, '2026-03-10', '2026-06-20'),
+(40, 150, 364, '2026-04-01', '2026-09-30'),
+
+(41, 151, 365, '2025-09-01', '2026-06-30'),
+(42, 152, 366, '2025-09-15', '2026-07-15'),
+(43, 153, 367, '2025-10-01', '2026-06-15'),
+(44, 154, 368, '2025-10-10', '2026-08-31'),
+(45, 155, 369, '2025-11-01', '2026-05-31'),
+(46, 156, 451, '2025-11-20', '2026-07-31'),
+(47, 157, 452, '2026-01-05', '2026-09-01'),
+(48, 158, 453, '2026-02-01', '2026-08-15'),
+(49, 159, 454, '2026-03-10', '2026-06-20'),
+(50, 160, 455, '2026-04-01', '2026-09-30'),
+
+(51, 161, 456, '2025-09-01', '2026-06-30'),
+(52, 162, 457, '2025-09-15', '2026-07-15'),
+(53, 163, 458, '2025-10-01', '2026-06-15'),
+(54, 164, 459, '2025-10-10', '2026-08-31'),
+(55, 165, 541, '2025-11-01', '2026-05-31'),
+(56, 166, 542, '2025-11-20', '2026-07-31'),
+(57, 167, 543, '2026-01-05', '2026-09-01'),
+(58, 168, 544, '2026-02-01', '2026-08-15'),
+(59, 169, 545, '2026-03-10', '2026-06-20'),
+(60, 170, 546, '2026-04-01', '2026-09-30'),
+
+(61, 171, 547, '2025-09-01', '2026-06-30'),
+(62, 172, 548, '2025-09-15', '2026-07-15'),
+(63, 173, 549, '2025-10-01', '2026-06-15'),
+(64, 174, 631, '2025-10-10', '2026-08-31'),
+(65, 175, 632, '2025-11-01', '2026-05-31'),
+(66, 176, 633, '2025-11-20', '2026-07-31'),
+(67, 177, 634, '2026-01-05', '2026-09-01'),
+(68, 178, 635, '2026-02-01', '2026-08-15'),
+(69, 179, 636, '2026-03-10', '2026-06-20'),
+(70, 180, 637, '2026-04-01', '2026-09-30'),
+
+(71, 181, 638, '2025-09-01', '2026-06-30'),
+(72, 182, 639, '2025-09-15', '2026-07-15'),
+(73, 183, 721, '2025-10-01', '2026-06-15'),
+(74, 184, 722, '2025-10-10', '2026-08-31'),
+(75, 185, 723, '2025-11-01', '2026-05-31'),
+(76, 186, 724, '2025-11-20', '2026-07-31'),
+(77, 187, 725, '2026-01-05', '2026-09-01'),
+(78, 188, 726, '2026-02-01', '2026-08-15'),
+(79, 189, 727, '2026-03-10', '2026-06-20'),
+(80, 190, 728, '2026-04-01', '2026-09-30'),
+
+(81, 191, 729, '2025-09-01', '2026-06-30'),
+(82, 192, 811, '2025-09-15', '2026-07-15'),
+(83, 193, 812, '2025-10-01', '2026-06-15'),
+(84, 194, 813, '2025-10-10', '2026-08-31'),
+(85, 195, 814, '2025-11-01', '2026-05-31'),
+(86, 196, 815, '2025-11-20', '2026-07-31'),
+(87, 197, 816, '2026-01-05', '2026-09-01'),
+(88, 198, 817, '2026-02-01', '2026-08-15'),
+(89, 199, 818, '2026-03-10', '2026-06-20'),
+(90, 200, 819, '2026-04-01', '2026-09-30'),
+
+(91, 201, 901, '2025-09-01', '2026-06-30'),
+(92, 202, 902, '2025-09-15', '2026-07-15'),
+(93, 203, 903, '2025-10-01', '2026-06-15'),
+(94, 204, 904, '2025-10-10', '2026-08-31'),
+(95, 205, 905, '2025-11-01', '2026-05-31'),
+(96, 206, 906, '2025-11-20', '2026-07-31'),
+(97, 207, 907, '2026-01-05', '2026-09-01'),
+(98, 208, 908, '2026-02-01', '2026-08-15'),
+(99, 209, 909, '2026-03-10', '2026-06-20'),
+(100, 210, 991, '2026-04-01', '2026-09-30'),
+
+(101, 211, 992, '2025-09-01', '2026-06-30'),
+(102, 212, 993, '2025-09-15', '2026-07-15'),
+(103, 213, 994, '2025-10-01', '2026-06-15'),
+(104, 214, 995, '2025-10-10', '2026-08-31'),
+(105, 215, 996, '2025-11-01', '2026-05-31'),
+(106, 216, 997, '2025-11-20', '2026-07-31'),
+(107, 217, 998, '2026-01-05', '2026-09-01'),
+(108, 218, 999, '2026-02-01', '2026-08-15'),
+(109, 219, 1081, '2026-03-10', '2026-06-20'),
+(110, 220, 1082, '2026-04-01', '2026-09-30'),
+
+(111, 221, 1083, '2025-09-01', '2026-06-30'),
+(112, 222, 1084, '2025-09-15', '2026-07-15'),
+(113, 223, 1085, '2025-10-01', '2026-06-15'),
+(114, 224, 1086, '2025-10-10', '2026-08-31'),
+(115, 225, 1087, '2025-11-01', '2026-05-31'),
+(116, 226, 1088, '2025-11-20', '2026-07-31'),
+(117, 227, 1089, '2026-01-05', '2026-09-01'),
+(118, 228, 1171, '2026-02-01', '2026-08-15'),
+(119, 229, 1172, '2026-03-10', '2026-06-20'),
+(120, 230, 1173, '2026-04-01', '2026-09-30'),
+
+(121, 231, 1174, '2025-09-01', '2026-06-30'),
+(122, 232, 1175, '2025-09-15', '2026-07-15'),
+(123, 233, 1176, '2025-10-01', '2026-06-15'),
+(124, 234, 1177, '2025-10-10', '2026-08-31'),
+(125, 235, 1178, '2025-11-01', '2026-05-31'),
+(126, 236, 1179, '2025-11-20', '2026-07-31'),
+(127, 237, 1261, '2026-01-05', '2026-09-01'),
+(128, 238, 1262, '2026-02-01', '2026-08-15'),
+(129, 239, 1263, '2026-03-10', '2026-06-20'),
+(130, 240, 1264, '2026-04-01', '2026-09-30'),
+
+(131, 241, 1265, '2025-09-01', '2026-06-30'),
+(132, 242, 1266, '2025-09-15', '2026-07-15'),
+(133, 243, 1267, '2025-10-01', '2026-06-15'),
+(134, 244, 1268, '2025-10-10', '2026-08-31'),
+(135, 245, 1269, '2025-11-01', '2026-05-31'),
+(136, 246, 1351, '2025-11-20', '2026-07-31'),
+(137, 247, 1352, '2026-01-05', '2026-09-01'),
+(138, 248, 1353, '2026-02-01', '2026-08-15'),
+(139, 249, 1354, '2026-03-10', '2026-06-20'),
+(140, 250, 1355, '2026-04-01', '2026-09-30'),
+
+(141, 251, 1356, '2025-09-01', '2026-06-30'),
+(142, 252, 1357, '2025-09-15', '2026-07-15'),
+(143, 253, 1358, '2025-10-01', '2026-06-15'),
+(144, 254, 1359, '2025-10-10', '2026-08-31'),
+(145, 255, 1441, '2025-11-01', '2026-05-31'),
+(146, 256, 1442, '2025-11-20', '2026-07-31'),
+(147, 257, 1443, '2026-01-05', '2026-09-01'),
+(148, 258, 1444, '2026-02-01', '2026-08-15'),
+(149, 259, 1445, '2026-03-10', '2026-06-20'),
+(150, 260, 1446, '2026-04-01', '2026-09-30');
+
+-- =========================================
+-- PASTATU ATSILIEPIMAI
+-- =========================================
+INSERT INTO PastatuAtsiliepimai (ID, Apgyvendinimas, Ivertinimas, Komentaras, Sukurta) VALUES
+(1, 1, 8, 'Tvarkingas pastatas, patogi vieta.', '2026-02-14 18:25:00'),
+(2, 5, 6, 'Pastatas neblogas, bet koridoriuose galėtų būti švariau.', '2026-03-02 20:10:00'),
+(3, 12, 9, 'Labai gera bendra būklė ir rami aplinka.', '2026-03-18 17:40:00'),
+(4, 18, 5, 'Pastatas priimtinas, tačiau kai kur reikėtų remonto.', '2026-04-01 19:15:00'),
+(5, 27, 7, 'Gera vieta gyventi, bendros erdvės tvarkingos.', '2026-04-19 16:30:00'),
+(6, 39, 4, 'Triukšminga aplinka ir nusidėvėjusios bendros patalpos.', '2026-05-03 21:05:00'),
+(7, 64, 10, 'Puiki bendra būklė, viskas prižiūrėta.', '2026-05-11 15:20:00'),
+(8, 88, 7, 'Pastatas geras, bet trūksta daugiau poilsio erdvių.', '2026-05-20 18:45:00'),
+(9, 103, 8, 'Tvarkingas, saugus ir gerai prižiūrimas pastatas.', '2026-05-24 14:10:00'),
+(10, 127, 6, 'Bendrai gerai, tačiau laiptinėje jautėsi drėgmė.', '2026-05-26 19:35:00');
+
+-- =========================================
+-- KAMBARIU ATSILIEPIMAI
+-- =========================================
+INSERT INTO KambariuAtsiliepimai (ID, Apgyvendinimas, Ivertinimas, Komentaras, Sukurta) VALUES
+(1, 2, 7, 'Kambarys tvarkingas, pakanka vietos daiktams.', '2026-02-20 18:00:00'),
+(2, 7, 5, 'Kambarys normalus, bet baldai jau seni.', '2026-03-05 20:35:00'),
+(3, 11, 9, 'Labai jaukus kambarys ir gera natūrali šviesa.', '2026-03-16 17:10:00'),
+(4, 21, 4, 'Trūksta ventiliacijos, kartais jaučiasi drėgmė.', '2026-03-29 22:15:00'),
+(5, 34, 8, 'Kambarys prižiūrėtas, patogus mokslams.', '2026-04-14 19:25:00'),
+(6, 46, 6, 'Viskas neblogai, bet čiužinys galėtų būti geresnis.', '2026-04-27 21:40:00'),
+(7, 58, 3, 'Labai triukšminga ir prasta garso izoliacija.', '2026-05-05 23:05:00'),
+(8, 72, 10, 'Puikus kambarys, tvarkingas ir labai patogus.', '2026-05-12 16:15:00'),
+(9, 95, 7, 'Geras kambarys, tik trūksta daugiau lentynų.', '2026-05-21 18:20:00'),
+(10, 132, 8, 'Švarus kambarys ir gera darbo vieta prie stalo.', '2026-05-27 17:55:00');
+
+-- =========================================
+-- PERSONALO ATSILIEPIMAI
+-- =========================================
+INSERT INTO PersonaloAtsiliepimai (ID, Apgyvendinimas, Personalas, Ivertinimas, Komentaras, Sukurta) VALUES
+(1, 3, 2, 8, 'Darbuotojas bendravo mandagiai ir greitai sureagavo.', '2026-02-28 15:10:00'),
+(2, 9, 4, 7, 'Problema išspręsta, nors teko šiek tiek palaukti.', '2026-03-11 19:20:00'),
+(3, 14, 8, 9, 'Labai profesionali pagalba ir aiškus paaiškinimas.', '2026-03-22 14:45:00'),
+(4, 31, 15, 5, 'Bendravimas normalus, bet darbai užtruko ilgiau nei tikėtasi.', '2026-04-06 20:05:00'),
+(5, 44, 23, 6, 'Darbuotojas padėjo, tačiau trūko informacijos apie eigą.', '2026-04-23 17:50:00'),
+(6, 61, 37, 10, 'Puikus aptarnavimas, viskas sutvarkyta labai greitai.', '2026-05-02 13:35:00'),
+(7, 79, 54, 4, 'Atvyko vėlai, problema buvo išspręsta tik iš dalies.', '2026-05-10 21:10:00'),
+(8, 97, 68, 8, 'Malonus bendravimas ir kokybiškai atliktas darbas.', '2026-05-18 16:40:00'),
+(9, 118, 74, 7, 'Padėjo greitai, bet trūko aiškesnio paaiškinimo.', '2026-05-24 12:25:00'),
+(10, 145, 83, 9, 'Labai atsakingas darbuotojas, viską paaiškino aiškiai.', '2026-05-27 15:30:00');
+
+-- =========================================
+-- MOKEJIMAI
+-- =========================================
+INSERT INTO Mokejimai (ID, Apgyvendinimas, Busena, Suma, MokejimoData) VALUES
+(1, 1, 3, 80.00, '2026-01-10'),
+(2, 2, 3, 125.00, '2026-01-12'),
+(3, 3, 2, 75.00, '2026-02-05'),
+(4, 4, 4, 100.00, '2026-02-20'),
+(5, 5, 3, 180.00, '2026-03-01'),
+(6, 6, 2, 145.00, '2026-03-11'),
+(7, 7, 3, 85.00, '2026-03-25'),
+(8, 8, 1, 115.00, '2026-04-02'),
+(9, 9, 3, 165.00, '2026-04-09'),
+(10, 10, 5, 100.00, '2026-04-15'),
+(11, 11, 3, 80.00, '2026-04-18'),
+(12, 12, 3, 70.00, '2026-04-22'),
+(13, 13, 4, 190.00, '2026-05-01'),
+(14, 14, 3, 85.00, '2026-05-05'),
+(15, 15, 2, 145.00, '2026-05-07'),
+(16, 16, 3, 115.00, '2026-05-10'),
+(17, 17, 3, 100.00, '2026-05-12'),
+(18, 18, 2, 125.00, '2026-05-16'),
+(19, 19, 4, 165.00, '2026-05-21'),
+(20, 20, 3, 75.00, '2026-05-25');
+
+-- =========================================
+-- UZKLAUSOS
+-- =========================================
+INSERT INTO Uzklausos (ID, Apgyvendinimas, PriskirtasPersonalas, Busena, Aprasymas, Sukurta) VALUES
+(1, 4, 3, 5, 'Kambaryje neveikė viena rozetė.', '2026-02-17 09:15:00'),
+(2, 7, 4, 4, 'Laša vanduo iš kriauklės maišytuvo.', '2026-03-03 18:20:00'),
+(3, 9, 8, 3, 'Nepavyksta prisijungti prie bendrabučio interneto.', '2026-03-12 21:05:00'),
+(4, 15, 6, 5, 'Koridoriuje reikalingas papildomas valymas.', '2026-03-27 11:40:00'),
+(5, 22, 5, 4, 'Kambaryje mirksi šviestuvas.', '2026-04-04 19:10:00'),
+(6, 28, 2, 2, 'Norėčiau pasitikslinti dėl kambario keitimo galimybės.', '2026-04-18 14:30:00'),
+(7, 35, 7, 1, 'Prie įėjimo durų pastebėtas neveikiantis užraktas.', '2026-04-29 22:25:00'),
+(8, 41, 3, 5, 'Neveikė elektros lizdas prie stalo.', '2026-05-06 08:50:00'),
+(9, 63, 4, 3, 'Duše silpnas vandens slėgis.', '2026-05-12 20:15:00'),
+(10, 78, 8, 4, 'Kartais dingsta interneto ryšys vakarais.', '2026-05-18 23:00:00'),
+(11, 96, 6, 5, 'Reikėjo sutvarkyti bendros virtuvės švarą.', '2026-05-22 10:20:00'),
+(12, 121, 5, 2, 'Kambaryje neveikia viena lemputė.', '2026-05-24 18:35:00'),
+(13, 139, 2, 3, 'Prašau informacijos dėl apgyvendinimo pratęsimo.', '2026-05-26 13:45:00'),
+(14, 147, 7, 4, 'Naktį girdisi triukšmas koridoriuje.', '2026-05-27 00:30:00'),
+(15, 150, 3, 1, 'Kambaryje neveikia papildomas kištukinis lizdas.', '2026-05-27 19:05:00');
