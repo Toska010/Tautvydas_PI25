@@ -17,7 +17,11 @@
 rule CXX_COMPILER__Paskutinis_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
+<<<<<<< HEAD
   command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+=======
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
   description = Building CXX object $out
 
 
@@ -25,7 +29,11 @@ rule CXX_COMPILER__Paskutinis_unscanned_Debug
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__Paskutinis_Debug
+<<<<<<< HEAD
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+=======
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -42,7 +50,15 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
+<<<<<<< HEAD
   command = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\toska\Desktop\Darbai\OperacinesSistemos\Paskutinis -BC:\Users\toska\Desktop\Darbai\OperacinesSistemos\Paskutinis\cmake-build-debug
+=======
+<<<<<<<< HEAD:OperacinesSistemos/Tautvydas_Bagdzius_PI25_K1_Programa1/cmake-build-debug/CMakeFiles/rules.ninja
+  command = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\toska\Desktop\Darbai\OperacinesSistemos\Tautvydas_Bagdzius_PI25_K1_Programa1 -BC:\Users\toska\Desktop\Darbai\OperacinesSistemos\Tautvydas_Bagdzius_PI25_K1_Programa1\cmake-build-debug
+========
+  command = "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\s057522\Desktop\Darbai\OperacinesSistemos\Paskutinis -BC:\Users\s057522\Desktop\Darbai\OperacinesSistemos\Paskutinis\cmake-build-debug
+>>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c:OperacinesSistemos/Paskutinis/cmake-build-debug/CMakeFiles/rules.ninja
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +67,11 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
+<<<<<<< HEAD
   command = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\ninja\win\x64\ninja.exe" $FILE_ARG -t clean $TARGETS
+=======
+  command = "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\ninja\win\x64\ninja.exe" $FILE_ARG -t clean $TARGETS
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
   description = Cleaning all built files...
 
 
@@ -59,6 +79,10 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
+<<<<<<< HEAD
   command = "C:\Program Files\JetBrains\CLion 2024.2.3\bin\ninja\win\x64\ninja.exe" -t targets
+=======
+  command = "C:\Program Files\JetBrains\CLion 2024.2.0.1\bin\ninja\win\x64\ninja.exe" -t targets
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
   description = All primary targets available:
 

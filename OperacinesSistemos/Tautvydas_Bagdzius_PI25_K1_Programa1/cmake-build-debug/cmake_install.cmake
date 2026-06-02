@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: C:/Users/toska/Desktop/Darbai/OperacinesSistemos/Tautvydas_Bagdzius_PI25_K1_Programa1
+=======
+# Install script for directory: C:/Users/s057522/Desktop/Darbai/OperacinesSistemos/Tautvydas_Bagdzius_PI25_K1_Programa1
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +38,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2024.2.3/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2024.2.0.1/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "C:/Users/toska/Desktop/Darbai/OperacinesSistemos/Tautvydas_Bagdzius_PI25_K1_Programa1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "C:/Users/s057522/Desktop/Darbai/OperacinesSistemos/Tautvydas_Bagdzius_PI25_K1_Programa1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 07040732f3a6677e18dd798e627bd2ed31062d4c
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
